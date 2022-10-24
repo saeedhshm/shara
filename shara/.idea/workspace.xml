@@ -10,90 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5b4870d-4bd8-4b8a-a715-9a946df198d8" name="Changes" comment="commit changes">
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Almarai-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Almarai-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Almarai-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Almarai-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cards/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cards/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cards/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/checkmarks.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/amazon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/barans_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/mac.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/man-user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/max.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/offer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/panner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/panner2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/smallcard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/startbucs_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/holders/zara.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/bell.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/ADV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/HOME.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/MENU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/MENUACTIVE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/MONEY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/PARTNER.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/account.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/8.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/add_balance/1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/add_balance/2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/add_balance/3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/add_balance/4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/calculate_points_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/coupon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/heart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/sec_arrow_ar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/sec_arrow_en.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/setting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/lang/check.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/lang/lang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/birthdate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/email.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/name.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/pass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/title-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/membership_icons/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/membership_icons/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/membership_icons/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/no_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/FAV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/birthdate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/fav_in_details.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/selected.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/share.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/profile/ask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/profile/money.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/icons/profile/setting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/intro/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/intro/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/intro/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/intro/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/intro/bc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/intro/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/membership_bg/classic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/membership_bg/golden.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/membership_bg/platin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/membership_bg/silver.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/splash/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/splash/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/splash/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/video/shara_intro.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/mac.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/mac.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,17 +56,17 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/assets/images/icons/home" />
       <recent name="$PROJECT_DIR$/lib/views/screens/account/login" />
-      <recent name="$PROJECT_DIR$/assets/images/holders" />
-      <recent name="$PROJECT_DIR$/assets/images/icons/payment_icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib/views/screens/home/pages/home_page" />
