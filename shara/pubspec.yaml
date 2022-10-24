@@ -80,7 +80,7 @@ flutter:
      - assets/images/splash/
      - assets/images/icons/
      - assets/images/icons/bottom_bar/
-     - assets/images/holders/
+     - 3
      - assets/images/cards/
      - assets/images/icons/home/
      - assets/images/icons/login/
