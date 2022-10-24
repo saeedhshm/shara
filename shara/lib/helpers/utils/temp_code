@@ -1,0 +1,12 @@
+import 'dart:math' as math;
+
+Transform.rotate(
+  angle: 180 * math.pi / 180,
+  child: IconButton(
+    icon: Icon(
+      Icons.details,
+      color: Colors.white,
+    ),
+    onPressed: null,
+  ),
+),
