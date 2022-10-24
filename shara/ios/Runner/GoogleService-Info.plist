@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>821837326896-lfjdpr7a1v55ket4qc7rpvt26t7l72mg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.821837326896-lfjdpr7a1v55ket4qc7rpvt26t7l72mg</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>821837326896-jo1hlblbng11fcinpqljllqjd43geupc.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAW4iW3YaMaMrAWrKp3OW7g33w_D6ou1d8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>821837326896</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.traffic.saeed.shara</string>
+	<key>PROJECT_ID</key>
+	<string>shara-81058</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shara-81058.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:821837326896:ios:d33653bdbacd0634d9dbf5</string>
+</dict>
+</plist>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5b4870d-4bd8-4b8a-a715-9a946df198d8" name="Changes" comment="commit changes">
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Almarai-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Almarai-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Almarai-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Almarai-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cards/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cards/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/cards/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/checkmarks.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/amazon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/barans_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/mac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/man-user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/max.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/offer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/panner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/panner2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/smallcard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/startbucs_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/holders/zara.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/bell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/ADV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/HOME.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/MENU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/MENUACTIVE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/MONEY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/PARTNER.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/bottom_bar/account.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/8.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/add_balance/1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/add_balance/2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/add_balance/3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/finance_icons/add_balance/4.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/calculate_points_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/coupon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/sec_arrow_ar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/sec_arrow_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/home/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/lang/check.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/lang/lang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/birthdate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/email.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/pass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/phone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/login/title-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/membership_icons/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/membership_icons/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/membership_icons/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/no_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/FAV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/birthdate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/fav_in_details.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/filter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/offer/share.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/profile/ask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/profile/money.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/icons/profile/setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/intro/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/intro/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/intro/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/intro/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/intro/bc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/intro/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/membership_bg/classic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/membership_bg/golden.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/membership_bg/platin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/membership_bg/silver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/splash/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/splash/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/splash/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/video/shara_intro.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/mac.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcuserdata/mac.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pubspec.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="2B589KtesViPCTZ5mXE6lRb5pv3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/assets/images/icons/home" />
+      <recent name="$PROJECT_DIR$/lib/views/screens/account/login" />
+      <recent name="$PROJECT_DIR$/assets/images/holders" />
+      <recent name="$PROJECT_DIR$/assets/images/icons/payment_icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/views/screens/home/pages/home_page" />
+      <recent name="$PROJECT_DIR$/lib/views/screens/account/login" />
+      <recent name="$PROJECT_DIR$/lib/models" />
+      <recent name="$PROJECT_DIR$/lib/controllers" />
+      <recent name="$PROJECT_DIR$/android/app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5b4870d-4bd8-4b8a-a715-9a946df198d8" name="Changes" comment="" />
+      <created>1656184434959</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656184434959</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add animation to login.dart">
+      <created>1656926670676</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656926670677</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add animation to login.dart">
+      <created>1658231525064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658231525064</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add animation to login.dart">
+      <created>1659692133255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659692133255</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add promo_code.dart&#10;add   promo_codes_controller.dart">
+      <created>1659697139102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659697139102</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add promo_code.dart&#10;add   promo_codes_controller.dart">
+      <created>1659725417842</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659725417843</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add promocode variants">
+      <created>1659726725175</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659726725175</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactoring promo_code screens">
+      <created>1659850654540</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659850654540</updated>
+    </task>
+    <task id="LOCAL-00008" summary="finsh promo code pay">
+      <created>1659854700197</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659854700197</updated>
+    </task>
+    <task id="LOCAL-00009" summary="finsh promo code pay">
+      <created>1659891247775</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1659891247775</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add categories to promocode">
+      <created>1661080983924</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661080983924</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add categories to promocode">
+      <created>1661154783845</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661154783845</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add forget password by phone">
+      <created>1661168191514</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1661168191514</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add forget password by phone">
+      <created>1661330693979</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1661330693979</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Last modifications">
+      <created>1661407925437</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1661407925438</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add intro_page.dart">
+      <created>1661758676099</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1661758676099</updated>
+    </task>
+    <task id="LOCAL-00016" summary="handling text field">
+      <created>1661937215044</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1661937215044</updated>
+    </task>
+    <task id="LOCAL-00017" summary="handling text field">
+      <created>1662019889854</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1662019889854</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add membership cards">
+      <created>1662412711546</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1662412711546</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add code verification">
+      <created>1663572331759</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1663572331759</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add code verification">
+      <created>1663666884083</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663666884083</updated>
+    </task>
+    <task id="LOCAL-00021" summary="modifying issues&#10;add image loader">
+      <created>1663834736318</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1663834736318</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add load image">
+      <created>1664346005891</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664346005891</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add load image">
+      <created>1664347021511</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664347021511</updated>
+    </task>
+    <task id="LOCAL-00024" summary="CHANGE LANGUAGE CODE">
+      <created>1664781574198</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1664781574198</updated>
+    </task>
+    <task id="LOCAL-00025" summary="discount coupons, pull to refresh">
+      <created>1665286839554</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1665286839554</updated>
+    </task>
+    <task id="LOCAL-00026" summary="discount coupons, pull to refresh">
+      <created>1665295472736</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1665295472736</updated>
+    </task>
+    <task id="LOCAL-00027" summary="discount coupons, pull to refresh">
+      <created>1665645700831</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1665645700831</updated>
+    </task>
+    <task id="LOCAL-00028" summary="discount coupons, pull to refresh">
+      <created>1666076708365</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1666076708366</updated>
+    </task>
+    <task id="LOCAL-00029" summary="contacts done">
+      <created>1666099388621</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1666099388621</updated>
+    </task>
+    <task id="LOCAL-00030" summary="commit changes">
+      <created>1666424979562</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1666424979562</updated>
+    </task>
+    <task id="LOCAL-00031" summary="commit changes">
+      <created>1666609958092</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1666609958092</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add animation to login.dart" />
+    <MESSAGE value="add promo_code.dart&#10;add   promo_codes_controller.dart" />
+    <MESSAGE value="add promocode variants" />
+    <MESSAGE value="refactoring promo_code screens" />
+    <MESSAGE value="finsh promo code pay" />
+    <MESSAGE value="add categories to promocode" />
+    <MESSAGE value="add forget password by phone" />
+    <MESSAGE value="Last modifications" />
+    <MESSAGE value="Add intro_page.dart" />
+    <MESSAGE value="handling text field" />
+    <MESSAGE value="add membership cards" />
+    <MESSAGE value="add code verification" />
+    <MESSAGE value="modifying issues&#10;add image loader" />
+    <MESSAGE value="add load image" />
+    <MESSAGE value="CHANGE LANGUAGE CODE" />
+    <MESSAGE value="discount coupons, pull to refresh" />
+    <MESSAGE value="contacts done" />
+    <MESSAGE value="commit changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit changes" />
+  </component>
+</project>

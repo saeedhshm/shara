@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "821837326896",
+    "project_id": "shara-81058",
+    "storage_bucket": "shara-81058.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821837326896:android:78c99e1c7888f6acd9dbf5",
+        "android_client_info": {
+          "package_name": "com.traffic.saeed.shara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821837326896-jo1hlblbng11fcinpqljllqjd43geupc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.traffic.saeed.shara",
+            "certificate_hash": "ba8ed4af6275736b0866adafab675257a4f68d21"
+          }
+        },
+        {
+          "client_id": "821837326896-omb9nkb4umflqdom3bue3691e2m0ribp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlsUFZMoPpljsynaWc26Yrj9vgvoWfyy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821837326896-omb9nkb4umflqdom3bue3691e2m0ribp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
