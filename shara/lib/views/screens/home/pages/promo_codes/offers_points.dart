@@ -39,7 +39,7 @@ class _OffersOfPointsScreenState extends State<OffersOfPointsScreen> {
   }
 
   void _scrollListener() {
-    print(scrollController.position.extentAfter);
+    // print(scrollController.position.extentAfter);
     if (scrollController.position.extentAfter == 0.0) {
       controller.loadMore();
     }

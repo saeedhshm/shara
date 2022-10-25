@@ -9,11 +9,14 @@ import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 import 'package:shara/views/screens/account/signin_pages/phone_page.dart';
 import 'package:shara/views/screens/account/signin_pages/sign_up.dart';
 import 'package:shara/views/screens/home/main_home_screen.dart';
+import 'package:shara/views/screens/splash/intro_page.dart';
 import 'package:shara/views/widgets/custom_text_form_field.dart';
 import 'package:shara/views/widgets/login_header.dart';
 import 'package:shara/views/widgets/main_button.dart';
 
-import 'forget_password.dart';
+import '../../splash/splash.dart';
+import '../forget_password.dart';
+import 'code_verification_login.dart';
 
 class LoginPage extends StatefulWidget {
 
@@ -103,6 +106,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
               HeaderLoginWidget(
                 height: 150,
                 isLogin: true,
+                pageName: 'LoginPage',
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -135,9 +139,9 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
                         child: Obx(() => Column(
                           children: [
                             SizedBox(
-                              height: 30,
+                              height: loginController.initAppController.userData.value.user == null  ? 30 : 0,
                             ),
-                            CustomTextFormField(
+                             CustomTextFormField(
                               controller: _emailController,
                               isValideField: loginController.isValidEmail.value,
                               errorMessage:
@@ -145,41 +149,43 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
                               hintText: 'enter_login_email'.tr,
                               labelText: 'login_email'.tr,
                               icon: 'assets/images/icons/login/email.png',
-                            ),
-                            SizedBox(
-                              height: 35,
-                            ),
-                            CustomTextFormField(
-                              isValideField:
-                              loginController.isValidPassword.value,
-                              errorMessage:
-                              loginController.passwordErrorMessage.value,
-                              controller: _passwordController,
-                              hintText: '*******',
-                              labelText: 'password'.tr,
-                              icon: 'assets/images/icons/login/pass.png',
-                              secureText: true,
-                            ),
+                              keyboardType: TextInputType.phone,
+                            ) ,
                             SizedBox(
                               height: 10,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                OpenContainer(
-                                    closedBuilder: (context,action){
-                                      return Text(
-                                        'forget_password'.tr,
-                                        style: TextStyle(
-                                            color: AppColors.mainLightGreyColor),
-                                      );
-                                    },
-                                    openBuilder: (context,action){
-                                      return ForgetPasswordWidget();
-                                    }
-                                )
-                              ],
+                            // CustomTextFormField(
+                            //   isValideField:
+                            //   loginController.isValidPassword.value,
+                            //   errorMessage:
+                            //   loginController.passwordErrorMessage.value,
+                            //   controller: _passwordController,
+                            //   hintText: '*******',
+                            //   labelText: 'password'.tr,
+                            //   icon: 'assets/images/icons/login/pass.png',
+                            //   secureText: true,
+                            //   keyboardType: TextInputType.number,
+                            // ),
+                            SizedBox(
+                              height: 10,
                             ),
+                            // Row(
+                            //   mainAxisAlignment: MainAxisAlignment.end,
+                            //   children: [
+                            //     OpenContainer(
+                            //         closedBuilder: (context,action){
+                            //           return Text(
+                            //             'forget_password'.tr,
+                            //             style: TextStyle(
+                            //                 color: AppColors.mainLightGreyColor),
+                            //           );
+                            //         },
+                            //         openBuilder: (context,action){
+                            //           return ForgetPasswordWidget();
+                            //         }
+                            //     )
+                            //   ],
+                            // ),
                             SizedBox(
                               height: 30,
                             ),
@@ -190,9 +196,9 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
                                 loginController.password = _passwordController.text;
                                 loginController.email = _emailController.text;
 
-                                loginController.loginAction((message){
+                                loginController.sendConfirmCodeToPhoneAction((message){
                                    if(message == null){
-                                     Go.toAndOff(context, MainHomeScreen());
+                                     Go.to(context, CodeVerificationLoginPage());
                                    } else{
                                      showErrorSnackbar('Error'.tr, message);
                                    }
@@ -214,28 +220,39 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
                                   width: 8,
                                 ),
                                 InkWell(
-                                  // onTap: (){
-                                  //   Get.to(SignUpPage());
-                                  // },
-                                  child: OpenContainer(
-                                    closedBuilder: (context, action) {
-                                      return Text(
-                                        'join_now'.tr,
-                                        style: TextStyle(
-                                            color: AppColors.mainGoldenDarkColor),
-                                      );
-                                    },
-                                    openBuilder: (context, action) {
-
-                                      return PhoneNumberPage();
-                                    },
-                                    closedElevation: 0,
-                                    transitionDuration:
-                                    Duration(milliseconds: 300),
+                                  onTap: (){
+                                    Get.to(PhoneNumberPage());
+                                  },
+                                  child: Text(
+                                    'join_now'.tr,
+                                    style: TextStyle(
+                                        color: AppColors.mainGoldenDarkColor),
                                   ),
                                 ),
                               ],
                             )
+                            //     : InkWell(
+                            //   onTap: (){
+                            //     // loginController.initAppController.userData.value.deleteUserFromStorage();
+                            //     loginController.logout( onDone: (onDone){
+                            //       // Navigator.pushReplacement(
+                            //       //   context,
+                            //       //   PageRouteBuilder(
+                            //       //     pageBuilder: (context, animation1, animation2) =>
+                            //       //         IntroPage(),
+                            //       //     transitionDuration: Duration.zero,
+                            //       //     reverseTransitionDuration: Duration.zero,
+                            //       //   ),
+                            //       // );
+                            //     });
+                            //
+                            //   },
+                            //   child: Text(
+                            //     'not_me'.tr,
+                            //     style: TextStyle(
+                            //         color: AppColors.mainGoldenDarkColor),
+                            //   ),
+                            // )
                           ],
                         )),
                       ),
@@ -251,8 +268,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
   @override
   void dispose() {
     // TODO: implement dispose
-    _passwordController.dispose();
-    _emailController.dispose();
+
     // logoController.dispose();
     super.dispose();
   }

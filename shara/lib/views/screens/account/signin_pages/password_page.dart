@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:shara/helpers/navigation.dart';
+import 'package:shara/views/screens/account/login/login.dart';
 
+import '../../../../controllers/init_app_controller.dart';
+import '../../../../controllers/sign_up_controller.dart';
 import '../../../../helpers/app_colors.dart';
 import '../../../../helpers/utils/printutils.dart';
-import '../../../widgets/custom_text_form_field.dart';
+import '../../../../helpers/utils/widgets/snack_bars.dart';
+import '../../../widgets/four_digits_widget.dart';
 import '../../../widgets/main_button.dart';
+import '../../home/main_home_screen.dart';
 import 'confirm_password.dart';
 
 class PasswordPage extends StatefulWidget {
 
-  PasswordPage({Key key}) : super(key: key);
+  final bool isFromLogin;
+  final bool fromRegister;
+  PasswordPage(this.isFromLogin,{Key key,this.fromRegister = false}) : super(key: key);
 
   @override
   State<PasswordPage> createState() => _PasswordPageState();
 }
 
 class _PasswordPageState extends State<PasswordPage> {
-  FocusNode _focusNode1 = FocusNode();
 
-  FocusNode _focusNode2 = FocusNode();
-
-  FocusNode _focusNode3 = FocusNode();
-
-  FocusNode _focusNode4 = FocusNode();
 
   final textEditing1 = TextEditingController();
 
@@ -33,20 +34,15 @@ class _PasswordPageState extends State<PasswordPage> {
 
   final textEditing4 = TextEditingController();
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _focusNode1.requestFocus();
-  }
+  // SignUpController signUpController = Get.find();
+
+
+  InitAppController initAppController = Get.find();
+
 
   @override
   void dispose() {
-    // TODO: implement dispose
-    _focusNode1.dispose();
-    _focusNode2.dispose();
-    _focusNode3.dispose();
-    _focusNode4.dispose();
+
 
     textEditing1.dispose();
     textEditing2.dispose();
@@ -62,7 +58,7 @@ class _PasswordPageState extends State<PasswordPage> {
           backgroundColor: AppColors.mainLightColor,
           elevation: 0,
           title: Text(
-            'create_password'.tr,
+           widget.isFromLogin ? 'create_password'.tr : 'password'.tr,
             style: TextStyle(
                 color: AppColors.mainDarkGreyColor,
                 fontWeight: FontWeight.bold,
@@ -93,112 +89,7 @@ class _PasswordPageState extends State<PasswordPage> {
               SizedBox(
                 height: 30,
               ),
-              Directionality(
-                textDirection: TextDirection.ltr,
-                child: Row(
-                  // crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    // RawKeyboardListener( focusNode: _focusNode1,
-                    //     onKey: (e){
-                    //       println('------ e $e}');
-                    //     }, child: SizedBox(width: 0,)),
-                    Container(
-                        width: 60,
-                        height: 60,
-
-                        child: CustomTextFormField(
-                          textAlign: TextAlign.center,
-                          controller: textEditing1,
-                          keyboardType: TextInputType.number,
-                          focusNode: _focusNode1,
-                          inputFormatters:  [
-                            LengthLimitingTextInputFormatter(1),
-                          ],
-                          onChange: (value){
-
-                            if(value.isNotEmpty){
-                              FocusScope.of(context).requestFocus(_focusNode2);
-                            }
-                          },
-
-                        )
-                    ),
-                    Container(
-                        width: 60,
-                        height: 60,
-                        child: CustomTextFormField(
-                          textAlign: TextAlign.center,
-                          controller: textEditing2,
-                          focusNode: _focusNode2,
-                          onChange: (value){
-
-                            if(value.isNotEmpty){
-                              FocusScope.of(context).requestFocus(_focusNode3);
-                            }else if(textEditing2.text.isEmpty){
-                              FocusScope.of(context).requestFocus(_focusNode1);
-                            }
-                          },
-                          inputFormatters:  [
-                            LengthLimitingTextInputFormatter(1),
-                          ],
-                          keyboardType: TextInputType.number,
-                          // decoration: InputDecoration(
-                          //
-                          // ),
-                        )),
-                    Container(
-                        width: 60,
-                        height: 60,
-                        child: CustomTextFormField(
-                          textAlign: TextAlign.center,
-                          focusNode: _focusNode3,
-                          controller: textEditing3,
-                          inputFormatters:  [
-                            LengthLimitingTextInputFormatter(1),
-                          ],
-                          onChange: (value){
-                            if(value.isNotEmpty) {
-                              FocusScope.of(context).requestFocus(_focusNode4);
-                            }else if(textEditing3.text.isEmpty){
-                              FocusScope.of(context).requestFocus(_focusNode2);
-                            }
-                          },
-                          keyboardType: TextInputType.number,
-                          // decoration: InputDecoration(
-                          //
-                          // ),
-                          //   inputFormatters:  [
-                          //     LengthLimitingTextInputFormatter(1),
-                          //   ]
-                        )),
-                    Container(
-                        width: 60,
-                        height: 60,
-                        child: CustomTextFormField(
-                          textAlign: TextAlign.center,
-                          inputFormatters:  [
-                            LengthLimitingTextInputFormatter(1),
-                          ],
-                          controller: textEditing4,
-                          focusNode: _focusNode4,
-
-                          onChange: (String value){
-
-                            if(value.isNotEmpty){
-                              // FocusScope.of(context).unfocus();
-                            }else if(textEditing4.text.isEmpty){
-                              FocusScope.of(context).requestFocus(_focusNode3);
-                            }
-                          },
-                          keyboardType: TextInputType.number,
-                          // decoration: InputDecoration(
-                          //
-                          // ),
-                        )),
-                  ],
-                ),
-              ),
+              FourDigitWidget(textControllers: [textEditing1,textEditing2,textEditing3,textEditing4],isPassword: true,),
               SizedBox(
                 height: 30,
               ),
@@ -208,11 +99,55 @@ class _PasswordPageState extends State<PasswordPage> {
               ),
               Row(
                 children: [
-                  Expanded(child: MainButtonWidget(btnTitle: 'create'.tr, onPressed: (){
-                    Get.to(()=>ConfirmPasswordPage());
+                  Expanded(child: MainButtonWidget(btnTitle:widget.isFromLogin ? 'create'.tr : 'sign_in'.tr, onPressed: (){
+
+                    if(textEditing1.text.isEmpty || textEditing2.text.isEmpty || textEditing3.text.isEmpty || textEditing4.text.isEmpty) {
+                      showErrorSnackbar('Error'.tr, 'password_must_fill'.tr);
+                    }else{
+                      var password = '${textEditing1.text}${textEditing2
+                          .text}${textEditing3.text}${textEditing4.text}';
+                      // println(signUpController.password);
+                      if(widget.fromRegister){
+                        SignUpController signUpController = Get.find();
+                        signUpController.password = '${textEditing1.text}${textEditing2
+                            .text}${textEditing3.text}${textEditing4.text}';
+                        println(signUpController.password);
+                        Get.to(()=>ConfirmPasswordPage());
+                        return;
+                      }
+
+                      //////////////////////////////////////////
+                      if(initAppController.userData.value.user.password == null || initAppController.userData.value.user.password == '') {
+                        initAppController.userData.value.user.password = password;
+                        initAppController.userData.value.saveDataToStorage();
+                        println(initAppController.userData.value.user.password);
+                        Get.to(()=>MainHomeScreen());
+                      }else if(initAppController.userData.value.user.password == password){
+                        Get.to(()=>MainHomeScreen());
+                      }else {
+                        // textEditing1.text = '';
+                        // textEditing2.text = '';
+                        // textEditing3.text = '';
+                        // textEditing4.text = '';
+                        showErrorSnackbar('Error'.tr, 'wrong_password'.tr);
+                      }
+                    }
+
+
                   })),
 
                 ],
+              ),
+            widget.isFromLogin ? SizedBox() :  InkWell(
+                onTap: (){
+                  Go.toAndOff(context, LoginPage());
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text('not_me'.tr,style: TextStyle(
+                    decoration: TextDecoration.underline,
+                  ),),
+                ),
               )
             ],
           ),

@@ -81,30 +81,25 @@ class AccountHomeWidget extends StatelessWidget {
                       ],
                     ),
                     Spacer(),
-                    InkWell(
-                      onTap: (){
-                        Get.to(()=>AccountInfoPage());
-                      },
-                      child: Column(
-                        children: [
-                          Text(
-                            'your_points'.tr,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                                color: AppColors.mainDarkGreyColor),
-                          ),
-                          SizedBox(height: 5,),
-                          Text(
-                            '${initAppController.userData.value.user.points}',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                                color: AppColors.mainDarkGreyColor),
-                          ),
+                    Column(
+                      children: [
+                        Text(
+                          'your_points'.tr,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: AppColors.mainDarkGreyColor),
+                        ),
+                        SizedBox(height: 5,),
+                        Text(
+                          '${initAppController.userData.value.user.points}',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: AppColors.mainDarkGreyColor),
+                        ),
 
-                        ],
-                      ),
+                      ],
                     )
                   ],
                 ),

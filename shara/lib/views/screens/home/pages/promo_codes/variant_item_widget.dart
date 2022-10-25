@@ -7,6 +7,7 @@ import 'package:shara/helpers/utils/widgets/loading_indicator.dart';
 import '../../../../../controllers/promo_codes_controller.dart';
 import '../../../../../models/promo_code.dart';
 import '../../../../widgets/image_from_server.dart';
+import '../../../../widgets/network_image.dart';
 import '../../../account/my_coupons.dart';
 
 class VariantItemWidget extends StatelessWidget {
@@ -60,6 +61,7 @@ class VariantItemWidget extends StatelessWidget {
                                   padding: const EdgeInsets.symmetric(horizontal: 0.0),
                                   child: Text(
                                     "${controller.promoCode.variants[index].value}",
+                                    maxLines: 1,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(fontSize: 15),
                                   ),
@@ -97,8 +99,7 @@ class VariantItemWidget extends StatelessWidget {
                                 padding: const EdgeInsets.all(0.0),
                                 child: SizedBox(
                                   // width: (width / 2.5),
-                                  child: imageFromServer(
-                                    imageUrl:controller.promoCode.photo,
+                                  child: loadImage(controller.promoCode.photo,
                                     fit: BoxFit.cover,
 
                                   ),

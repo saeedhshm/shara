@@ -27,7 +27,7 @@ class DecoratedAppBar extends StatelessWidget implements PreferredSizeWidget{
             child: Container(
                 color: Colors.white,
                 child: Image.asset(
-                  'assets/images/icons/login/title-bg.png',
+                  'assets/images/icons/login/title_bg.png',
                   width: double.infinity,
                 )),
           ),

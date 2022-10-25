@@ -61,7 +61,7 @@ class ChangeAccountInformation extends GetxController{
        } ;
        var headers = {
          'Authorization' : 'bearer ${userData.token.accessToken}' ,
-         "x-localization": 'ar',
+         "x-localization": 'lang_code'.tr,
        } ;
        AppApiHandler.sendData(url: updateEmailUrl, callback: (json,stsCode){
          loading.value = false;

@@ -55,7 +55,7 @@ class _SingleOfferPageState extends State<SingleOfferPage> {
                   leading: LeadingBackArrow(),
                   bottom: PreferredSize(preferredSize: Size.fromHeight(0), child: SizedBox(),),
                   flexibleSpace: FlexibleSpaceBar(
-                    background: imageFromServer(imageUrl: '${controller.offerDetails.image(isArabic)}',
+                    background: loadImage('${controller.offerDetails.image(isArabic)}',
                       fit: BoxFit.cover,),
                   ),
                 ) ,
@@ -65,7 +65,7 @@ class _SingleOfferPageState extends State<SingleOfferPage> {
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          Container(width:100,height: 70,child: imageFromServer( imageUrl: controller.offerDetails.partner.logo,fit: BoxFit.contain)) ,
+                          Container(width:100,height: 70,child: loadImage(  controller.offerDetails.partner.logo,fit: BoxFit.contain)) ,
                           SizedBox(height: 10,),
                           // Text('متبقي 10 ايام',style: TextStyle(color: AppColors.mainLightGreyColor),),
                           // SizedBox(height: 10,),

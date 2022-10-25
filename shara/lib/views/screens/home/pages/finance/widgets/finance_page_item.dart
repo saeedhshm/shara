@@ -24,13 +24,16 @@ class FinancePageItemWidget extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: AppColors.peageColor,
+              color: Colors.white,// AppColors.peageColor,
               borderRadius: BorderRadius.circular(3),
               border: Border.all(color: AppColors.mainGoldenDarkColor,width: 0.4)
             ),
             child: Column(
               children: [
-                Expanded(child: SvgImageWidget(imageIcon)),
+                Expanded(child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: SvgImageWidget(imageIcon),
+                )),
 
                 Container(
                   width: double.infinity,

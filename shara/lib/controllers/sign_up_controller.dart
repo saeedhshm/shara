@@ -50,7 +50,7 @@ class SignUpController extends GetxController {
     } else {
       isValidPhone.value = true;
       var body = {
-        'phone':phone,
+        'phone':'$num',
       } ;
       loading.value = true;
       println('------------ send code');
@@ -58,7 +58,7 @@ class SignUpController extends GetxController {
       AppApiHandler.sendData(
           url: sendConfirmCodeUrl,
           body: body,
-          header: {"x-localization":'ar','Content-Type':'application/x-www-form-urlencoded'},
+          header: {"x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
           callback: (json,stsCode) {
             loading.value = false;
             if(stsCode == 200){
@@ -82,10 +82,10 @@ class SignUpController extends GetxController {
     }
   }
 
-  void validateConfirmationCode(String confCode,onDone){
+  void validateConfirmationCode(onDone){
     var body = {
       'phone':phone,
-      'code':confCode
+      'code':confirmationCode
     } ;
     loading.value = true;
     println('------------ send code');
@@ -94,7 +94,7 @@ class SignUpController extends GetxController {
     AppApiHandler.sendData(
         url: validateConfirmCodeUrl,
         body: body,
-        header: {"x-localization":'ar','Content-Type':'application/x-www-form-urlencoded'},
+        header: {"x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
         callback: (json,stsCode) {
           loading.value = false;
           if(stsCode == 200){
@@ -103,15 +103,15 @@ class SignUpController extends GetxController {
             // "confirmCode": "6307",
             // "message": "من فضلك ادخل البيانات المطلوبة بطريقة صحيحة"
             // }
-            confirmationCode = json['confirmCode'];
-            println(confirmationCode);
+
             onDone(true,null);
           } else{
 
-            InvalidUser invalidUser = InvalidUser.fromJson(json);
+            // InvalidUser invalidUser = InvalidUser.fromJson(json);
             // println(invalidUser.message);
             // println(invalidUser.validator.errors);
-            onDone(false,invalidUser.validator.errors) ;
+            var message = 'code_not_correct_expired'.tr;
+            onDone(false,message) ;
 
           }
         });
@@ -119,13 +119,13 @@ class SignUpController extends GetxController {
 
   void signUpAction(onLogin) {
 
-    if (validateFields()) {
+
       loading.value = true;
       var body = {
          'first_name':firstName,
          'last_name':lastName,
         'phone':phone,
-        // 'email':email,
+        'confirm_code':confirmationCode,
         'password':password  ,
         'confirmPassword'  :confirmPassword
       } ;
@@ -134,9 +134,12 @@ class SignUpController extends GetxController {
       AppApiHandler.sendData(
           url: registerUrl,
           body: body,
-          header: {"x-localization":'ar','Content-Type':'application/x-www-form-urlencoded'},
+          header: {"x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
           callback: (json,stsCode) {
             loading.value = false;
+            println('--------->>>>>>>>>>>>>> register');
+            println(json);
+            println('--------->>>>>>>>>>>>>> register');
             if(stsCode == 200){
               InitAppController initApp = Get.find();
               initApp.userData.value = UserData.fromJson(json);
@@ -152,9 +155,7 @@ class SignUpController extends GetxController {
               println('--------->>>>>> error message');
             }
           });
-    }else{
-      println('========>>>>>> not valid fields');
-    }
+
   }
 
  bool validateFields() {

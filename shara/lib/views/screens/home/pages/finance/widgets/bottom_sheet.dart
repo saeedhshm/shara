@@ -44,61 +44,58 @@ class BottomSheetWidget extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(0.0),
-                    child: SizedBox(child: SvgImageWidget('assets/images/icons/finance_icons/add_balance/3.svg',),width: 50,height: 55,),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/madacard.png',),width: 69,height: 65,),
                   ),
 
-                  Text('apple pay',style: TextStyle(
-                      color: AppColors.navBarUnselectedIconsColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                  ),)
+                  // Text('apple pay',style: TextStyle(
+                  //     color: AppColors.navBarUnselectedIconsColor,
+                  //     fontSize: 16,
+                  //     fontWeight: FontWeight.bold
+                  // ),)
                 ],
               ),
               Container(width: double.infinity,height: 1,color: Colors.white,),
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(0.0),
-                    child: SizedBox(child: SvgImageWidget('assets/images/icons/finance_icons/add_balance/2.svg',),width: 50,height: 55,),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/apple_pay.png',color: Colors.black54,),width: 69,height: 65,),
                   ),
 
-                  Text('credit_card'.tr,style: TextStyle(
-                      color: AppColors.navBarUnselectedIconsColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                  ),)
+                  // Text('credit_card'.tr,style: TextStyle(
+                  //     color: AppColors.navBarUnselectedIconsColor,
+                  //     fontSize: 16,
+                  //     fontWeight: FontWeight.bold
+                  // ),)
                 ],
               ),
               Container(width: double.infinity,height: 1,color: Colors.white,),
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(0.0),
-                    child: SizedBox(child: SvgImageWidget('assets/images/icons/finance_icons/add_balance/1.svg',),width: 50,height: 55,),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/Stc-logo.png',),width: 69,height: 65,),
                   ),
 
-                  Text(
-                    '${'bank_transfer_to'.tr} stc pay',style: TextStyle(
-                      color: AppColors.navBarUnselectedIconsColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                  ),)
+
                 ],
               ),
               Container(width: double.infinity,height: 1,color: Colors.white,),
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(0.0),
-                    child: SizedBox(child: SvgImageWidget('assets/images/icons/finance_icons/add_balance/4.svg',),width: 50,height: 55,),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/visa_PNG4.png',),width: 59,height: 55,),
                   ),
-
-                  Text('inesta_add'.tr,style: TextStyle(
-                      color: AppColors.navBarUnselectedIconsColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold
-                  ),)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                    child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/mc.png',),width: 45,height: 40,),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/am_exp.png',),width: 40,height: 30,),
+                  ),
                 ],
               ),
               Container(width: double.infinity,height: 1,color: Colors.white,),
@@ -106,24 +103,24 @@ class BottomSheetWidget extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 32.0),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Color(0xffF8F9F7),
-              borderRadius: BorderRadius.circular(100),
-            ),
-            child: GestureDetector(
-              onTap:(){
-                Get.back();
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Icon(Icons.clear_outlined),
-              ),
-            ),
-          ),
-        )
+        // Padding(
+        //   padding: const EdgeInsets.symmetric(horizontal: 32.0),
+        //   child: Container(
+        //     decoration: BoxDecoration(
+        //       color: Color(0xffF8F9F7),
+        //       borderRadius: BorderRadius.circular(100),
+        //     ),
+        //     child: GestureDetector(
+        //       onTap:(){
+        //         Get.back();
+        //       },
+        //       child: Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Icon(Icons.clear_outlined),
+        //       ),
+        //     ),
+        //   ),
+        // )
       ],
     );
   }

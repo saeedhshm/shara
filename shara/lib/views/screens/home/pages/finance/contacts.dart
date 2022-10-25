@@ -1,12 +1,19 @@
+import 'package:fast_contacts/fast_contacts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:shara/controllers/transfer_points_controller.dart';
+import 'package:shara/helpers/utils/widgets/loading_indicator.dart';
 import 'package:shara/views/screens/home/pages/finance/transfer_to_contact.dart';
+import 'package:shara/views/screens/home/pages/finance/widgets/ContactListItemWidget.dart';
 
 import '../../../../../helpers/app_colors.dart';
 
 class ContactsPage extends StatelessWidget {
+  ContactsPage({Key key}) : super(key: key);
 
-   ContactsPage({Key key}) : super(key: key);
+  final TransferPointsController controller =
+      Get.put(TransferPointsController());
 
   @override
   Widget build(BuildContext context) {
@@ -36,119 +43,119 @@ class ContactsPage extends StatelessWidget {
               ),
             ),
           )),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 16),
-        child: Column(
-          children: [
-            SizedBox(height: 16,),
-            Container(
-              decoration: BoxDecoration(
-                  color: AppColors.mainLightColor,
-                  borderRadius: BorderRadius.circular(100)
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Row(
-                  children: [
-                    SizedBox(width: 8,),
-                    Expanded(child: TextFormField(
-                      decoration: InputDecoration(
-                          hintText: 'search_by_name'.tr,
-                          border: InputBorder.none
-                      ),
-                    )),
-                    Container(
-                      // width: 100,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 18.0,vertical: 8),
-                        child: Icon(Icons.search,size: 30,color: Colors.white,),
-                      ),
-                      decoration: BoxDecoration(
-                          color: AppColors.mainGoldenDarkColor,
-                          borderRadius: BorderRadius.circular(100)
-                      ),
-                    )
-                  ],
+      body: Obx(() => Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 16,
                 ),
-              ),
-            ),
-            SizedBox(height: 20,),
-            Container(
-              decoration: BoxDecoration(
-                  color: AppColors.mainGoldenDarkColor,
-                  borderRadius: BorderRadius.circular(100)
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32.0,vertical: 16),
-                child: Text('transfer_to_unregistered'.tr,style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold
-                ),),
-              ),
-            ),
-            SizedBox(height: 20,),
-            Expanded(child: ListView.separated(itemBuilder: (context,index){
-              return GestureDetector(
-                onTap: (){
-                  Get.to(()=>TransferToContactPage());
-                },
-                child: Container(
-                  width: double.infinity,
+                Container(
                   decoration: BoxDecoration(
                       color: AppColors.mainLightColor,
-                      borderRadius: BorderRadius.circular(15)
-                  ),
+                      borderRadius: BorderRadius.circular(100)),
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(5.0),
                     child: Row(
                       children: [
                         SizedBox(
-                          height: 55,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(100),
-                            child: Image.asset(
-                              'assets/images/icons/home/user.png',color: Colors.grey,),
-                          ),
+                          width: 8,
                         ),
-                        SizedBox(width: 16,),
                         Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('المعتصم بالله',style: TextStyle(
-                                  fontSize: 18,
-                                  color: AppColors.mainDarkGreyColor
-                              ),),
-                              SizedBox(height: 8,),
-                              Row(
-                                children: [
-                                  Text('${'end_with'.tr}9940',style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: AppColors.navBarUnselectedIconsColor
-                                  ),),
-                                  Spacer(),
-                                  Text('Riyad bank',style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: AppColors.navBarUnselectedIconsColor
-                                  ),),
-                                ],
-                              )
-                            ],
+                            child: TextFormField(
+                          onChanged: (String value) {
+                            controller.searchFor(name: value);
+                          },
+                          decoration: InputDecoration(
+                              hintText: 'search_by_name'.tr,
+                              border: InputBorder.none),
+                        )),
+                        Container(
+                          // width: 100,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18.0, vertical: 8),
+                            child: Icon(
+                              Icons.search,
+                              size: 30,
+                              color: Colors.white,
+                            ),
                           ),
-                        ),
-
+                          decoration: BoxDecoration(
+                              color: AppColors.mainGoldenDarkColor,
+                              borderRadius: BorderRadius.circular(100)),
+                        )
                       ],
                     ),
                   ),
                 ),
-              );
-            },itemCount: 15, separatorBuilder: (BuildContext context, int index) => SizedBox(height: 16,),))
-          ],
-        ),
-      ),
+                SizedBox(
+                  height: 20,
+                ),
+                InkWell(
+                  onTap: (){
+                    Get.to(TransferToContactPage(contact: null));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: AppColors.mainGoldenDarkColor,
+                        borderRadius: BorderRadius.circular(100)),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 32.0, vertical: 16),
+                      child: Text(
+                        'transfer_to_unregistered'.tr,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Expanded(
+                  child: controller.loading.value
+                      ? Center(
+                    child: LoadingIndicatorWidget(),
+                  )
+                      : ListView.separated(
+                          itemBuilder: (context, index) {
+                            Contact contact = controller.contacts[index];
+                            return GestureDetector(
+                              onTap: () {
+                                Get.to(() => TransferToContactPage(
+                                      contact: contact,
+                                    ));
+                              },
+                              child: ContactListItemWidget(contact),
+                            );
+                          },
+                          itemCount: controller.contacts.length,
+                          separatorBuilder: (BuildContext context, int index) =>
+                              SizedBox(
+                            height: 8,
+                          ),
+                        ),
+                )
+              ],
+            ),
+          )),
     );
   }
+
+  // Future<List<Contact>> getContacts() async{
+  //   bool isGranted = await Permission.contacts.status.isGranted;
+  //   if(!isGranted){
+  //     isGranted = await Permission.contacts.request().isGranted;
+  //   }
+  //
+  //   if(isGranted){
+  //     return await FastContacts.allContacts;
+  //   }
+  //
+  //   return [];
+  // }
 }

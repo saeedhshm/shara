@@ -4,7 +4,7 @@ import 'package:shara/helpers/app_colors.dart';
 
 import 'loading.dart';
 
-Widget imageFromServer({@required String imageUrl,fit = BoxFit.contain}){
+Widget _imageFromServer({@required String imageUrl,fit = BoxFit.contain}){
 
 
   return CachedNetworkImage(

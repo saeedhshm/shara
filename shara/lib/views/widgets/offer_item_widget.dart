@@ -25,7 +25,7 @@ class OfferItemWidget extends StatelessWidget {
             children: [
               Container(
                 // color: Colors.red,
-                child: imageFromServer(imageUrl: offer.image(isArabic),fit: BoxFit.cover),
+                child: loadImage(offer.image(isArabic),fit: BoxFit.cover),
                 width: (size.width / 1.5),
                 height: 200,
               ),

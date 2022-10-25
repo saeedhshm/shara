@@ -10,7 +10,7 @@ import 'package:shara/views/widgets/custom_text_form_field.dart';
 import 'package:shara/views/widgets/login_header.dart';
 import 'package:shara/views/widgets/main_button.dart';
 
-import 'login.dart';
+import 'login/login.dart';
 
 
 class ResetNewPassword extends StatefulWidget {

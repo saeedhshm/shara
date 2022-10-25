@@ -7,6 +7,6 @@ class LoadingIndicatorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircularProgressIndicator(valueColor:AlwaysStoppedAnimation<Color>(AppColors.mainGoldenDarkColor) ,);
+    return Center(child: CircularProgressIndicator(valueColor:AlwaysStoppedAnimation<Color>(AppColors.mainGoldenDarkColor) ,));
   }
 }

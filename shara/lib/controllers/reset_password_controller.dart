@@ -75,7 +75,7 @@ class ResetPasswordController extends GetxController{
         url: url,
         body: {'$fieldKey': email},
         header: {
-          "x-localization": 'ar',
+          "x-localization": 'lang_code'.tr,
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         callback: (json, stsCode) {
@@ -135,7 +135,7 @@ class ResetPasswordController extends GetxController{
         url: resetPasswordUrl,
         body: {'code': code,'password':password,'confirmPassword':confirmPassword},
         header: {
-          "x-localization": 'ar',
+          "x-localization": 'lang_code'.tr,
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         callback: (json, stsCode) {

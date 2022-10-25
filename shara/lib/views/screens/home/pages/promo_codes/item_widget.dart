@@ -6,7 +6,9 @@ import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/views/screens/home/pages/promo_codes/promo_code_varients_screen.dart';
 
 import '../../../../../models/promo_code.dart';
+import '../../../../../my_libs/image/load_image.dart';
 import '../../../../widgets/image_from_server.dart';
+import '../../../../widgets/network_image.dart';
 
 class ItemWidget extends StatelessWidget {
 
@@ -88,8 +90,7 @@ class ItemWidget extends StatelessWidget {
                       padding: const EdgeInsets.all(0.0),
                       child: SizedBox(
                         // width: (width / 2.5),
-                        child: imageFromServer(
-                          imageUrl:controller.promoCodeService.value.promoCodes[index].photo,
+                        child: loadImage(controller.promoCodeService.value.promoCodes[index].photo,
                           fit: BoxFit.cover,
 
                         ),

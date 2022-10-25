@@ -6,6 +6,7 @@ import 'package:shara/helpers/navigation.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/helpers/utils/widgets/sending_loading_widget.dart';
 import 'package:shara/helpers/utils/widgets/snack_bars.dart';
+import 'package:shara/views/screens/account/signin_pages/password_page.dart';
 import 'package:shara/views/screens/account/signin_pages/phone_page.dart';
 import 'package:shara/views/screens/home/main_home_screen.dart';
 import 'package:shara/views/widgets/custom_text_form_field.dart';
@@ -27,7 +28,7 @@ class _SignUpPageState extends State<SignUpPage> {
    final _lastNameController = TextEditingController();
 
 
-   SignUpController signUpController = Get.put(SignUpController());
+   SignUpController signUpController = Get.find();
 
    @override
   void initState() {
@@ -39,109 +40,121 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(()=>SendingLoadingDataWidget(
-      isLoading: signUpController.loading.value,
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Container(
-          color: AppColors.mainLightColor,
-          child: Column(
-            children: [
-              SizedBox(height: 30,),
-              HeaderLoginWidget(height: 120, child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Spacer(),
-                  Text(
-                    'create_account'.tr,
-                    style: TextStyle(
-                        color: AppColors.mainDarkGreyColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  Text(
-                    'data_record'.tr,
-                    style: TextStyle(
-                        color: AppColors.mainLightGreyColor, fontSize: 18),
-                  ),
-                  Spacer(),
-                ],
-              ),onClose: (){
-                // signUpController.onClose();   6:10 PM
-                signUpController.dispose();
-                signUpController.onClose();
-                Get.delete<SignUpController>();
-              },),
-              Expanded(
-                  child: Container(
-                    color: Colors.white,
-                    child: SingleChildScrollView(
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Obx(()=>Column(
-                          children: [
-                            CustomTextFormField(
-                              isValideField: signUpController.isValidFirstName.value,
-                              errorMessage:  signUpController.firstNameErrorMessage.value,
-                              controller: _fistNameController,
-                              hintText: 'enter_your_name'.tr,
-                              labelText: 'full_name'.tr,
-                              textCapitalization :  TextCapitalization.sentences,
-                              icon: 'assets/images/icons/login/name.png',
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            CustomTextFormField(
-                              isValideField: signUpController.isValidLastName.value,
-                              errorMessage:  signUpController.lastNameErrorMessage.value,
-                              controller: _lastNameController,
-                              hintText: 'enter_last_name'.tr,
-                              labelText: 'last_name'.tr,
-                              textCapitalization :  TextCapitalization.sentences,
-                              icon: 'assets/images/icons/login/name.png',
-                            ),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Container(
+        color: AppColors.mainLightColor,
+        child: Column(
+          children: [
+            SizedBox(height: 30,),
+            HeaderLoginWidget(height: 120, child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Spacer(),
+                Text(
+                  'create_account'.tr,
+                  style: TextStyle(
+                      color: AppColors.mainDarkGreyColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'data_record'.tr,
+                  style: TextStyle(
+                      color: AppColors.mainLightGreyColor, fontSize: 18),
+                ),
+                Spacer(),
+              ],
+            ),onClose: (){
+              Get.back();
+            },isLogin: false,pageName: 'SignUpPage',),
+            Expanded(
+                child: Container(
+                  color: Colors.white,
+                  child: SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Obx(()=>Column(
+                        children: [
+                          CustomTextFormField(
+                            isValideField: signUpController.isValidFirstName.value,
+                            errorMessage:  signUpController.firstNameErrorMessage.value,
+                            controller: _fistNameController,
+                            hintText: 'enter_your_name'.tr,
+                            labelText: 'full_name'.tr,
+                            textCapitalization :  TextCapitalization.sentences,
+                            icon: 'assets/images/icons/login/name.png',
+                          ),
+                          SizedBox(
+                            height: 16,
+                          ),
+                          CustomTextFormField(
+                            isValideField: signUpController.isValidLastName.value,
+                            errorMessage:  signUpController.lastNameErrorMessage.value,
+                            controller: _lastNameController,
+                            hintText: 'enter_last_name'.tr,
+                            labelText: 'last_name'.tr,
+                            textCapitalization :  TextCapitalization.sentences,
+                            icon: 'assets/images/icons/login/name.png',
+                          ),
 
-                            SizedBox(
-                              height: 30,
-                            ),
-                            MainButtonWidget(btnTitle: 'sign_up'.tr, onPressed: () {
+                          SizedBox(
+                            height: 30,
+                          ),
+                          MainButtonWidget(btnTitle: 'sign_up'.tr, onPressed: () {
+
+
+                            signUpController.isValidLastName.value = _lastNameController.text.isNotEmpty;
+                            signUpController.isValidFirstName.value = _fistNameController.text.isNotEmpty;
+
+                            if(_fistNameController.text.isEmpty){
+                              signUpController.firstNameErrorMessage.value = 'enter_your_name'.tr;
+                            }else{
+                              signUpController.firstNameErrorMessage.value = '';
+                            }
+                            if(_lastNameController.text.isEmpty){
+                              signUpController.lastNameErrorMessage.value = 'enter_last_name'.tr;
+                            }else{
+                              signUpController.lastNameErrorMessage.value = ''.tr;
+                            }
+
+
+
+                            if(signUpController.isValidLastName.value && signUpController.isValidFirstName.value) {
                               FocusScope.of(context).unfocus();
                               signUpController.firstName = _fistNameController.text;
 
                               signUpController.lastName = _lastNameController.text;
-
-
-                              Go.toAndOff(context, PhoneNumberPage());
-                              return;
-                              signUpController.signUpAction((mssg,List<String> errors){
-                                if(mssg == null){
-                                  Go.toAndOff(context, PhoneNumberPage());
-                                } else{
-                                  var err = '';
-                                  for(var e in errors){
-                                    println('----- err ${e.tr}');
-                                      err += '\n${e.tr}';
-                                  }
-                                  // var err =  errors.join('\n');
-                                  showErrorSnackbar(mssg, '$err');
+                              Go.to(context, PasswordPage(true,fromRegister: true,));
+                            }
+                            return;
+                            signUpController.signUpAction((mssg,List<String> errors){
+                              if(mssg == null){
+                                Go.toAndOff(context, PhoneNumberPage());
+                              } else{
+                                var err = '';
+                                for(var e in errors){
+                                  println('----- err ${e.tr}');
+                                  err += '\n${e.tr}';
                                 }
-                              });
-                            },) ,
+                                // var err =  errors.join('\n');
+                                showErrorSnackbar(mssg, '$err');
+                              }
+                            });
+                          },) ,
 
-                          ],
-                        )),
-                      ),
+                        ],
+                      )),
                     ),
-                  ))
-            ],
-          ),
+                  ),
+                ))
+          ],
         ),
       ),
-    ));
+    );
   }
 
   @override
@@ -152,7 +165,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
     _fistNameController.dispose();
 
-    signUpController.dispose();
     super.dispose();
   }
 }

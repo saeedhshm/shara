@@ -38,7 +38,7 @@ class PromoCodeController extends GetxController {
     var headers = {
       'Authorization':
       'bearer ${initAppController.userData.value.token.accessToken}',
-      "x-localization": 'ar',
+      "x-localization": 'lang_code'.tr,
     };
     println(url);
     println("--======================== inside promocode type func");
@@ -83,7 +83,7 @@ class PromoCodeController extends GetxController {
     var headers = {
       'Authorization':
           'bearer ${initAppController.userData.value.token.accessToken}',
-      "x-localization": 'ar',
+      "x-localization": 'lang_code'.tr,
     };
 
      println("--======================== selectedTypeId $url");
@@ -115,7 +115,7 @@ class PromoCodeController extends GetxController {
     var headers = {
       'Authorization':
       'bearer ${initAppController.userData.value.token.accessToken}',
-      "x-localization": 'ar',
+      "x-localization":'lang_code'.tr,
     };
     var body = {
       "gift_variants_id":"$variantId",

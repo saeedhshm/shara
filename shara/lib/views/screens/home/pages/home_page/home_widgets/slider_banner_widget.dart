@@ -5,6 +5,7 @@ import 'package:shara/controllers/home_controller.dart';
 import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:shara/views/widgets/image_from_server.dart';
+import 'package:shara/views/widgets/network_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SliderBannerWidget extends StatefulWidget {
@@ -61,13 +62,14 @@ class _SliderBannerWidgetState extends State<SliderBannerWidget> {
   @override
   Widget build(BuildContext context) {
     sliderWidth =  MediaQuery.of(context).size.width - (16 * 2);
+
     return Stack(
       children: [
         Container(
           child: Column(
             children: [
               SizedBox(
-                height: 150,
+                height: 190,
                 width: double.infinity,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
@@ -78,8 +80,8 @@ class _SliderBannerWidgetState extends State<SliderBannerWidget> {
                       height: 150,
                       width: sliderWidth,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: imageFromServer(imageUrl: homeController.homeData.value.sliders[index].image(initAppController.isArabicLang),fit: BoxFit.cover)),
+                          borderRadius: BorderRadius.circular(0),
+                          child: loadImage(homeController.homeData.value.sliders[index].image(initAppController.isArabicLang),fit: BoxFit.fill)),
                     );
                   }, separatorBuilder: (BuildContext context, int index) {
                   return SizedBox(width: 8,);

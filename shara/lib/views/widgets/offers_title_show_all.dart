@@ -11,7 +11,7 @@ class OffersTitleShowAllWidget extends StatelessWidget {
   final String title;
   final double padding;
 
-   OffersTitleShowAllWidget({Key key,@required this.onShowAllPressed,@required this.title,this.padding = 20}) : super(key: key);
+   OffersTitleShowAllWidget({Key key, this.onShowAllPressed,@required this.title,this.padding = 20}) : super(key: key);
    InitAppController appController = Get.find();
   @override
   Widget build(BuildContext context) {
@@ -37,28 +37,28 @@ class OffersTitleShowAllWidget extends StatelessWidget {
               ),
             ),
             Spacer(),
-            // InkWell(
-            //   onTap: onShowAllPressed,
-            //   child: Row(
-            //     children: [
-            //       Text(
-            //         'show_all'.tr,
-            //         style: TextStyle(color: AppColors.mainLightGreyColor),
-            //       ),
-            //       SizedBox(
-            //         width: 8,
-            //       ),
-            //       Transform(
-            //         alignment: Alignment.center,
-            //         transform: Matrix4.rotationY(appController.isArabicLang ? 0 :math.pi),
-            //         child: Image.asset(
-            //           'assets/images/icons/home/sec_arrow_ar.png',
-            //           height: 20,
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
+           onShowAllPressed != null ? InkWell(
+              onTap: onShowAllPressed,
+              child: Row(
+                children: [
+                  Text(
+                    'show_all'.tr,
+                    style: TextStyle(color: AppColors.mainLightGreyColor),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Transform(
+                    alignment: Alignment.center,
+                    transform: Matrix4.rotationY(appController.isArabicLang ? 0 :math.pi),
+                    child: Image.asset(
+                      'assets/images/icons/home/sec_arrow_ar.png',
+                      height: 20,
+                    ),
+                  ),
+                ],
+              ),
+            ) : SizedBox(),
 
           ],
         ),

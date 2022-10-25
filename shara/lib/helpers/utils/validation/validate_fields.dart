@@ -19,7 +19,7 @@ String validateEmailField(String email,{String currentEmail}){
 String validatePassword(String password,{String currentPassword}){
   if (password.isEmpty) {
     return 'password_must_fill'.tr;
-  } else if (password.length < 8) {
+  } else if (password.length < 4) {
     return 'password_less_than_6'.tr;
   }else if(currentPassword != null && password != currentPassword){
     return 'currentPassword_password_not_match'.tr;

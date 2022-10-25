@@ -46,8 +46,15 @@ class AppApiHandler {
     println(response.body);
     println('------------------------------- AppApiHandler response');
     // if(response.statusCode == 200){
-    final json = jsonDecode(response.body) ?? null;
-    callback(json, response.statusCode);
+    try {
+      final json = jsonDecode(response.body) ;
+      callback(json, response.statusCode);
+    } catch (error) {
+      println('------------------------------- AppApiHandler response $error');
+      callback(null, response.statusCode);
+    }
+
+
     // }else{
     //   callback(null);
     // }

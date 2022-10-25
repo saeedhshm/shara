@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/views/screens/account/signin_pages/code_verification.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../controllers/sign_up_controller.dart';
 import '../../../../helpers/app_colors.dart';
@@ -51,7 +53,7 @@ class PhoneNumberPage extends StatelessWidget {
                   Spacer(),
                 ],
               ),
-              isLogin: true,
+                isLogin: false,pageName: 'PhoneNumberPage',
               //   onClose: (){
               //   // signUpController.onClose();   6:10 PM
               //   signUpController.dispose();
@@ -75,6 +77,7 @@ class PhoneNumberPage extends StatelessWidget {
                               hintText: '5XXXXXXXXX',
                               labelText: 'phone_number'.tr,
                               icon: 'assets/images/icons/login/phone.png',
+                              keyboardType: TextInputType.phone,
                             ),
 
                             SizedBox(
@@ -82,7 +85,6 @@ class PhoneNumberPage extends StatelessWidget {
                             ),
                             MainButtonWidget(btnTitle: 'continue'.tr, onPressed: () {
                               FocusScope.of(context).unfocus();
-                              println('ggggggggggggggg');
                               // signUpController.loading.toggle();
                               signUpController.phone = int.tryParse(_phoneController.text).toString();
                               signUpController.sendRegisterPhone((arg1,arg2){
@@ -94,6 +96,49 @@ class PhoneNumberPage extends StatelessWidget {
                               });
 
                             },) ,
+                            SizedBox(
+                              height: 30,
+                            ),
+                           Wrap(
+                             crossAxisAlignment: WrapCrossAlignment.center,
+                             alignment: WrapAlignment.center,
+                             runSpacing: 8,
+                             spacing: 5,
+                             children: [
+                               Text('by_presseing_continue'.tr,style: TextStyle(
+                                 color: Colors.black54,
+                                 fontSize: 15
+                               ),),
+                               InkWell(
+                                 onTap: (){
+
+                                   var url = 'https://sharaksa.com/terms-condition';
+                                   if(Get.locale.languageCode == 'en'){
+                                     url = 'https://sharaksa.com/en/terms-condition';
+                                   }
+                                   launchUrlString(url);
+                                 },
+                                 child: Text('terms_and_conditions'.tr,style: TextStyle(
+                                   color: AppColors.mainGoldenDarkColor
+                                 ),),
+                               ),
+                               Text('and'.tr,style: TextStyle(
+                                   color: Colors.black54
+                               ),),
+                               InkWell(
+                                 onTap: (){
+                                   var url = 'https://sharaksa.com/privacy-policy';
+                                   if(Get.locale.languageCode == 'en'){
+                                     url = 'https://sharaksa.com/en/privacy-policy';
+                                   }
+                                   launchUrlString(url);
+                                 },
+                                 child: Text('privacy_policy'.tr,style: TextStyle(
+                                     color: AppColors.mainGoldenDarkColor
+                                 ),),
+                               ),
+                             ],
+                           )
 
                           ],
                         )),

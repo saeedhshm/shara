@@ -46,7 +46,7 @@ class InitAppController extends GetxController{
 
     var headers = {
       'Authorization' : 'bearer ${userData.value.token.accessToken}' ,
-      "x-localization": 'ar',
+      "x-localization": 'lang_code'.tr,
     } ;
     AppApiHandler.sendData(url: sendMessageUrl, callback: (json,stsCode){
       println();

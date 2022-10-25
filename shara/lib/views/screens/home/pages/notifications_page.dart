@@ -58,9 +58,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                               children: [
                                 Container(
                                   child: ClipRRect(
-                                    child: imageFromServer(
-                                      imageUrl: notification.image,
-                                    ),
+                                    child: loadImage(notification.image,),
                                     borderRadius: BorderRadius.circular(100),
                                   ),
                                   width: 90,

@@ -37,7 +37,7 @@ class UserData {
 
   void saveDataToStorage(){
     JsonHandler jsonHandler = JsonHandler(_User_Key);
-    jsonHandler.writeJson(this.toJson())   ;
+    jsonHandler.writeJson(this.toJson());
   }
 
  Future getDataFromStorage() async {
@@ -49,6 +49,8 @@ class UserData {
   }
 
   Future deleteUserFromStorage() async{
+    JsonHandler jsonHandler = JsonHandler(_User_Key);
+    jsonHandler.writeJson(null);
     await JsonHandler(_User_Key).deleteFile();
   }
 }

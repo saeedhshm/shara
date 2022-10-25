@@ -10,6 +10,11 @@ import 'package:shara/models/user_data.dart';
 import 'init_app_controller.dart';
 
 class LoginController extends GetxController {
+
+  InitAppController initAppController = Get.find();
+
+  // var isNewUser = true.obs;
+
   var isValidEmail = true.obs;
   var isValidPassword = true.obs;
   // var isValidConfirmPassword = true.obs;
@@ -22,29 +27,37 @@ class LoginController extends GetxController {
   var password = '';
   var loading = false.obs;
 
-  void loginAction(onLogin) {
+  var confirmationCode = '';
+
+  void sendConfirmCodeToPhoneAction(onLogin) {
+    // if(initAppController.userData.value.user != null){
+    //   email = (initAppController.userData.value.user?.email ?? '').split('@').first;
+    // }
+
     if (validateLoginFields()) {
       loading.value = true;
       var phoneOrEmail = int.tryParse(email) ?? email;
-      var body = {'phone': '$phoneOrEmail', 'password': password};
+
+      var body = {'phone': '$phoneOrEmail'};
       AppApiHandler.sendData(
-          url: loginUrl,
+          url: loginSendConfirmCodeUrl,
           body: body,
           header: {
-            "x-localization": 'ar',
+            "x-localization": 'lang_code'.tr,
             'Content-Type': 'application/x-www-form-urlencoded'
           },
           callback: (json, stsCode) {
             loading.value = false;
+            println('----------------->>>>>>>>>>> login json');
             println('------>> login json \n$json\n');
             if (stsCode == 200) {
-              InitAppController initApp = Get.find();
-              initApp.userData.value = UserData.fromJson(json);
-              initApp.userData.value.user.password = password;
-              initApp.userData.value.saveDataToStorage();
+
+              // initAppController.userData.value = UserData.fromJson(json);
+              // initAppController.userData.value.user.password = password;
+              // initAppController.userData.value.saveDataToStorage();
               onLogin(null);
             } else {
-              var message = json['message'];
+              var message = 'phone_or_password_uncorrect'.tr;
               println('--------->>>>>> error $message');
               onLogin(message);
 
@@ -52,6 +65,41 @@ class LoginController extends GetxController {
             }
           });
     }
+  }
+
+  void validateConfirmationCode(onDone){
+
+    var phoneOrEmail = int.tryParse(email) ?? email;
+    println(phoneOrEmail);
+    var body = {
+      'phone':'$phoneOrEmail',
+      'confirm_code':confirmationCode
+    } ;
+    loading.value = true;
+    println('------------ send code');
+    println(body);
+    println(confirmationCode);
+    AppApiHandler.sendData(
+        url: loginUrl,
+        body: body,
+        header: {"x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
+        callback: (json,stsCode) {
+          loading.value = false;
+          println('---- success = ${json['success']}');
+          if(json['success']){
+            initAppController.userData.value = UserData.fromJson(json);
+            initAppController.userData.value.saveDataToStorage();
+            onDone(true,null);
+          } else{
+
+            // InvalidUser invalidUser = InvalidUser.fromJson(json);
+            // println(invalidUser.message);
+            // println(invalidUser.validator.errors);
+            var message = 'code_not_correct_expired'.tr;
+            onDone(false,message) ;
+
+          }
+        });
   }
 
   bool validateLoginFields() {
@@ -66,40 +114,36 @@ class LoginController extends GetxController {
         isValidEmail.value = true;
       }
     } else {
-      if (email.isEmpty) {
-        isValidEmail.value = false;
-        validFields = false;
-        emailErrorMessage.value = 'email_phone_must_fill'.tr;
-      } else if (!EmailValidator.validate(email)) {
-        isValidEmail.value = false;
-        validFields = false;
-        emailErrorMessage.value = 'enter_a_valid_email'.tr;
-      } else {
-        isValidEmail.value = true;
-      }
+      isValidEmail.value = false;
+      validFields = false;
+      emailErrorMessage.value = 'email_phone_must_fill'.tr;
     }
 
-    if (password.isEmpty) {
-      isValidPassword.value = false;
-      validFields = false;
-      passwordErrorMessage.value = 'password_must_fill'.tr;
-    } else if (password.length < 8) {
-      isValidPassword.value = false;
-      validFields = false;
-      passwordErrorMessage.value = 'password_less_than_6'.tr;
-    } else {
-      isValidPassword.value = true;
-    }
+    // if (password.isEmpty) {
+    //   isValidPassword.value = false;
+    //   validFields = false;
+    //   passwordErrorMessage.value = 'password_must_fill'.tr;
+    // } else if (password.length < 4) {
+    //   isValidPassword.value = false;
+    //   validFields = false;
+    //   passwordErrorMessage.value = 'password_less_than_6'.tr;
+    // } else {
+    //   isValidPassword.value = true;
+    // }
 
     return validFields;
   }
 
   logout(
-      {@required UserData userData,
+      {
       @required Function onDone}) async {
 
-    await userData.deleteUserFromStorage();
+    // await initAppController.userData.value.deleteUserFromStorage();
+    // initAppController.userData.value.user = null;
+    // isNewUser.value = true;
+    update();
     onDone(true);
+
     // AppApiHandler.sendData(
     //     url: logoutUrl,
     //     body: {'email': userData.user.email, 'password': userData.user.password},
@@ -119,5 +163,11 @@ class LoginController extends GetxController {
     //     });
   }
 
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    // isNewUser.value = initAppController.userData.value.user == null;
+  }
 
 }

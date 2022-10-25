@@ -6,6 +6,7 @@ import 'package:overlay_support/overlay_support.dart';
 import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/controllers/login_controller.dart';
 import 'package:shara/helpers/utils/printutils.dart';
+import 'package:shara/views/screens/home/pages/discount_coupons/screen.dart';
 import 'package:shara/views/screens/splash/splash.dart';
 import 'helpers/translattion/local_strings.dart';
 import 'package:flutter/services.dart';

@@ -1,5 +1,6 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class OpenContainerWidget extends StatelessWidget {
 
@@ -10,6 +11,15 @@ class OpenContainerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    return InkWell(
+      onTap: (){
+        if(openWidget != null) {
+          Get.to(() => openWidget);
+        }
+      },
+      child: closedWidget,
+    );
     return OpenContainer(
       closedElevation: 0,
         openElevation: 0,

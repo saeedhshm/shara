@@ -32,8 +32,8 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
 
   final genderCtrl = TextEditingController();
 
-  final emailCtrl = TextEditingController();
-
+  // final emailCtrl = TextEditingController();
+  //
   final passwordCtrl = TextEditingController();
 
   final secretNumberCtrl = TextEditingController();
@@ -47,7 +47,7 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
       // birthDateCtrl.text = '14/06/2020';
       genderCtrl.text =
       '${initAppController.userData.value.user.points} ${'Point'.tr}';
-      emailCtrl.text = initAppController.userData.value.user.email;
+      // emailCtrl.text = initAppController.userData.value.user.email;
       secretNumberCtrl.text = '123456';
       passwordCtrl.text = initAppController.userData.value.user.password;
       return Scaffold(
@@ -91,16 +91,16 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
                   _rowItem('full_name'.tr, firstNameCtrl),
                   _rowItem('last_name'.tr, secondNameCtrl),
                   _rowItem('phone'.tr, phoneCtrl,readOnly: true),
-                  // _rowItem('points_count'.tr, genderCtrl),
-                  _rowItem('email'.tr, emailCtrl, suffix: true, onChange: () {
-
-                    Go.to(context, ChangeEmail((message){
-                      showConfirmedSnackbar('',message);
-                      setState(() {
-
-                      });
-                    }));
-                  },readOnly: true),
+                  _rowItem('points_count'.tr, genderCtrl),
+                  // _rowItem('email'.tr, emailCtrl, suffix: true, onChange: () {
+                  //
+                  //   Go.to(context, ChangeEmail((message){
+                  //     showConfirmedSnackbar('',message);
+                  //     setState(() {
+                  //
+                  //     });
+                  //   }));
+                  // },readOnly: true),
                   _rowItem('password'.tr, passwordCtrl, suffix: true, onChange: () {
                     Go.to(context, ChangePasswordPage((message){
                     println('----========= onChangeDone');
@@ -109,7 +109,7 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
                     });
                     }));
                   },readOnly: true,obscureText: true),
-                  // _rowItem('secret_number'.tr, secretNumberCtrl),
+                  _rowItem('secret_number'.tr, secretNumberCtrl),
                   SizedBox(
                     height: 50,
                   ),

@@ -19,7 +19,7 @@ class MyCouponsController extends GetxController{
       println('----->>>  all my transactions');
       var headers = {
         'Authorization' : 'bearer ${appController.userData.value.token.accessToken}' ,
-        "x-localization": 'ar',
+        "x-localization": 'lang_code'.tr,
       } ;
       AppApiHandler.getData(url: myCouponsUrl, header: headers,callback: (json){
         myCoupons.value.fromJson(json);

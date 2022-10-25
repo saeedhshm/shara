@@ -6,10 +6,12 @@ const partnerImage = '$mainUrl/public/uploads/partners/source';
 const membershipImage = '$mainUrl/public/uploads/membership/source';
 const offersImage = '$mainUrl/public/uploads/offers/source';
 const slidersImage = '$mainUrl/public/uploads/sliders/source';
+const discountCouponsImage = '$mainUrl/public/uploads/coupons/source';
 
 
 const String registerUrl = '$mainUrl/api/customer/auth/register';
 const String loginUrl = '$mainUrl/api/customer/auth/login';
+const String loginSendConfirmCodeUrl = '$mainUrl/api/customer/auth/login_send_confirm_code';
 
 const String validateConfirmCodeUrl = '$mainUrl/api/customer/auth/register_validate_confirm_code';
 
@@ -29,6 +31,8 @@ const sendMessageUrl = '$mainUrl/api/customer/send_message';
 const String myTransactionsUrl = '$mainUrl/api/customer/transactions';
 const String myCouponsUrl = '$mainUrl/api/customer/gift_cards';
 
+const String allDiscountCouponsUrl = '$mainUrl/api/customer/coupons';
+
 const String partnersUrl = '$mainUrl/api/customer/partners' ;
 const String membershipUrl = '$mainUrl/api/customer/memberships';
 const String calcPointsUrl = '$mainUrl/api/customer/calc_points';
@@ -38,3 +42,5 @@ const String offersUrl = '$mainUrl/api/customer/offers';
 const String promoCodesTypesUrl = '$mainUrl/api/customer/get_promo_codes_types';
 const String promoCodesUrl = '$mainUrl/api/customer/get_promo_codes';
 const String buyPromoCodePayUrl = '$mainUrl/api/customer/promo-codes-pay';
+
+const String innerTransferUrl = '$mainUrl/api/customer/transfer/inner_transfer';

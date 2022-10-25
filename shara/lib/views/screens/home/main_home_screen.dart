@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:shara/views/screens/all_offers/all_offers_screen.dart';
+import 'package:shara/views/screens/home/pages/discount_coupons/screen.dart';
 import 'package:shara/views/screens/home/pages/finance/finance_page.dart';
-import 'package:shara/views/screens/home/pages/home_page.dart';
+import 'package:shara/views/screens/home/pages/home_page/home_page.dart';
 import 'package:get/get.dart';
 import 'package:shara/views/screens/home/pages/memberships.dart';
+import 'package:shara/views/screens/home/pages/profile.dart';
 import 'package:shara/views/screens/home/pages/promo_codes/offers_points.dart';
 import 'package:shara/views/screens/partners/all_partners.dart';
 
@@ -57,14 +59,18 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     SizedBox(width: size.width, child: HomePage(onShowOffers: (){
                       _gotoSelectedTap(1);
                     },)),
-                    SizedBox(width: size.width, child: FinancePage()),
-                    SizedBox(width: size.width, child: PartnersPage(onBack: (){
+                    SizedBox(width: size.width, child: FinancePage(onBack: (){
+                      _gotoSelectedTap(0);
+                    },)),
+                    SizedBox(width: size.width, child: DiscountCoupons(onBack: (){
                       _gotoSelectedTap(0);
                     },),),
                     SizedBox(width: size.width,child: OffersOfPointsScreen(onBack: (){
                       _gotoSelectedTap(0);
                     },), ),
-                    SizedBox(width: size.width,child: MembershipPage(), )
+                    SizedBox(width: size.width,child: ProfilePage(onBack: (){
+                      _gotoSelectedTap(0);
+                    },), )
                   ],
                 ),
               ),
@@ -91,7 +97,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           BottomNavigationBarItem(
             icon:Image.asset('assets/images/icons/bottom_bar/PARTNER.png',color: AppColors.navBarUnselectedIconsColor,width: 20,height: 20,),
             activeIcon:Image.asset('assets/images/icons/bottom_bar/PARTNER.png',color: AppColors.mainGoldenDarkColor,width: 25,height: 25,),
-            label: 'partners'.tr,
+            label: 'disc_coupon'.tr,
             //   title: FittedBox(child: Text('partners'.tr),)
           ),
           BottomNavigationBarItem(

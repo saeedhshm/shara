@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 
 import '../../../../models/my_coupons_manager.dart';
-import '../../../widgets/image_from_server.dart';
+import '../../../widgets/network_image.dart';
 
 
 class MyCouponWidget extends StatelessWidget {
@@ -72,8 +71,7 @@ class MyCouponWidget extends StatelessWidget {
                                 padding: const EdgeInsets.all(0.0),
                                 child: SizedBox(
                                   // width: (width / 2.5),
-                                  child: imageFromServer(
-                                    imageUrl:card.photo,
+                                  child: loadImage(card.photo,
                                     fit: BoxFit.cover,
 
                                   ),

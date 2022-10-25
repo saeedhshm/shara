@@ -5,7 +5,8 @@ import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/views/widgets/main_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../account/login.dart';
+import '../../../controllers/init_app_controller.dart';
+import '../account/login/login.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({Key key}) : super(key: key);
@@ -24,19 +25,19 @@ class _IntroPageState extends State<IntroPage> {
     items.add(IntroItem(
         image: 'assets/images/intro/1.png',
         title: 'shara',
-        description: 'shara_description'.tr));
+        description: 'shara_description'));
     items.add(IntroItem(
         image: 'assets/images/intro/2.png',
-        title: 'points_to_cash'.tr,
-        description: 'points_to_cash_description'.tr));
+        title: 'points_to_cash',
+        description: 'points_to_cash_description'));
     items.add(IntroItem(
         image: 'assets/images/intro/3.png',
-        title: 'points_to_sells'.tr,
-        description: 'points_to_sells_description'.tr));
+        title: 'points_to_sells',
+        description: 'points_to_sells_description'));
     items.add(IntroItem(
         image: 'assets/images/intro/4.png',
-        title: 'points_for_u_beloveds'.tr,
-        description: 'points_for_u_beloveds_description'.tr));
+        title: 'points_for_u_beloveds',
+        description: 'points_for_u_beloveds_description'));
   }
 
   @override
@@ -71,7 +72,7 @@ class _IntroPageState extends State<IntroPage> {
                           ),
                           e.title != 'shara'
                               ? Text(
-                            e.title,
+                            e.title.tr,
                             style: TextStyle(
                                 color: AppColors.mainGoldenDarkColor,
                                 fontWeight: FontWeight.w900,
@@ -88,7 +89,7 @@ class _IntroPageState extends State<IntroPage> {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 8.0, horizontal: 50),
                             child: Text(
-                              e.description,
+                              e.description.tr,
                               style: TextStyle(
                                   fontSize: 18,
                                   color: AppColors.mainLightGreyColor),
@@ -197,8 +198,36 @@ class _IntroPageState extends State<IntroPage> {
                       children: [
                         GestureDetector(
                           onTap: (){
+                            InitAppController initApp = Get.find();
+                            if(initApp.isArabicLang){
+                              initApp.updateAppLanguage('en');
+                            }else{
+                              initApp.updateAppLanguage('ar');
+                            }
+                              // goToLogin(context);
 
-                              goToLogin(context);
+
+
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+
+                                borderRadius: BorderRadius.circular(8)
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 15),
+                              child: Text('lang'.tr,style: TextStyle(
+                                  color: AppColors.mainLightGreyColor,
+                                  fontSize: 15
+                              ),),
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        GestureDetector(
+                          onTap: (){
+
+                            goToLogin(context);
 
                           },
                           child: Container(

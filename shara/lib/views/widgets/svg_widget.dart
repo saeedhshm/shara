@@ -15,7 +15,7 @@ class SvgImageWidget extends StatelessWidget {
           imageName,
           color: color,
         placeholderBuilder: (context){
-            return imageName.toLowerCase().contains('png') || imageName.toLowerCase().contains('jpg') || imageName.toLowerCase().contains('jpeg')? Image.asset(imageName) : Image.asset('assets/images/icons/no_image.png');
+            return imageName.toLowerCase().contains('png') || imageName.toLowerCase().contains('jpg') || imageName.toLowerCase().contains('jpeg')? Image.asset(imageName,color: color,) : Image.asset('assets/images/icons/no_image.png');
         },
       ),
     );

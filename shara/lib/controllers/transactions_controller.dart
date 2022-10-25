@@ -20,7 +20,7 @@ class TransactionsController extends GetxController{
     println('----->>>  all my transactions');
     var headers = {
       'Authorization' : 'bearer ${appController.userData.value.token.accessToken}' ,
-      "x-localization": 'ar',
+      "x-localization": 'lang_code'.tr,
     } ;
     AppApiHandler.getData(url: myTransactionsUrl, header: headers,callback: (json){
       transactionsService.fromJson(json);

@@ -4,13 +4,18 @@ import 'package:get/get.dart';
 class LeadingBackArrow extends StatelessWidget {
 
   final double size;
-  const LeadingBackArrow({Key key,this.size = 40}) : super(key: key);
+  final Function onBack;
+  const LeadingBackArrow({Key key,this.size = 40,this.onBack}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap:(){
-        Get.back();
+        if(onBack != null){
+          onBack();
+        }else {
+          Get.back();
+        }
       },
       child: Container(
         // color: Colors.red,

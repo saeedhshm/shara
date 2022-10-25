@@ -83,7 +83,7 @@ class PartnersPage extends StatelessWidget {
                         width: 78,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(50),
-                          child: imageFromServer(imageUrl: partnersController.partners[index].logo,fit: BoxFit.contain),
+                          child: loadImage(partnersController.partners[index].logo,fit: BoxFit.contain),
                         ),
                       ),
                       SizedBox(height: 8,),

@@ -12,14 +12,37 @@ import 'contacts.dart';
 
 class FinancePage extends StatelessWidget {
 
-
-   FinancePage({Key key}) : super(key: key);
+  final Function onBack;
+   FinancePage({Key key,this.onBack}) : super(key: key);
 
    InitAppController appController = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: AppColors.mainLightColor,
+          elevation: 0,
+          title: Text(
+            'finance'.tr,
+            style: TextStyle(
+                color: AppColors.mainDarkGreyColor,
+                fontWeight: FontWeight.bold,
+                fontSize: 18),
+            maxLines: 3,
+          ),
+          leading: Container(
+            child: InkWell(
+              onTap: onBack,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          )),
       body: Scaffold(
         body: Container(
           width: double.infinity,
@@ -29,36 +52,7 @@ class FinancePage extends StatelessWidget {
             children: [
               // 01226973508
               // 0963321300
-              Container(
-                height: 100,
-                width: double.infinity,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 16.0, horizontal: 16),
-                      child: Row(
-                        children: [
-                          Container(
 
-                            width:150 ,
-                            child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 8.0, vertical: 4),
-                                child: Image.asset('assets/images/icons/logo.png',width: 150,)
-                            ),
-                          )
-                          ,
-                          Spacer(),
-
-
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               Expanded(child: Container(
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -71,8 +65,8 @@ class FinancePage extends StatelessWidget {
                       ),
                     ],
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30),
+                      topLeft: Radius.circular(0),
+                      topRight: Radius.circular(0),
 
                     )),
                 child: Padding(
@@ -100,7 +94,7 @@ class FinancePage extends StatelessWidget {
                           ),
                         ),
                         decoration: BoxDecoration(
-                          color: AppColors.peageColor,
+                          color: Colors.white, //AppColors.peageColor.withOpacity(0.3),
                           border: Border.all(color: AppColors.goldColor,width: 1),
                           borderRadius: BorderRadius.circular(25)
                         ),
@@ -118,9 +112,57 @@ class FinancePage extends StatelessWidget {
                           Get.to(()=>ContactsPage());
                         },child: FinancePageItemWidget(title: 'transfer_points'.tr, imageIcon: 'assets/images/icons/finance_icons/8.svg',)),
                         InkWell(onTap: (){
-                          Get.to(()=>ChooseBeneficiaryPage());
+                          // Get.to(()=>ChooseBeneficiaryPage());
+                          Get.defaultDialog(
+                            title: "".tr,
+                            middleText: "verify_your_id".tr,
+                            middleTextStyle:  TextStyle(
+                                color: Colors.red,
+                                fontSize: 18
+                            ),
+                            titleStyle: TextStyle(
+                                color: Colors.red,
+                                fontSize: 18
+                            ),
+                            confirm:   FlatButton(
+                              child:  Text("press_to_verify_id".tr,style: TextStyle(
+                                  color: Colors.white
+                              ),),
+                              color: AppColors.mainGoldenDarkColor,
+                              onPressed: () {
+                                Get.back();
+                                // Get.to(()=>MyCouponsPage());
+
+                              },
+                            ),
+                          );
                         },child: FinancePageItemWidget(title: 'local_transfer'.tr, imageIcon: 'assets/images/icons/finance_icons/4.png')),
-                        FinancePageItemWidget(title: 'international_transfer'.tr, imageIcon: 'assets/images/icons/finance_icons/3.png'),
+                        InkWell(onTap: (){
+                          // Get.to(()=>ChooseBeneficiaryPage());
+                          Get.defaultDialog(
+                            title: "".tr,
+                            middleText: "verify_your_id".tr,
+                            middleTextStyle:  TextStyle(
+                                color: Colors.red,
+                                fontSize: 18
+                            ),
+                            titleStyle: TextStyle(
+                                color: Colors.red,
+                                fontSize: 18
+                            ),
+                            confirm:   FlatButton(
+                              child:  Text("press_to_verify_id".tr,style: TextStyle(
+                                  color: Colors.white
+                              ),),
+                              color: AppColors.mainGoldenDarkColor,
+                              onPressed: () {
+                                Get.back();
+                                // Get.to(()=>MyCouponsPage());
+
+                              },
+                            ),
+                          );
+                        },child: FinancePageItemWidget(title: 'international_transfer'.tr, imageIcon: 'assets/images/icons/finance_icons/3.png')),
 
                       ],)
                     ],
