@@ -62,7 +62,7 @@ class TransferToContactPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Column(
+          child: Obx(()=>Column(
             children: [
               Container(
                 width: double.infinity,
@@ -115,12 +115,13 @@ class TransferToContactPage extends StatelessWidget {
                 height: 20,
               ),
               CustomTextFormField(
-                isValideField: true,
-                errorMessage: 'signUpController.firstNameErrorMessage.value',
+                isValideField: controller.errorMsgContactName.value == '',
+                errorMessage: controller.errorMsgContactName.value,
                 controller: transferToCtrl,
                 hintText: 'contact'.tr,
                 labelText: 'contact'.tr,
                 readOnly: readOnly,
+
                 textCapitalization: TextCapitalization.sentences,
                 // icon: 'assets/images/icons/login/name.png',
               ),
@@ -128,8 +129,8 @@ class TransferToContactPage extends StatelessWidget {
                 height: 20,
               ),
               CustomTextFormField(
-                isValideField: true,
-                errorMessage: 'signUpController.firstNameErrorMessage.value',
+                isValideField: controller.errorMsgAmmount.value == '',
+                errorMessage: controller.errorMsgAmmount.value,
                 controller: ammountCtrl,
                 hintText: '0.00'.tr,
                 labelText: 'sum_to_transfer'.tr,
@@ -180,7 +181,7 @@ class TransferToContactPage extends StatelessWidget {
                 controller.sendInnerTransfer('512345678', ammountCtrl.text);
               })
             ],
-          ),
+          )),
         ),
       ),
     );

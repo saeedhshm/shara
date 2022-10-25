@@ -195,6 +195,9 @@ Map<String, String> englishString = {
   'and':'and',
   'privacy_policy':'Privacy policy',
 
+  'enter_contact_phone':'Enter a correct phone',
+  'enter_valid_amount':'Enter a valid amount',
+
   'reason_porpose': 'A reason to transfer',
   'add_info': 'Add information',
   'notice': 'Notice',

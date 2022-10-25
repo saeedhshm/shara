@@ -190,6 +190,9 @@ Map<String,String>  arabicStrings = {
 'invite':'دعوة',
   'something_went_wrong':'هناك خطأ ما، يرجي المحاولة في وقت لاحق',
 
+  'enter_contact_phone':'ادخل رقم الجوال',
+  'enter_valid_amount':'ادخل قيمة التحويل',
+
   'phone_or_password_uncorrect':'ليس لديك حساب في شارة',
   'wrong_password':'كلمة المرور غير صحيحة',
   'code_not_correct_expired':'كود التفعيل غير صحيح او انتهت صلاحيته',

@@ -10,6 +10,8 @@ class TransferPointsController extends GetxController{
 
   var loading = false.obs;
 
+
+
   @override
   void onInit() {
     // TODO: implement onInit
