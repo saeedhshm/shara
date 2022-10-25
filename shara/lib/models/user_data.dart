@@ -81,7 +81,7 @@ class User {
   int id;
   int isActive;
   String phone;
-  dynamic points;
+  double _points;
   String email;
   String firstName;
   String lastName;
@@ -91,28 +91,28 @@ class User {
   String password;
   Membership membership;
   int membershipTypeId;
-  User(
-      {this.id,
-        this.isActive,
-        this.phone,
-        this.points,
-        this.email,
-        this.firstName,
-        this.lastName,
-        this.membershipTypeId,
-        this.avatar,
-        this.gender,
-        this.password,
-  this.membership,});
+  // User(
+  //     {this.id,
+  //       this.isActive,
+  //       this.phone,
+  //       this.points,
+  //       this.email,
+  //       this.firstName,
+  //       this.lastName,
+  //       this.membershipTypeId,
+  //       this.avatar,
+  //       this.gender,
+  //       this.password,
+  // this.membership,});
 
   User.fromJson(Map<String, dynamic> json) {
-    println('-=-==------------=-=- user');
-    println(json);
-    println('-=-==------------=-=- user');
+
+    _points = double.tryParse('${json['points']}') ?? 0.0;
+
     id = json['id'];
     isActive = json['is_active'];
     phone = json['phone'];
-    points = json['points'];
+
     email = json['email'];
     firstName = json['first_name'];
     lastName = json['last_name'];
@@ -126,13 +126,25 @@ class User {
         : null;
   }
 
+  String get points{
+
+    _points = double.tryParse('${_points.toStringAsFixed(2)}') ?? 0.0;
+    var newNumber = '';
+    if (_points == _points.toInt()) {
+      newNumber = '${_points.toInt()}';
+    }else{
+      newNumber = '${_points.toStringAsFixed(2)}';
+    }
+    return newNumber;
+  }
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
     data['is_active'] = this.isActive;
     data['membership_type_id'] = this.membershipTypeId;
     data['phone'] = this.phone;
-    data['points'] = this.points;
+    data['points'] = this._points;
     data['email'] = this.email;
     data['first_name'] = this.firstName;
     data['last_name'] = this.lastName;

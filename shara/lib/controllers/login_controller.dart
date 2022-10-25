@@ -69,7 +69,7 @@ class LoginController extends GetxController {
 
   void validateConfirmationCode(onDone){
 
-    var phoneOrEmail = int.tryParse(email) ?? email;
+    var phoneOrEmail = int.tryParse(email) ?? 0;
     println(phoneOrEmail);
     var body = {
       'phone':'$phoneOrEmail',

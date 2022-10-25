@@ -13,6 +13,9 @@ const String registerUrl = '$mainUrl/api/customer/auth/register';
 const String loginUrl = '$mainUrl/api/customer/auth/login';
 const String loginSendConfirmCodeUrl = '$mainUrl/api/customer/auth/login_send_confirm_code';
 
+const String profileDataUrl = '$mainUrl/api/customer/profile_data';
+
+
 const String validateConfirmCodeUrl = '$mainUrl/api/customer/auth/register_validate_confirm_code';
 
 const String sendConfirmCodeUrl = '$mainUrl/api/customer/auth/register_send_phone';

@@ -56,4 +56,18 @@ class InitAppController extends GetxController{
     }, body: params,header: headers);
   }
 
+  void getUserProfileInfo(){
+    var headers = {
+      'Authorization' : 'bearer ${userData.value.token.accessToken}' ,
+      "x-localization": 'lang_code'.tr,
+    } ;
+
+    AppApiHandler.getData(url: profileDataUrl, header: headers ,callback: (json){
+      User user = User.fromJson(json);
+      userData.value.user = user;
+      userData.value.saveDataToStorage();
+      update();
+    });
+  }
+
 }

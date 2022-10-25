@@ -20,16 +20,29 @@ import 'home_widgets/home_appbar.dart';
 import 'home_widgets/slider_banner_widget.dart';
 
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
 
   final Function onShowOffers;
 
   HomePage({Key key,this.onShowOffers}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   final InitAppController initAppController = Get.find();
+
   final homeController  = Get.find<HomeController>();
+
   PromoCodeController controller =  Get.find();
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    initAppController.getUserProfileInfo();
+  }
 
   @override
   Widget build(BuildContext context) {
