@@ -99,17 +99,17 @@ class _ConfirmPasswordPageState extends State<ConfirmPasswordPage> {
                       signUpController.confirmPassword = '${textEditing1.text}${textEditing2
                           .text}${textEditing3.text}${textEditing4.text}';
                       if(textEditing1.text.isEmpty || textEditing2.text.isEmpty || textEditing3.text.isEmpty || textEditing4.text.isEmpty) {
-                        showErrorSnackbar('Error'.tr, 'password_must_fill'.tr);
+                        SnackBars.showErrorSnackBar('Error'.tr, 'password_must_fill'.tr);
                       }else if(signUpController.confirmPassword != signUpController.password){
 
-                        showErrorSnackbar('Error'.tr, 'confirm_password_not_match'.tr);
+                        SnackBars.showErrorSnackBar('Error'.tr, 'confirm_password_not_match'.tr);
                         // Get.to(()=>ConfirmPasswordPage());
                       }else{
                         signUpController.signUpAction((arg1,arg2){
                           if(arg1 == null){
                             Go.toAndOff(context, MainHomeScreen());
                           }else{
-                            showErrorSnackbar('Error'.tr, 'something_went_wrong'.tr);
+                            SnackBars.showErrorSnackBar('Error'.tr, 'something_went_wrong'.tr);
                           }
                         });
                       }

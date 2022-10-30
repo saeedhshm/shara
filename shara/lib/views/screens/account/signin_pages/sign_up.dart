@@ -141,7 +141,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   err += '\n${e.tr}';
                                 }
                                 // var err =  errors.join('\n');
-                                showErrorSnackbar(mssg, '$err');
+                                SnackBars.showErrorSnackBar(mssg, '$err');
                               }
                             });
                           },) ,

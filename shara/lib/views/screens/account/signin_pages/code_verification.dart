@@ -124,7 +124,7 @@ class _CodeVerificationPageState extends State<CodeVerificationPage> {
                       // println(signUpController.confirmationCode);
                       // return;
                       if(textEditing1.text.isEmpty || textEditing2.text.isEmpty || textEditing3.text.isEmpty || textEditing4.text.isEmpty) {
-                        showErrorSnackbar('Error'.tr, 'enter_conf_code_correctly'.tr);
+                        SnackBars.showErrorSnackBar('Error'.tr, 'enter_conf_code_correctly'.tr);
                       }else{
                         signUpController.confirmationCode = '${textEditing1.text}${textEditing2
                             .text}${textEditing3.text}${textEditing4.text}';
@@ -134,7 +134,7 @@ class _CodeVerificationPageState extends State<CodeVerificationPage> {
 
                             Get.to(()=>SignUpPage());
                           }else{
-                            showErrorSnackbar('Error'.tr, arg2);
+                            SnackBars.showErrorSnackBar('Error'.tr, arg2);
                           }
                         });
                       }

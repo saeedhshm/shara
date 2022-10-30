@@ -102,7 +102,7 @@ class _PasswordPageState extends State<PasswordPage> {
                   Expanded(child: MainButtonWidget(btnTitle:widget.isFromLogin ? 'create'.tr : 'sign_in'.tr, onPressed: (){
 
                     if(textEditing1.text.isEmpty || textEditing2.text.isEmpty || textEditing3.text.isEmpty || textEditing4.text.isEmpty) {
-                      showErrorSnackbar('Error'.tr, 'password_must_fill'.tr);
+                      SnackBars.showErrorSnackBar('Error'.tr, 'password_must_fill'.tr);
                     }else{
                       var password = '${textEditing1.text}${textEditing2
                           .text}${textEditing3.text}${textEditing4.text}';
@@ -129,7 +129,7 @@ class _PasswordPageState extends State<PasswordPage> {
                         // textEditing2.text = '';
                         // textEditing3.text = '';
                         // textEditing4.text = '';
-                        showErrorSnackbar('Error'.tr, 'wrong_password'.tr);
+                        SnackBars.showErrorSnackBar('Error'.tr, 'wrong_password'.tr);
                       }
                     }
 

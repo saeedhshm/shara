@@ -111,7 +111,7 @@ class ChangeEmail extends StatelessWidget{
                                   Get.back();
                                   onChange(message);
                                 } else{
-                                  showErrorSnackbar('Error'.tr, message);
+                                  SnackBars.showErrorSnackBar('Error'.tr, message);
                                 }
                               });
                             },

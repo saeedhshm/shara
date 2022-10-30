@@ -131,10 +131,10 @@ class _ResetNewPasswordState extends State<ResetNewPassword> {
                                   println(done);
                                   println(message);
                                   if(done){
-                                    showConfirmedSnackbar('',message);
+                                    SnackBars.showConfirmedSnackBar('',message);
                                     Go.toAndOff(context, LoginPage());
                                   } else{
-                                    showErrorSnackbar('Error'.tr, 'invalid_code_entered'.tr);
+                                    SnackBars.showErrorSnackBar('Error'.tr, 'invalid_code_entered'.tr);
                                   }
                                 });
                               },

@@ -48,11 +48,11 @@ class InnerTransferController extends GetxController{
             if(json['success']){
               Get.back();
               println('---- success = $json');
-              showConfirmedSnackbar('success'.tr,json['message']);
+              SnackBars.showConfirmedSnackBar('success'.tr,json['message']);
 
             } else{
               println('---- failed = $json');
-              showErrorSnackbar('failed'.tr, json['message']);
+              SnackBars.showErrorSnackBar('failed'.tr, json['message']);
             }
           });
     }

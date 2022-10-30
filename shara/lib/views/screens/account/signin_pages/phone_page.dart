@@ -91,7 +91,7 @@ class PhoneNumberPage extends StatelessWidget {
                                 if(arg1) {
                                   Get.to(()=>CodeVerificationPage());
                                 }else{
-                                  showErrorSnackbar('Error'.tr, 'registered_number_login'.tr);
+                                  SnackBars.showErrorSnackBar('Error'.tr, 'registered_number_login'.tr);
                                 }
                               });
 

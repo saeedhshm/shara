@@ -141,12 +141,12 @@ class _SendMessagePageState extends State<SendMessagePage> {
 
                       });
                       if(done){
-                        showConfirmedSnackbar('',message);
+                        SnackBars.showConfirmedSnackBar('',message);
                         Future.delayed(Duration(milliseconds: 2600),(){
                           Get.back(closeOverlays: true);
                         });
                       } else{
-                        showErrorSnackbar('Error'.tr, message);
+                        SnackBars.showErrorSnackBar('Error'.tr, message);
                       }
                     });
                   })

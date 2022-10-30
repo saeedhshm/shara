@@ -93,11 +93,11 @@ class ForgetPasswordWidget extends StatelessWidget {
                                     println(done);
                                     println(message);
                                     if (done) {
-                                      showConfirmedSnackbar('', message);
+                                      SnackBars.showConfirmedSnackBar('', message);
                                       Go.to(context, ResetNewPassword());
                                     } else {
 
-                                      showErrorSnackbar(
+                                      SnackBars. showErrorSnackBar(
                                           'Error'.tr,message );
                                     }
                                   });

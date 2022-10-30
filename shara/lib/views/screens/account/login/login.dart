@@ -200,7 +200,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
                                    if(message == null){
                                      Go.to(context, CodeVerificationLoginPage());
                                    } else{
-                                     showErrorSnackbar('Error'.tr, message);
+                                     SnackBars.showErrorSnackBar('Error'.tr, message);
                                    }
                                 });
                               },

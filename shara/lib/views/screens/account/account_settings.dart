@@ -104,7 +104,7 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
                   _rowItem('password'.tr, passwordCtrl, suffix: true, onChange: () {
                     Go.to(context, ChangePasswordPage((message){
                     println('----========= onChangeDone');
-                    showConfirmedSnackbar('',message);
+                    SnackBars.showConfirmedSnackBar('',message);
                     setState(() {
                     });
                     }));
@@ -128,9 +128,9 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
                       println(done);
                       println(message);
                       if(done){
-                        showConfirmedSnackbar('',message);
+                        SnackBars.showConfirmedSnackBar('',message);
                       } else{
-                        showErrorSnackbar('Error'.tr, message);
+                        SnackBars.showErrorSnackBar('Error'.tr, message);
                       }
                     }) ;
                   })

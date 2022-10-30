@@ -306,7 +306,7 @@ class ProfilePage extends StatelessWidget {
                     if(done){
                       Go.toAndOff(context, LoginPage());
                     } else{
-                      showErrorSnackbar('Error'.tr, 'there_is_wrong_somewhere'.tr);
+                      SnackBars.showErrorSnackBar('Error'.tr, 'there_is_wrong_somewhere'.tr);
                     }
                   }, );
                 }),
