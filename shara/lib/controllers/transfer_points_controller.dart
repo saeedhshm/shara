@@ -3,10 +3,15 @@ import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 
+import '../helpers/apis_urls/api.dart';
+import '../helpers/apis_urls/app_urls.dart';
+import '../models/app_contact.dart';
+import 'init_app_controller.dart';
+
 class TransferPointsController extends GetxController{
 
-  var contacts = <Contact>[].obs;
-  var _contacts = <Contact>[];
+  var contacts = <AppContact>[].obs;
+  var _contacts = <AppContact>[];
 
   var loading = false.obs;
 
@@ -24,28 +29,71 @@ class TransferPointsController extends GetxController{
       contacts.value = _contacts;
       return;
     }
-    contacts.value = _contacts.where((e) => e.displayName.toLowerCase().contains(name.toLowerCase())).toList();
+    contacts.value = _contacts.where((e) => e.name.toLowerCase().contains(name.toLowerCase())).toList();
   }
   getContacts() async {
-    println('--------------------------- contact in getContacts()');
     loading.value = true;
     await Permission.contacts.request();
     var status = await Permission.contacts.status;
-    println('--------------------------- contact ${status.isGranted}');
     if (!status.isGranted) {
-      // We didn't ask for permission yet or the permission has been denied before but not permanently.
-      println('--------------------------- contact requst');
       status = await Permission.contacts.request();
     }else{
-      println('--------------------------- contact not requested');
     }
 
     if(status.isGranted){
       List<Contact> data = await FastContacts.allContacts;
-      _contacts = data.where((element) => element.phones.isNotEmpty).toList();
+
+      for(var contact in data){
+        if(contact.phones.isNotEmpty){
+          List<AppContact> ac = [];
+          for(var phone in contact.phones){
+            // var mob = phone.replaceAll('-', '').replaceAll(' ', '').replaceAll('+', '00');
+            var mob = '';
+            for(var i in phone.split('')){
+              if(int.tryParse(i) != null){
+                mob += i;
+              }
+            }
+            if('${int.tryParse(mob)}'.substring(0,1) == '5'){
+              mob = '966'+'${int.tryParse(mob)}';
+            }
+            AppContact c = AppContact(contact.displayName,int.tryParse(mob).toString());
+            ac.add(c);
+          }
+          Map<String, AppContact> mp = {};
+          for (var item in ac) {
+            mp[item.phone] = item;
+          }
+          _contacts.addAll(mp.values.toList());
+        }
+      }
+     _contacts = _contacts.where((element) => '${int.tryParse(element.phone)}'.substring(0,3) == '966' ).toList();
+
     contacts.value = _contacts;
+
+    List<int> pohone = _contacts.map((e) => int.tryParse(e.phone)).toList();
+
+      InitAppController appController = Get.find();
+      var body = {
+        "phones": '[${pohone.join(',')}]'
+      };
+      AppApiHandler.sendData(
+          url: syncPhonesUrl,
+          body: body,
+          header: {
+            'Authorization' : 'bearer ${appController.userData.value.token.accessToken}' ,
+            "x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
+          callback: (json,stsCode) {
+            loading.value = false;
+            println('---- success ----- = $json');
+            if(json['success']){
+
+            } else{
+            }
+          });
+
     }
-    loading.value = false;
+    // loading.value = false;
   }
 
 }

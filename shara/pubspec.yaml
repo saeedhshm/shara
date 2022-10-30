@@ -87,6 +87,7 @@ flutter:
      - assets/images/icons/home/
      - assets/images/icons/login/
      - assets/images/icons/profile/
+     - assets/images/icons/profile/verify_id/
      - assets/images/icons/offer/
      - assets/images/icons/membership_icons/
      - assets/images/icons/lang/

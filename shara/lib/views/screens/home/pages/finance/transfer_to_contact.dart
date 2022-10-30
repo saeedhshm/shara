@@ -5,21 +5,22 @@ import 'package:shara/controllers/inner_transfer.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 
 import '../../../../../helpers/app_colors.dart';
+import '../../../../../models/app_contact.dart';
 import '../../../../widgets/custom_text_form_field.dart';
 import '../../../../widgets/main_button.dart';
 
 class TransferToContactPage extends StatelessWidget {
 
   bool readOnly = false;
-  final Contact contact;
+  final AppContact contact;
   String _phone = '';
 
   final InnerTransferController controller = Get.put(InnerTransferController());
 
   TransferToContactPage({Key key, @required this.contact}) : super(key: key) {
     if(contact != null){
-      _phone = contact.phones.first.replaceAll('-', '').replaceAll(' ', '');
-      transferToCtrl.text ='${contact.displayName} ($_phone)';
+      _phone = contact.phone;
+      transferToCtrl.text ='${contact.name} ($_phone)';
     }
     readOnly = transferToCtrl.text.isNotEmpty;
   }
@@ -177,8 +178,8 @@ class TransferToContactPage extends StatelessWidget {
                 height: 20,
               ),
               MainButtonWidget(btnTitle: 'conform'.tr, onPressed: () {
-                println('===>>>>>> $_phone , ${ammountCtrl.text}');
-                controller.sendInnerTransfer('512345678', ammountCtrl.text);
+
+                controller.sendInnerTransfer('${contact.phone}', ammountCtrl.text);
               })
             ],
           )),

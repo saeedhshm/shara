@@ -47,3 +47,5 @@ const String promoCodesUrl = '$mainUrl/api/customer/get_promo_codes';
 const String buyPromoCodePayUrl = '$mainUrl/api/customer/promo-codes-pay';
 
 const String innerTransferUrl = '$mainUrl/api/customer/transfer/inner_transfer';
+
+const String syncPhonesUrl = '$mainUrl/api/customer/transfer/synchronize_phones';

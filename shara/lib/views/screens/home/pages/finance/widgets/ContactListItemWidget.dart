@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../../../helpers/app_colors.dart';
+import '../../../../../../models/app_contact.dart';
 
 class ContactListItemWidget extends StatelessWidget {
   
-  final Contact contact;
+  final AppContact contact;
   const ContactListItemWidget(this.contact,{Key key}) : super(key: key);
 
   @override
@@ -34,14 +35,14 @@ class ContactListItemWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('${contact.displayName}',style: TextStyle(
+                  Text('${contact.name}',style: TextStyle(
                       fontSize: 18,
                       color: AppColors.mainDarkGreyColor
                   ),),
                   SizedBox(height: 8,),
                   Row(
                     children: [
-                      Text('${contact.phones.first.replaceAll('-', '').replaceAll(' ', '').replaceAll('+', '00')}',style: TextStyle(
+                      Text('${contact.phone}',style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                           color: AppColors.navBarUnselectedIconsColor

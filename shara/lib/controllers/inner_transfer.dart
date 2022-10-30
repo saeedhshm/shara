@@ -1,13 +1,16 @@
 import 'package:get/get.dart';
+import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 
 import '../helpers/apis_urls/api.dart';
 import '../helpers/apis_urls/app_urls.dart';
 import '../helpers/utils/printutils.dart';
+import 'init_app_controller.dart';
 
 class InnerTransferController extends GetxController{
 
   var loading = false.obs;
 
+  InitAppController appController = Get.find();
 
   var errorMsgContactName = ''.obs;
   var errorMsgAmmount = ''.obs;
@@ -24,26 +27,32 @@ class InnerTransferController extends GetxController{
     }else{
       errorMsgAmmount.value = '';
     }
-    return;
+
     if(phone.isNotEmpty && ammount.isNotEmpty){
 
+      loading.value = true;
       var body = {
-        'to':'$phone',
+        'to':'${phone.substring(3)}',
         'amount':ammount
       } ;
       AppApiHandler.sendData(
           url: innerTransferUrl,
           body: body,
-          header: {"x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
+          header: {
+            'Authorization' : 'bearer ${appController.userData.value.token.accessToken}' ,
+            "x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
           callback: (json,stsCode) {
+            println('---->>>> $json');
             loading.value = false;
-            println('---- success = ${json['success']}');
+
             if(json['success']){
+              Get.back();
+              println('---- success = $json');
+              showConfirmedSnackbar('success'.tr,json['message']);
 
             } else{
-
-
-
+              println('---- failed = $json');
+              showErrorSnackbar('failed'.tr, json['message']);
             }
           });
     }

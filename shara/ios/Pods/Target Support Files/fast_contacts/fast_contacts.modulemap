@@ -1,0 +1,6 @@
+framework module fast_contacts {
+  umbrella header "fast_contacts-umbrella.h"
+
+  export *
+  module * { export * }
+}

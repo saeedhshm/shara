@@ -54,6 +54,18 @@
       <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/firebase_core/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/firebase_core/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/firebase_core/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/fast_contacts/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/fast_contacts/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/fast_contacts/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/fast_contacts/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/fast_contacts/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/fast_contacts/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

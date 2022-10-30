@@ -8,6 +8,7 @@ import 'package:shara/views/screens/home/pages/finance/transfer_to_contact.dart'
 import 'package:shara/views/screens/home/pages/finance/widgets/ContactListItemWidget.dart';
 
 import '../../../../../helpers/app_colors.dart';
+import '../../../../../models/app_contact.dart';
 
 class ContactsPage extends StatelessWidget {
   ContactsPage({Key key}) : super(key: key);
@@ -123,7 +124,7 @@ class ContactsPage extends StatelessWidget {
                   )
                       : ListView.separated(
                           itemBuilder: (context, index) {
-                            Contact contact = controller.contacts[index];
+                            AppContact contact = controller.contacts[index];
                             return GestureDetector(
                               onTap: () {
                                 Get.to(() => TransferToContactPage(
