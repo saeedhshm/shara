@@ -194,7 +194,8 @@ Map<String, String> englishString = {
   'terms_and_conditions':'Terme and conditions',
   'and':'and',
   'privacy_policy':'Privacy policy',
-
+  'insert_points_to_buy':'Enter number of points',
+  'please_points_to_buy':'Please, enter points you want to buy',
   'enter_contact_phone':'Enter a correct phone',
   'enter_valid_amount':'Enter a valid amount',
 

@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
       onTap: (){
         FocusScope.of(context).unfocus();
       },
-      child: OverlaySupport(
+      child: OverlaySupport.global(
         child: GetMaterialApp(
           // localizationsDelegates: context.localizationDelegates,
           // supportedLocales: context.supportedLocales,
@@ -72,6 +72,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
           home: MyHomePage(),
+
           // home: ProfilePage()
           // home: LoginPage(),
           // home: MainHomeScreen(),

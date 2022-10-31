@@ -186,6 +186,8 @@ Map<String,String>  arabicStrings = {
   'local_transfer':'تحويل محلي',
 'balance':'رصيد',
 'my_account':'حسابي',
+  'please_points_to_buy':'من فضلك ادخل عدد النقاط المراد شراؤها',
+  'insert_points_to_buy':'أدخل عدد النقاط المراد شراءها',
   'not_me':'الدخول بحساب اخر او انشاء كلمة مرور جديدة',
 'invite':'دعوة',
   'something_went_wrong':'هناك خطأ ما، يرجي المحاولة في وقت لاحق',

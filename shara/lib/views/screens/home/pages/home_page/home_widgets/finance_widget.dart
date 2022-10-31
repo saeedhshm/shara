@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 
+import '../../../../../../controllers/buy_points_controller.dart';
 import '../../../../../../helpers/app_colors.dart';
 import '../../../../../widgets/svg_widget.dart';
 import '../../finance/contacts.dart';
@@ -31,6 +32,7 @@ class FinanceWidget extends StatelessWidget {
         child: Row(
           children: [
             _ItemWidget(title: 'add_balance'.tr, imageIcon: 'assets/images/icons/finance_icons/2.png',onTap: (){
+              Get.put(BuyPointsController());
               Get.bottomSheet(
                   BottomSheetWidget()
               );

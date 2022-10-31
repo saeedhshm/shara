@@ -59,7 +59,7 @@ dependencies:
   overlay_support: ^2.0.1
   fast_contacts: ^1.0.0
   permission_handler: ^10.1.0
-#  easy_localization: ^3.0.0
+
 
 dev_dependencies:
   flutter_test:
@@ -90,6 +90,7 @@ flutter:
      - assets/images/icons/profile/verify_id/
      - assets/images/icons/offer/
      - assets/images/icons/membership_icons/
+     - assets/images/icons/payment_icons/
      - assets/images/icons/lang/
      - assets/images/4.png
      - assets/images/4.jpg

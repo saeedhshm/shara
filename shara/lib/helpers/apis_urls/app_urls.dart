@@ -49,3 +49,6 @@ const String buyPromoCodePayUrl = '$mainUrl/api/customer/promo-codes-pay';
 const String innerTransferUrl = '$mainUrl/api/customer/transfer/inner_transfer';
 
 const String syncPhonesUrl = '$mainUrl/api/customer/transfer/synchronize_phones';
+
+// payments {{domain}}/api/customer/payment/generate_payment_url
+const String urlPaymentGeneratorUrl = '$mainUrl/api/customer/payment/generate_payment_url';
