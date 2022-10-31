@@ -21,17 +21,20 @@ class DiscountCouponsController extends GetxController{
 
   getAllCoupons(){
     loading.value = true;
-     currentPage = 1;
-     nextPage = 1;
+    currentPage = 1;
+    nextPage = 1;
     AppApiHandler.getData(url: '$allDiscountCouponsUrl?page=$currentPage', callback: (json){
       println('---------------- allDiscountCouponsUrl');
-      println(json);
+      println('$allDiscountCouponsUrl?page=$currentPage');
+      println('---------------- allDiscountCouponsUrl 1');
       couponsManager.value.data.clear();
+      println('---------------- allDiscountCouponsUrl 2');
       couponsManager.value .fromJson(json);
+      println('---------------- allDiscountCouponsUrl 3');
       nextPage++;
       // println('---------------- allDiscountCouponsUrl ${couponsManager.value.data.length}');
       loading.value = false;
-      println('-------------------------------------');
+      println('---------------- allDiscountCouponsUrl 4');
     });
   }
 

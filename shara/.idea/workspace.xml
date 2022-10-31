@@ -9,37 +9,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5b4870d-4bd8-4b8a-a715-9a946df198d8" name="Changes" comment="refactor SnackBars class">
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/payment_icons/Stc-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/payment_icons/am_exp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/payment_icons/apple_pay.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/payment_icons/madacard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/payment_icons/mc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/icons/payment_icons/visa_PNG4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/controllers/buy_points_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/widgets/web_page.dart" afterDir="false" />
+    <list default="true" id="e5b4870d-4bd8-4b8a-a715-9a946df198d8" name="Changes" comment="add urway">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Flutter.podspec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/apis_urls/app_urls.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/apis_urls/app_urls.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/translattion/ar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/translattion/ar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helpers/translattion/en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helpers/translattion/en.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/screens/home/pages/finance/widgets/bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/screens/home/pages/finance/widgets/bottom_sheet.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controllers/discount_coupon_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/discount_coupon_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/screens/home/pages/discount_coupons/screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/screens/home/pages/discount_coupons/screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667113339456</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="add urway">
+      <created>1667207564870</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1667207564870</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -401,6 +387,7 @@
     <MESSAGE value="commit changes" />
     <MESSAGE value="inner transfer" />
     <MESSAGE value="refactor SnackBars class" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor SnackBars class" />
+    <MESSAGE value="add urway" />
+    <option name="LAST_COMMIT_MESSAGE" value="add urway" />
   </component>
 </project>

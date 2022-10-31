@@ -66,13 +66,13 @@ class DiscountCoupons extends StatelessWidget {
                   ),
                   ),
                 ),
-          controller.subLoading.value ? Container(
+                controller.subLoading.value ? Container(
 
                   margin: EdgeInsets.all(8),
                   child: controller.nomoreData.value != '' ? Center(
                     child: Text(controller.nomoreData.value,style: TextStyle(
-                      color: AppColors.mainGoldenDarkColor,
-                      fontSize: 16
+                        color: AppColors.mainGoldenDarkColor,
+                        fontSize: 16
                     ),),
                   ) : Center(child: LoadingIndicatorWidget()) ,
                 ): SizedBox()
