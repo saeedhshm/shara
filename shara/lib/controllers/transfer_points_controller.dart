@@ -71,11 +71,14 @@ class TransferPointsController extends GetxController{
 
     contacts.value = _contacts;
 
-    List<int> pohone = _contacts.map((e) => int.tryParse(e.phone)).toList();
+    List<String> phones = _contacts.map((e) => e.phone.substring(3)).toList();
+
+    println('-->> phones = $phones');
+
 
       InitAppController appController = Get.find();
       var body = {
-        "phones": '[${pohone.join(',')}]'
+        "phones": '[${phones.join(',')}]'
       };
       AppApiHandler.sendData(
           url: syncPhonesUrl,
@@ -85,7 +88,7 @@ class TransferPointsController extends GetxController{
             "x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
           callback: (json,stsCode) {
             loading.value = false;
-            println('---- success ----- = $json');
+            println('---- success phones ----- = $json');
             if(json['success']){
 
             } else{

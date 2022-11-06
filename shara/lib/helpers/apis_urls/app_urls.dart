@@ -1,6 +1,8 @@
 
 
 const String mainUrl = 'https://sharaksa.com'; //live url
+// const String mainUrl = 'http://dev.sharaksa.com/';
+
 
 const partnerImage = '$mainUrl/public/uploads/partners/source';
 const membershipImage = '$mainUrl/public/uploads/membership/source';

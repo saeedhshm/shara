@@ -7,6 +7,7 @@ import 'package:shara/views/screens/home/pages/finance/transfer_to_contact.dart'
 import 'package:shara/views/screens/home/pages/finance/widgets/bottom_sheet.dart';
 import 'package:shara/views/screens/home/pages/finance/widgets/finance_page_item.dart';
 
+import '../../../../../controllers/buy_points_controller.dart';
 import 'choose_beneficiary.dart';
 import 'contacts.dart';
 
@@ -103,6 +104,7 @@ class FinancePage extends StatelessWidget {
                       Wrap(children: [
                         InkWell(
                           onTap: (){
+                            Get.put(BuyPointsController());
                             Get.bottomSheet(
                               BottomSheetWidget()
                             );
