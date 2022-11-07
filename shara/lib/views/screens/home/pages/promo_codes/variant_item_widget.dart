@@ -6,6 +6,7 @@ import 'package:shara/helpers/utils/widgets/loading_indicator.dart';
 
 import '../../../../../controllers/promo_codes_controller.dart';
 import '../../../../../models/promo_code.dart';
+import '../../../../widgets/flat_botton.dart';
 import '../../../../widgets/image_from_server.dart';
 import '../../../../widgets/network_image.dart';
 import '../../../account/my_coupons.dart';

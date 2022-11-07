@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:shara/controllers/inner_transfer.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 
+import '../../../../../controllers/init_app_controller.dart';
 import '../../../../../helpers/app_colors.dart';
 import '../../../../../models/app_contact.dart';
 import '../../../../widgets/custom_text_form_field.dart';
@@ -91,7 +92,7 @@ class TransferToContactPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '${'balance'.tr} stcpay',
+                            '${'your_points'.tr}',
                             style: TextStyle(
                                 fontSize: 18,
                                 color: AppColors.mainDarkGreyColor),
@@ -100,7 +101,7 @@ class TransferToContactPage extends StatelessWidget {
                             height: 8,
                           ),
                           Text(
-                            '650,00 ${'S.R'.tr}',
+                            '${controller.appController.userData.value.user.points}',
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -134,7 +135,7 @@ class TransferToContactPage extends StatelessWidget {
                 errorMessage: controller.errorMsgAmmount.value,
                 controller: ammountCtrl,
                 hintText: '0.00'.tr,
-                labelText: 'sum_to_transfer'.tr,
+                labelText: 'points_to_transfer'.tr,
                 keyboardType: TextInputType.number,
                 textCapitalization: TextCapitalization.sentences,
                 // icon: 'assets/images/icons/login/name.png',
@@ -178,8 +179,11 @@ class TransferToContactPage extends StatelessWidget {
                 height: 20,
               ),
               MainButtonWidget(btnTitle: 'conform'.tr, onPressed: () {
-
-                controller.sendInnerTransfer('${contact.phone}', ammountCtrl.text);
+                var phone = '${int.tryParse(transferToCtrl.text)}';
+                if(readOnly){
+                  phone = '${contact.phone.substring(3)}';
+                }
+                controller.sendInnerTransfer(phone, ammountCtrl.text);
               })
             ],
           )),

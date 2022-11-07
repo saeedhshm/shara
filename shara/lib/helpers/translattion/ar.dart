@@ -190,6 +190,7 @@ Map<String,String>  arabicStrings = {
   'insert_points_to_buy':'أدخل عدد النقاط المراد شراءها',
   'not_me':'الدخول بحساب اخر او انشاء كلمة مرور جديدة',
 'invite':'دعوة',
+  'points_to_transfer':'النقاط المراد تحويلها',
   'something_went_wrong':'هناك خطأ ما، يرجي المحاولة في وقت لاحق',
 
   'enter_contact_phone':'ادخل رقم الجوال',

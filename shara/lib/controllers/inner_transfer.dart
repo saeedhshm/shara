@@ -17,6 +17,7 @@ class InnerTransferController extends GetxController{
 
   sendInnerTransfer(String phone,String ammount){
 
+    println('------ $phone');
     if(phone.isEmpty){
       errorMsgContactName.value = 'enter_contact_phone'.tr;
     }else{
@@ -32,9 +33,10 @@ class InnerTransferController extends GetxController{
 
       loading.value = true;
       var body = {
-        'to':'${phone.substring(3)}',
+        'to':'${phone}',
         'amount':ammount
       } ;
+
       AppApiHandler.sendData(
           url: innerTransferUrl,
           body: body,
@@ -48,6 +50,7 @@ class InnerTransferController extends GetxController{
             if(json['success']){
               Get.back();
               println('---- success = $json');
+              appController.getUserProfileInfo();
               SnackBars.showConfirmedSnackBar('success'.tr,json['message']);
 
             } else{
