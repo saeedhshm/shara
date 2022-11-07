@@ -9,12 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5b4870d-4bd8-4b8a-a715-9a946df198d8" name="Changes" comment="fix transfer">
+    <list default="true" id="e5b4870d-4bd8-4b8a-a715-9a946df198d8" name="Changes" comment="fix flat_button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/screens/home/pages/finance/finance_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/screens/home/pages/finance/finance_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/screens/home/pages/promo_codes/variant_item_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/screens/home/pages/promo_codes/variant_item_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/widgets/flat_botton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/widgets/flat_botton.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,15 +37,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pubspec.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/finance/local_tranfer.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/controllers/transfer_points_controller.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/finance/transfer_to_contact.dart" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/finance/contacts.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/profile.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/finance/finance_page.dart" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/pubspec.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/controllers/inner_transfer.dart" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/finance/local_tranfer.dart" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/finance/transfer_to_contact.dart" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/finance/contacts.dart" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2B589KtesViPCTZ5mXE6lRb5pv3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -361,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667807252321</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix flat_button">
+      <created>1667807720111</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1667807720111</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -374,7 +378,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -400,6 +403,7 @@
     <MESSAGE value="refactor SnackBars class" />
     <MESSAGE value="add urway" />
     <MESSAGE value="fix transfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix transfer" />
+    <MESSAGE value="fix flat_button" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix flat_button" />
   </component>
 </project>

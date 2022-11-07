@@ -82,7 +82,7 @@ class FinanceWidget extends StatelessWidget {
                 color: Colors.red,
                 fontSize: 18
             ),
-            confirm:   FlatButton(
+            confirm:   FlatButtonWidget(
               child:  Text("press_to_verify_id".tr,style: TextStyle(
                   color: Colors.white
               ),),
