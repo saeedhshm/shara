@@ -131,7 +131,7 @@ class VariantItemWidget extends StatelessWidget {
                           color: Colors.green,
                           fontSize: 18
                       ),
-                      confirm:   FlatButton(
+                      confirm:   FlatButtonWidget(
                         child:  Text("show_coupon".tr,style: TextStyle(
                             color: Colors.white
                         ),),
