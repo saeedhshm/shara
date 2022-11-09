@@ -10,8 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5b4870d-4bd8-4b8a-a715-9a946df198d8" name="Changes" comment="fix flat_button">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/screens/home/pages/finance/finance_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/screens/home/pages/finance/finance_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +56,9 @@
     <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/profile.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/views/screens/home/pages/finance/finance_page.dart" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/controllers/inner_transfer.dart" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2B589KtesViPCTZ5mXE6lRb5pv3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -365,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667807720111</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fix flat_button">
+      <created>1667808685323</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1667808685323</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
