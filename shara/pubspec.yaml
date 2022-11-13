@@ -18,8 +18,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 ##############################################################
 # ############# ########### flutter and dart version:
- # • Flutter version 2.10.2
- # • Dart version 2.16.1
+ # • Flutter version stable, 3.3.7
+ # • Dart version 2.18.4
 ##################################################################
 #Certificate fingerprints:
 #  SHA1: BA:8E:D4:AF:62:75:73:6B:08:66:AD:AF:AB:67:52:57:A4:F6:8D:21
@@ -44,7 +44,7 @@ dependencies:
   provider: ^6.0.2
   cached_network_image: ^3.2.0
   animations: ^2.0.2
-  email_validator: '^1.0.6'
+  email_validator: ^2.0.1
   http: ^0.13.4
   webview_flutter: ^3.0.2
   dropdown_button2: ^1.4.0
@@ -59,6 +59,8 @@ dependencies:
   overlay_support: ^2.0.1
   fast_contacts: ^1.0.0
   permission_handler: ^10.1.0
+  urwaypayment: ^1.0.8
+  flutter_pay: ^1.0.2
 
 
 

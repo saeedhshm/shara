@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/utils/printutils.dart';
-
+import 'dart:io' show Platform;
 import 'package:shara/views/widgets/custom_text_form_field.dart';
 import 'package:shara/views/widgets/svg_widget.dart';
 import 'package:shara/views/widgets/web_page.dart';
@@ -115,22 +115,25 @@ class BottomSheetWidget extends StatelessWidget {
                   ),
                 ),
                 Container(width: double.infinity,height: 1,color: Colors.white,),
-
-                Row(
+                Platform.isIOS ? Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/apple_pay.png',color: Colors.black54,),width: 69,height: 65,),
-                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                          child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/apple_pay.png',color: Colors.black54,),width: 69,height: 65,),
+                        ),
 
-                    // Text('credit_card'.tr,style: TextStyle(
-                    //     color: AppColors.navBarUnselectedIconsColor,
-                    //     fontSize: 16,
-                    //     fontWeight: FontWeight.bold
-                    // ),)
+                        // Text('credit_card'.tr,style: TextStyle(
+                        //     color: AppColors.navBarUnselectedIconsColor,
+                        //     fontSize: 16,
+                        //     fontWeight: FontWeight.bold
+                        // ),)
+                      ],
+                    ),
+                    Container(width: double.infinity,height: 1,color: Colors.white,),
                   ],
-                ),
-                Container(width: double.infinity,height: 1,color: Colors.white,),
+                ) : SizedBox(),
                 Row(
                   children: [
                     Padding(

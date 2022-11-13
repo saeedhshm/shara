@@ -1,6 +1,6 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/mac/Documents/nuyo assets/flutter"
+export "FLUTTER_ROOT=/Users/mac/development/3_3_7/flutter"
 export "FLUTTER_APPLICATION_PATH=/Users/mac/Desktop/shara/app/shara/shara"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=/Users/mac/Desktop/shara/app/shara/shara/lib/main.dart"

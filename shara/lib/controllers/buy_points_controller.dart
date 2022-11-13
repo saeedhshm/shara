@@ -1,6 +1,7 @@
+import 'package:flutter_pay/flutter_pay.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/apis_urls/app_urls.dart';
-
+import 'dart:io' show Platform;
 import '../helpers/apis_urls/api.dart';
 import '../helpers/utils/printutils.dart';
 import 'init_app_controller.dart';
@@ -9,6 +10,8 @@ class BuyPointsController extends GetxController{
 
   InitAppController appController = Get.find();
   var errorMessage = ''.obs;
+  var canUseApplePay = false;
+
 
   generatePaymentUrl(String points,onDone){
     var params = {
@@ -31,4 +34,25 @@ class BuyPointsController extends GetxController{
     }, body: params,header: headers);
   }
 
+  void checkForApplePay() async{
+    FlutterPay flutterPay = FlutterPay();
+    println('-0-0-0-0-0->>> check_apple_pay');
+    canUseApplePay = await flutterPay.canMakePaymentsWithActiveCard(allowedPaymentNetworks: [
+      PaymentNetwork.visa,
+      PaymentNetwork.masterCard,
+      PaymentNetwork.mada,
+    ]);
+    println('-0-0-0-0-0->>> $canUseApplePay');
+  }
+
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    if (Platform.isIOS) {
+      checkForApplePay();
+    }else{
+      println('-0-0-0-0-0->>> not Platform.isIOS');
+    }
+  }
 }
