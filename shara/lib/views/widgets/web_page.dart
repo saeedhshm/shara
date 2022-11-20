@@ -1,10 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/helpers/utils/widgets/loading_indicator.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'dart:io';
 
@@ -23,6 +24,13 @@ class _WebPageState extends State<WebPage> {
 
 
   InitAppController initApp = Get.find();
+
+  bool paymentDone = false;
+  bool paymentSucceed = false;
+  Timer timer;
+  bool loading = true;
+
+  String errorMessage;
 
   @override
   void initState() {
@@ -69,11 +77,52 @@ class _WebPageState extends State<WebPage> {
             ),
           )),
       body: Container(
-        child: WebView(
-          javascriptMode: JavascriptMode.unrestricted,
-          initialUrl: widget.url,
+        child: Stack(
+          children: [
+            WebView(
+              javascriptMode: JavascriptMode.unrestricted,
+              javascriptChannels: [
+                JavascriptChannel(name: 'Print', onMessageReceived: (message) {
+                  // Navigator.of(context).pop();
+                  paymentDone = true;
+                  int productId = int.tryParse(message.message);
+
+                  if(productId != null){
+                    paymentSucceed = true;
+
+                    timer = Timer(Duration(seconds: 0), () {
+                      SnackBars.showConfirmedSnackBar('', 'success_payment'.tr);
+                    });
+                  }else{
+                    paymentSucceed = false;
+                    errorMessage = message.message;
+                    SnackBars.showErrorSnackBar('error'.tr, 'unsuccess_payment'.tr);
+                  }
+
+                  setState(() {});
+
+                })
+              ].toSet(),
+              initialUrl: widget.url,
+              onPageFinished: (done){
+                setState(() {
+                  loading = false;
+                });
+              },
+            ),
+            loading ? Center(
+              child: LoadingIndicatorWidget(),
+            ) : Container()
+          ],
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    timer.cancel();
+    super.dispose();
   }
 }

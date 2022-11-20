@@ -115,24 +115,41 @@ class BottomSheetWidget extends StatelessWidget {
                   ),
                 ),
                 Container(width: double.infinity,height: 1,color: Colors.white,),
-                Platform.isIOS ? Column(
-                  children: [
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                          child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/apple_pay.png',color: Colors.black54,),width: 69,height: 65,),
-                        ),
+                Platform.isIOS ? InkWell(
+                  onTap: (){
+                    if(pointCtrl.text.isEmpty && !pointCtrl.text.isEmpty){
+                      controller.errorMessage.value = 'please_points_to_buy'.tr;
+                    }else{
+                      FocusScope.of(context).unfocus();
+                      // Get.back();
+                      controller.errorMessage.value = '';
+                      controller.payUsingApplePay(context,pointCtrl.text,(paymentUrl){
+                        println('-0-0-0-0-0->>> $paymentUrl');
+                        // Get.to(()=>WebPage(paymentUrl));
 
-                        // Text('credit_card'.tr,style: TextStyle(
-                        //     color: AppColors.navBarUnselectedIconsColor,
-                        //     fontSize: 16,
-                        //     fontWeight: FontWeight.bold
-                        // ),)
-                      ],
-                    ),
-                    Container(width: double.infinity,height: 1,color: Colors.white,),
-                  ],
+                      });
+                    }
+                    // println('صثصقفثص');
+                  },
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: SizedBox(child: SvgImageWidget('assets/images/icons/payment_icons/apple_pay.png',color: Colors.black54,),width: 69,height: 65,),
+                          ),
+
+                          // Text('credit_card'.tr,style: TextStyle(
+                          //     color: AppColors.navBarUnselectedIconsColor,
+                          //     fontSize: 16,
+                          //     fontWeight: FontWeight.bold
+                          // ),)
+                        ],
+                      ),
+                      Container(width: double.infinity,height: 1,color: Colors.white,),
+                    ],
+                  ),
                 ) : SizedBox(),
                 Row(
                   children: [
