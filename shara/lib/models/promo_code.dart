@@ -70,9 +70,9 @@ class PromoCode {
 
 class Variant {
   int id;
-  String value;
+  dynamic value;
   dynamic price;
-  String vat;
+  dynamic vat;
   dynamic serviceFees;
   dynamic partnerFees;
   bool display;

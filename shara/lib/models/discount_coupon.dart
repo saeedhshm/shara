@@ -1,3 +1,5 @@
+import 'package:shara/helpers/utils/printutils.dart';
+
 import '../helpers/apis_urls/app_urls.dart';
 
 class CouponsManager {
@@ -59,6 +61,7 @@ class Coupon {
   }
 
   String get imageUrl{
+    println('$discountCouponsImage/$_image');
     return '$discountCouponsImage/$_image';
   }
 

@@ -11,21 +11,16 @@ class AppApiHandler {
       Map<String, dynamic> body,
       @required callback}) async {
 
-    println('------------------------------- AppApiHandler');
 
     var uri = Uri.parse(url);
     final response = await http.get(uri, headers: header);
 
-    println(response.request.url);
-    println(response.statusCode);
-    println(response.body);
-    println('------------------------------- AppApiHandler');
 
     if (response.statusCode == 200) {
       final json = jsonDecode(response.body);
       callback(json);
     } else {
-      callback(null);
+      callback      (null);
     }
   }
 
@@ -35,22 +30,13 @@ class AppApiHandler {
       Map<String, String> header,
       @required callback(json, stsCode)}) async {
     var uri = Uri.parse(url);
-    println('------------------------------- AppApiHandler');
-    println(body);
-    println(uri);
-    final response = await http.post(uri, body: body, headers: header);
-    println('------------------------------- AppApiHandler response');
 
-    println(response.request.url);
-    println(response.statusCode);
-    println(response.body);
-    println('------------------------------- AppApiHandler response');
-    // if(response.statusCode == 200){
+    final response = await http.post(uri, body: body, headers: header);
+     // if(response.statusCode == 200){
     try {
       final json = jsonDecode(response.body) ;
       callback(json, response.statusCode);
     } catch (error) {
-      println('------------------------------- AppApiHandler response $error');
       callback(null, response.statusCode);
     }
 
@@ -66,6 +52,7 @@ class AppApiHandler {
       Map<String, String> header,
       @required callback}) async {
     var uri = Uri.parse(url);
+   
     final response = await http
         .post(uri, body: body, headers: {"Content-Type": "application/json"});
 

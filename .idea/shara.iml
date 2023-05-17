@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration />
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -66,8 +71,38 @@
       <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/build" />
       <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/permission_handler_apple/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/package_info_plus/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/package_info_plus/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/package_info_plus/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/connectivity/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/connectivity/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/connectivity/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/apple_pay_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/apple_pay_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/apple_pay_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/apple_pay_flutter/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/apple_pay_flutter/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/apple_pay_flutter/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/flutter_pay/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/flutter_pay/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/flutter_pay/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/connectivity/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/connectivity/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/connectivity/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/flutter_pay/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/flutter_pay/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/flutter_pay/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/device_info_plus/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/device_info_plus/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/device_info_plus/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/device_info_plus/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/device_info_plus/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/device_info_plus/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/package_info_plus/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/package_info_plus/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/shara/ios/.symlinks/plugins/package_info_plus/build" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

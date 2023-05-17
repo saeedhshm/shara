@@ -33,15 +33,13 @@ class PromoCodeController extends GetxController {
 
 
   _getPromoCodesTypes(){
-    println("--======================== inside promocode type func");
+
     final url = promoCodesTypesUrl;
     var headers = {
       'Authorization':
       'bearer ${initAppController.userData.value.token.accessToken}',
       "x-localization": 'lang_code'.tr,
     };
-    println(url);
-    println("--======================== inside promocode type func");
 
     AppApiHandler.getData(
         url: '$url',
@@ -50,9 +48,6 @@ class PromoCodeController extends GetxController {
           println(json);
           promocodeTypeService.value.fromJson(json);
 
-          println(promocodeTypeService.value.productsTypes.length);
-
-          println("--======================== selectedTypeId $selectedTypeId");
           _getPromoCodes();
         });
   }
@@ -124,8 +119,10 @@ class PromoCodeController extends GetxController {
     };
     buyingCode.value = true;
 
+
     AppApiHandler.sendData(url: url, body: body,header: headers, callback: (json, stsCode){
-      println(json["success"]);
+      buyingCode.value = false;
+      // return;
       println(json["message"]);
       bool success = json["success"];
       String message = json["message"];

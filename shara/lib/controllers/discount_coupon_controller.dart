@@ -24,17 +24,17 @@ class DiscountCouponsController extends GetxController{
     currentPage = 1;
     nextPage = 1;
     AppApiHandler.getData(url: '$allDiscountCouponsUrl?page=$currentPage', callback: (json){
-      println('---------------- allDiscountCouponsUrl');
-      println('$allDiscountCouponsUrl?page=$currentPage');
-      println('---------------- allDiscountCouponsUrl 1');
+      println('=-=-=-=-=---=- offers =-==-==-=-=-');
+      println(json);
+      println('=-=-=-=-=---=- offers =-==-==-=-=-');
       couponsManager.value.data.clear();
-      println('---------------- allDiscountCouponsUrl 2');
+
       couponsManager.value .fromJson(json);
-      println('---------------- allDiscountCouponsUrl 3');
+
       nextPage++;
-      // println('---------------- allDiscountCouponsUrl ${couponsManager.value.data.length}');
+
       loading.value = false;
-      println('---------------- allDiscountCouponsUrl 4');
+
     });
   }
 
@@ -59,14 +59,14 @@ class DiscountCouponsController extends GetxController{
 
   loadMore(){
 
-    println('---=======-- loadMore()currentPage $currentPage, nextPage $nextPage ');
+
     if(couponsManager.value.nextPageUrl != null){
 
       if(currentPage != nextPage){
         subLoading.value = true;
         currentPage = nextPage;
         AppApiHandler.getData(url: '$allDiscountCouponsUrl?page=$currentPage', callback: (json){
-          // println(json);
+
           couponsManager.value .fromJson(json);
           nextPage++;
           loading.value = false;

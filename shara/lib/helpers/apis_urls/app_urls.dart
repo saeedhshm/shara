@@ -1,7 +1,7 @@
 
 
-// const String mainUrl = 'https://sharaksa.com'; //live url
-const String mainUrl = 'https://dev.sharaksa.com'; //http://dev.sharaksa.com/ {{domain}}
+const String mainUrl = 'https://sharaksa.com'; //live url
+// const String mainUrl = 'https://dev.sharaksa.com'; //http://dev.sharaksa.com/ {{domain}}
 
 
 const partnerImage = '$mainUrl/public/uploads/partners/source';
