@@ -7,7 +7,7 @@ class FinancePageItemWidget extends StatelessWidget {
 
   final String imageIcon;
   final String title;
-  const FinancePageItemWidget({Key key,@required this.title,@required this.imageIcon}) : super(key: key);
+  const FinancePageItemWidget({Key? key,required this.title,required this.imageIcon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

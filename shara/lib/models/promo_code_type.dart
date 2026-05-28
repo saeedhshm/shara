@@ -1,6 +1,6 @@
 class PromoCodeType {
-  bool success;
-  String message;
+  bool? success;
+  String? message;
   List<ProductsTypes> productsTypes = <ProductsTypes>[];
 
   fromJson(Map<String, dynamic> json) {
@@ -18,13 +18,13 @@ class PromoCodeType {
 }
 
 class ProductsTypes {
-  int id;
-  String name;
-  String code;
-  String description;
+  int? id;
+  String? name;
+  String? code;
+  String? description;
   bool selected = false;
 
-  ProductsTypes({this.id, this.name, this.code, this.description});
+  ProductsTypes({required this.id, required this.name, required this.code, required this.description});
 
   ProductsTypes.fromJson(Map<String, dynamic> json) {
     id = json['id'];

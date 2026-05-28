@@ -3,7 +3,6 @@ import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:shara/models/offer.dart';
-import 'package:shara/views/widgets/favorit_icon_widget.dart';
 import 'package:shara/views/widgets/network_image.dart';
 
 class OfferItemWidget extends StatelessWidget {
@@ -56,7 +55,7 @@ class OfferItemWidget extends StatelessWidget {
             height: 16,
           ),
           Text(
-            offer.partner.name(isArabic),
+            offer.partner!.name(isArabic),
             style: TextStyle(
                 color: AppColors.mainDarkGreyColor,
                 fontWeight: FontWeight.bold),

@@ -3,18 +3,18 @@ import 'package:shara/helpers/utils/printutils.dart';
 import '../helpers/apis_urls/app_urls.dart';
 
 class CouponsManager {
-  int currentPage;
+  int? currentPage;
   List<Coupon> data = <Coupon>[];
-  String firstPageUrl;
-  int from;
-  int lastPage;
-  String lastPageUrl;
+  String? firstPageUrl;
+  int? from;
+  int? lastPage;
+  String? lastPageUrl;
   dynamic nextPageUrl;
-  String path;
-  int perPage;
+  String? path;
+  int? perPage;
   dynamic prevPageUrl;
-  int to;
-  int total;
+  int? to;
+  int? total;
 
 
   fromJson(Map<String, dynamic> json) {
@@ -40,13 +40,13 @@ class CouponsManager {
 }
 
 class Coupon {
-  int id;
-  String _nameEn;
-  String _nameAr;
-  String _image;
+  int? id;
+  String? _nameEn;
+  String? _nameAr;
+  String? _image;
   dynamic value;
-  String createdAt;
-  String updatedAt;
+  String? createdAt;
+  String? updatedAt;
 
 
 
@@ -66,7 +66,7 @@ class Coupon {
   }
 
   String get code {
-    return _nameEn;
+    return _nameEn ?? '';
   }
 
 }

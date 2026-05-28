@@ -10,7 +10,7 @@ import '../../../../helpers/utils/widgets/sending_loading_widget.dart';
 import '../../../widgets/four_digits_widget.dart';
 
 class CodeVerificationPage extends StatefulWidget {
-  const CodeVerificationPage({Key key}) : super(key: key);
+  const CodeVerificationPage({Key? key}) : super(key: key);
 
   @override
   State<CodeVerificationPage> createState() => _CodeVerificationPageState();

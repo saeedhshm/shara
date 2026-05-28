@@ -8,7 +8,7 @@ import '../../widgets/leading_back_arrow.dart';
 class VerifyIdPage extends StatelessWidget {
 
 
-   VerifyIdPage({Key key}) : super(key: key){
+   VerifyIdPage({Key? key}) : super(key: key){
      controller.isVerifiedId.value = true;
    }
 
@@ -28,15 +28,9 @@ class VerifyIdPage extends StatelessWidget {
                 fontSize: 18),
             maxLines: 3,
           ),
-          leading: Container(
-            child: InkWell(
-              onTap: () {
-                Get.back();
-              },
-              child: LeadingBackArrow(
-                size: 30,
-              ),
-            ),
+          leading: LeadingBackArrow(
+            size: 30,
+            onBack: Get.back,
           )),
       body: Container(
         width: double.infinity,

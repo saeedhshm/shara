@@ -1,6 +1,5 @@
-import 'package:email_validator/email_validator.dart';
 import 'package:get/get.dart';
-import 'package:shara/helpers/apis_urls/api.dart';
+import 'package:shara/helpers/apis_urls/api_handler.dart';
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 
@@ -39,39 +38,23 @@ class ResetPasswordController extends GetxController{
     //   isValidEmail.value = true;
     // }
 
-    int phoneNum = int.tryParse(email);
-    if (phoneNum != null) {
-      if (!Validator.validatePhone(phoneNum)) {
-        isValidEmail.value = false;
-        emailErrorMessage.value = 'enter_valid_phone'.tr;
-        return;
-      } else {
-        isValidEmail.value = true;
-      }
+    int? phoneNum = int.tryParse(email);
+    if (!Validator.validatePhone(phoneNum ?? 0)) {
+      isValidEmail.value = false;
+      emailErrorMessage.value = 'enter_valid_phone'.tr;
+      return;
     } else {
-      if (email.isEmpty) {
-        isValidEmail.value = false;
-        emailErrorMessage.value = 'email_phone_must_fill'.tr;
-        return;
-      } else if (!EmailValidator.validate(email)) {
-        isValidEmail.value = false;
-        emailErrorMessage.value = 'enter_a_valid_email'.tr;
-        return;
-      } else {
-        isValidEmail.value = true;
-      }
+      isValidEmail.value = true;
     }
-
+  
     var fieldKey = 'email';
     var url = forgetPasswordByEmailUrl;
 
-    if(phoneNum != null){
-      url = forgetPasswordByPhoneUrl;
-      fieldKey = 'phone';
-    }
-
+    url = forgetPasswordByPhoneUrl;
+    fieldKey = 'phone';
+  
     loading.value = true;
-    AppApiHandler.sendData(
+    ApiHandler.sendData(
         url: url,
         body: {'$fieldKey': email},
         header: {
@@ -85,10 +68,8 @@ class ResetPasswordController extends GetxController{
             onDone(true,json['message']);
           }else {
             var errorMessage = 'email_not_found'.tr;
-            if (phoneNum != null) {
-              errorMessage = 'phone_not_found'.tr;
-            }
-            onDone(false,errorMessage);
+            errorMessage = 'phone_not_found'.tr;
+                      onDone(false,errorMessage);
           }
         });
   }
@@ -131,7 +112,7 @@ class ResetPasswordController extends GetxController{
       return;
 
     loading.value = true;
-    AppApiHandler.sendData(
+    ApiHandler.sendData(
         url: resetPasswordUrl,
         body: {'code': code,'password':password,'confirmPassword':confirmPassword},
         header: {

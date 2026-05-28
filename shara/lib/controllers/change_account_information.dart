@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:shara/helpers/apis_urls/api.dart';
+import 'package:shara/helpers/apis_urls/api_handler.dart';
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/helpers/utils/validation/validate_fields.dart';
-import 'package:shara/models/user_data.dart';
+import 'package:shara/features/auth/data/models/user_model.dart';
 
 class ChangeAccountInformation extends GetxController{
   var loading = false.obs;
@@ -33,26 +33,17 @@ class ChangeAccountInformation extends GetxController{
   String firstName = '';
   String lastName = '';
 
-  void changeEmailAction(UserData userData,onChangeDone){
+  void changeEmailAction(UserDataModel? userData,onChangeDone){
 
-    String emailValidation =  validateEmailField(email);
-    String passwordValidation = validatePassword(password,currentPassword: currentPassword);
+    String? emailValidation =  validateEmailField(email);
+    String? passwordValidation = validatePassword(password,currentPassword: currentPassword);
 
-     if( emailValidation != null){
-       emailErrorMessage.value =  emailValidation;
-       isValidEmail.value = false;
-     }else{
-       emailErrorMessage.value =  '';
-       isValidEmail.value = true;
-     }
-
-     if(passwordValidation != null){
-        passwordErrorMessage.value =  passwordValidation ;
-        isValidPassword.value = false;
-     }  else{
-       isValidPassword.value = true;
-     }
-
+     emailErrorMessage.value =  emailValidation ?? '';
+     isValidEmail.value = false;
+   
+      passwordErrorMessage.value =  passwordValidation ?? '';
+      isValidPassword.value = false;
+   
      if(isValidPassword.value && isValidEmail.value){
        loading.value = true;
        var params = {
@@ -60,84 +51,69 @@ class ChangeAccountInformation extends GetxController{
          'currentPasswordEmail':password
        } ;
        var headers = {
-         'Authorization' : 'bearer ${userData.token.accessToken}' ,
+         'Authorization' : 'bearer ${userData?.token?.accessToken}' ,
          "x-localization": 'lang_code'.tr,
        } ;
-       AppApiHandler.sendData(url: updateEmailUrl, callback: (json,stsCode){
+       ApiHandler.sendData(url: updateEmailUrl, callback: (json,stsCode){
          loading.value = false;
-         userData.user.email = email;
-         userData.saveDataToStorage();
+         userData?.user?.email = email;
+         userData?.saveDataToStorage();
          onChangeDone(json['success'],json['message']) ;
        }, body: params,header: headers);
      }
   }
 
-  void changeAccountInfo(UserData userData,onChangeDone){
+  void changeAccountInfo(UserDataModel? userData,onChangeDone){
 
     var params = {
       'first_name' : firstName,
       'last_name':lastName ,
-      'phone' : userData.user.phone
+      'phone' : userData?.user?.phone
     }  ;
 
     var headers = {
-      'Authorization' : 'bearer ${userData.token.accessToken}' ,
+      'Authorization' : 'bearer ${userData?.token?.accessToken}' ,
       "x-localization": 'ar',
     } ;
-    AppApiHandler.sendData(url: updateProfileUrl, callback: (json,stsCode){
+    ApiHandler.sendData(url: updateProfileUrl, callback: (json,stsCode){
       loading.value = false;
-      userData.user.firstName = firstName;
-      userData.user.lastName = lastName;
-      userData.saveDataToStorage();
+      userData?.user?.firstName = firstName;
+      userData?.user?.lastName = lastName;
+      userData?.saveDataToStorage();
 
       onChangeDone(json['success'],json['message']) ;
     }, body: params,header: headers);
   }
 
-  changePasswordAction(UserData userData,onChangeDone){
-    String passwordValidation = validatePassword(newPassword,currentPassword: null);
-    String currentPasswordValidation = validatePassword(currentPassword,currentPassword: userData.user.password);
-    String confirmedPasswordValidation = validateConfirmedPassword(confirmedPassword: confirmPassword,password: newPassword);
+  changePasswordAction(UserDataModel? userData,onChangeDone){
+    String? passwordValidation = validatePassword(newPassword,currentPassword: null);
+    String? currentPasswordValidation = validatePassword(currentPassword,currentPassword: userData?.user?.password);
+    String? confirmedPasswordValidation = validateConfirmedPassword(confirmedPassword: confirmPassword,password: newPassword);
 
 
-    if(passwordValidation != null){
-      newPasswordErrorMessage.value = passwordValidation;
-      isValidNewPassword.value = false;
-    }else{
-      newPasswordErrorMessage.value = '';
-      isValidNewPassword.value = true;
-    }
-
-    if(currentPasswordValidation != null){
-      currentPasswordErrorMessage.value = currentPasswordValidation;
-      isValidCurrentPassword.value = false;
-    }else{
-      currentPasswordErrorMessage.value = '';
-      isValidCurrentPassword.value = true;
-    }
-
-    if(confirmedPasswordValidation != null){
-      confirmPasswordErrorMessage.value = confirmedPasswordValidation;
-      isValidConfirmPassword.value = false;
-    }else{
-      confirmPasswordErrorMessage.value = '';
-      isValidConfirmPassword.value = true;
-    }
-
-    if(isValidCurrentPassword.value && isValidConfirmPassword.value && isValidNewPassword.value){
+    newPasswordErrorMessage.value = passwordValidation ?? '';
+    isValidNewPassword.value = false;
+  
+    currentPasswordErrorMessage.value = currentPasswordValidation ?? '';
+    isValidCurrentPassword.value = false;
+  
+    confirmPasswordErrorMessage.value = confirmedPasswordValidation ?? '';
+    isValidConfirmPassword.value = false;
+  
+    if(isValidCurrentPassword.value && isValidConfirmPassword.value && isValidNewPassword.value && userData != null){
 
       var params = {
-           'currentPassword':  userData.user.password,
+           'currentPassword':  userData.user?.password,
         'password':newPassword,
         'confirmPassword':confirmPassword
       } ;
       var headers = {
-        'Authorization' : 'bearer ${userData.token.accessToken}' ,
+        'Authorization' : 'bearer ${userData.token?.accessToken}' ,
         "x-localization": 'ar',
       } ;
-      AppApiHandler.sendData(url: updatePasswordUrl, callback: (json,stsCode){
+      ApiHandler.sendData(url: updatePasswordUrl, callback: (json,stsCode){
         loading.value = false;
-        userData.user.password = newPassword;
+        userData.user?.password = newPassword;
         userData.saveDataToStorage();
 
         onChangeDone(json['success'],json['message']) ;

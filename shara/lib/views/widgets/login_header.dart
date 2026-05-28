@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 
@@ -8,9 +7,9 @@ class HeaderLoginWidget extends StatelessWidget {
   final Widget child;
   final isLogin;
   final onClose;
-  final String pageName;
+  final String? pageName;
 
-  HeaderLoginWidget({Key key, @required this.height, @required this.child,this.isLogin = false,this.onClose,this.pageName,})
+  HeaderLoginWidget({Key? key, required this.height, required this.child,this.isLogin = false,this.onClose,this.pageName,})
       : super(key: key){
     println('----=----->> $isLogin');
     println('----=----->> $pageName');

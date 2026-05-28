@@ -8,7 +8,7 @@ import '../../../../widgets/leading_back_arrow.dart';
 import 'item_widget.dart';
 
 class LastOperationsScreen extends StatelessWidget {
-  LastOperationsScreen({Key key}) : super(key: key);
+  LastOperationsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class LastOperationsScreen extends StatelessWidget {
               height: 8,
             );
           },
-          scrollController: null,
+          scrollController: ScrollController(),
           itemBuilder: (BuildContext, index) {
             return LastOperationItem(OperationItem(index));
           },

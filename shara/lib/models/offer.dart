@@ -1,14 +1,14 @@
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 
 class Offer {
-  int id;
-  int offersCategoriesId;
-  int usersCompaniesId;
-  String _titleAr;
-  String _titleEn;
+  int? id;
+  int? offersCategoriesId;
+  int? usersCompaniesId;
+  String? _titleAr;
+  String? _titleEn;
   dynamic _imageAr;
-  String _imageEn;
-  OfferPartner partner;
+  String? _imageEn;
+  OfferPartner? partner;
 
   String title(bool isArabic){
     return isArabic ? '$_titleAr' : '$_titleEn';
@@ -35,9 +35,9 @@ class Offer {
 
 
 class OfferPartner {
-  int id;
-  String _nameAr;
-  String _nameEn;
+  int? id;
+  String? _nameAr;
+  String? _nameEn;
 
   String name(bool isArabic){
     return isArabic ? '$_nameAr' : '$_nameEn';

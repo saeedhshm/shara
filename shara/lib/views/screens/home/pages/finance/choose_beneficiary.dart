@@ -6,7 +6,7 @@ import 'local_tranfer.dart';
 
 class ChooseBeneficiaryPage extends StatelessWidget {
 
-   ChooseBeneficiaryPage({Key key}) : super(key: key);
+   ChooseBeneficiaryPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

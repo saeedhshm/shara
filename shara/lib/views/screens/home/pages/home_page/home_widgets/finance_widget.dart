@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 
 import '../../../../../../controllers/buy_points_controller.dart';
 import '../../../../../../helpers/app_colors.dart';
@@ -11,7 +10,7 @@ import '../../finance/widgets/bottom_sheet.dart';
 
 class FinanceWidget extends StatelessWidget {
 
-   FinanceWidget({Key key}) : super(key: key);
+    FinanceWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class FinanceWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(9),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
+            color: Colors.grey.withValues(alpha: 0.5),
             spreadRadius: 0.5,
             blurRadius: 10,
             offset: Offset(0, 6), // changes position of shadow
@@ -38,11 +37,11 @@ class FinanceWidget extends StatelessWidget {
                   BottomSheetWidget()
               );
             },),
-            Container(width: 0.5,height: 60,color: Colors.grey.withOpacity(0.5),),
+            Container(width: 0.5,height: 60,color: Colors.grey.withValues(alpha: 0.5),),
             _ItemWidget(title: 'transfer_points'.tr, imageIcon: 'assets/images/icons/finance_icons/8.svg',onTap: (){
               Get.to(()=>ContactsPage());
             },),
-            Container(width: 0.5,height: 60,color: Colors.grey.withOpacity(0.5),),
+            Container(width: 0.5,height: 60,color: Colors.grey.withValues(alpha: 0.5),),
             _ItemWidget(imageIcon: 'assets/images/icons/finance_icons/4.png',title: 'local_transfer'.tr,onTap: (){
               Get.defaultDialog(
                 title: "".tr,
@@ -68,7 +67,7 @@ class FinanceWidget extends StatelessWidget {
                 ),
               );
             },),
-            Container(width: 0.5,height: 60,color: Colors.grey.withOpacity(0.5),),
+            Container(width: 0.5,height: 60,color: Colors.grey.withValues(alpha: 0.5),),
 
         _ItemWidget(title: 'international_transfer'.tr, imageIcon: 'assets/images/icons/finance_icons/3.png',onTap: (){
           Get.defaultDialog(
@@ -106,8 +105,8 @@ class _ItemWidget extends StatelessWidget {
 
   final String imageIcon;
   final String title;
-  final Function onTap;
-   _ItemWidget({Key key,this.imageIcon,this.title,this.onTap}) : super(key: key);
+  final void Function()? onTap;
+   _ItemWidget({Key? key,required this.imageIcon,required this.title,this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

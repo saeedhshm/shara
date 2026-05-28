@@ -1,11 +1,9 @@
-import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:shara/controllers/all_offers_controller.dart';
 import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/utils/widgets/loading_data_widget.dart';
-import 'package:shara/views/screens/all_offers/offers.dart';
 import 'package:shara/views/widgets/list_offers_items.dart';
 import 'package:shara/views/widgets/offers_title_show_all.dart';
 
@@ -17,11 +15,11 @@ class  AllOffersScreen extends StatelessWidget {
   //   'عروض الأطفال'
   // ];
 
-  final Function onBack;
+  final void Function()? onBack;
   final allOffersController = Get.put(AllOffersController());
   InitAppController initAppController = Get.find();
 
-  AllOffersScreen({Key key,this.onBack}) : super(key: key);
+  AllOffersScreen({Key? key,required this.onBack}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +92,7 @@ class  AllOffersScreen extends StatelessWidget {
 
                       return Column(
                         children: [
-                          OffersTitleShowAllWidget(padding: 0,title: allOffersController.allOffersService.value.data[index].name(initAppController.isArabicLang), onShowAllPressed:null),
+                          OffersTitleShowAllWidget(padding: 0,title: allOffersController.allOffersService.value.data[index].name(initAppController.isArabicLang), onShowAllPressed:(){}),
 
 
                           // OpenContainer(closedBuilder: (context,action){

@@ -7,14 +7,15 @@ import 'package:shara/helpers/utils/widgets/loading_data_widget.dart';
 import 'package:shara/models/clac_points.dart';
 import 'package:shara/views/widgets/custom_text_form_field.dart';
 import 'package:shara/views/widgets/drop_down_widget.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:dropdown_button2/dropdown_button2.dart'
+    show DropdownButton2, ButtonStyleData, DropdownItem;
 
 
 class CalculatePointsPage extends StatefulWidget {
-
-  CalculatePointsPage({Key key}) : super(key: key) {
-
-  }
+ 
+   CalculatePointsPage({Key? key}) : super(key: key) {
+ 
+   }
 
 
   @override
@@ -227,32 +228,36 @@ class _CalculatePointsPageState extends State<CalculatePointsPage> {
                               //   height: 20,
                               // ),
                               DropdownButtonHideUnderline(
-                                child: DropdownButton2(
-                                  customButton:  DropDownWidget(
-                                    controller: selectMembershipEarnCtrl,
-                                  ),
-                                  items: calculateController.points
-                                      .map((item) =>
-                                      DropdownMenuItem<CalcPoints>(
-                                        value: item,
-                                        child: Text(
-                                          item.name(initApp.isArabicLang),
-                                          style: const TextStyle(
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ))
-                                      .toList(),
-                                  value: calculateController.selectedPoint,
-                                  onChanged: (value) {
-                                    calculateController.selectedPoint = value;
-                                    selectMembershipEarnCtrl.text =  calculateController.selectedPoint.name(initApp.isArabicLang);
-                                    calculateController.calculateEarningPoints(double.tryParse(pointsEarnCtrl.text) ?? 0);
-                                  },
-                                  buttonHeight: 40,
-                                  buttonWidth: 140,
-                                  itemHeight: 40,
-                                ),
+                                 child: DropdownButton2<CalcPoints>(
+                                   customButton:  DropDownWidget(
+                                     controller: selectMembershipEarnCtrl,
+                                   ),
+                                   items: calculateController.points
+                                       .map((item) =>
+                                       DropdownItem<CalcPoints>(
+                                         value: item,
+                                         height: 40,
+                                         child: Text(
+                                           item.name(initApp.isArabicLang),
+                                           style: const TextStyle(
+                                             fontSize: 14,
+                                           ),
+                                         ),
+                                       ))
+                                       .toList(),
+                                   valueListenable: calculateController.selectedPoint,
+                                   onChanged: (value) {
+                                     if (value != null) {
+                                       calculateController.selectedPoint.value = value;
+                                       selectMembershipEarnCtrl.text =  value.name(initApp.isArabicLang);
+                                       calculateController.calculateEarningPoints(double.tryParse(pointsEarnCtrl.text) ?? 0);
+                                     }
+                                   },
+                                   buttonStyleData: const ButtonStyleData(
+                                     height: 40,
+                                     width: 140,
+                                   ),
+                                 ),
                               ),
                               SizedBox(
                                 height: 15,
@@ -302,33 +307,36 @@ class _CalculatePointsPageState extends State<CalculatePointsPage> {
                               // ),
 
                               DropdownButtonHideUnderline(
-                                child: DropdownButton2(
-                                  customButton:  DropDownWidget(
-                                    controller: selectMembershipSpendCtrl,
-                                  ),
-                                  items: calculateController.points
-                                      .map((item) =>
-                                      DropdownMenuItem<CalcPoints>(
-                                        value: item,
-                                        child: Text(
-                                          item.name(initApp.isArabicLang),
-                                          style: const TextStyle(
-                                            fontSize: 14,
-                                          ),
-                                        ),
-                                      ))
-                                      .toList(),
-                                  value: calculateController.selectedPoint,
-                                  onChanged: (value) {
-                                    calculateController.selectedPoint = value;
-                                    selectMembershipSpendCtrl.text =  calculateController.selectedPoint.name(initApp.isArabicLang);
-                                    calculateController.calculateSpendingPoints(double.tryParse(pointsSpendCtrl.text) ?? 0);
-
-                                  },
-                                  buttonHeight: 40,
-                                  buttonWidth: 140,
-                                  itemHeight: 40,
-                                ),
+                                 child: DropdownButton2<CalcPoints>(
+                                   customButton:  DropDownWidget(
+                                     controller: selectMembershipSpendCtrl,
+                                   ),
+                                   items: calculateController.points
+                                       .map((item) =>
+                                       DropdownItem<CalcPoints>(
+                                         value: item,
+                                         height: 40,
+                                         child: Text(
+                                           item.name(initApp.isArabicLang),
+                                           style: const TextStyle(
+                                             fontSize: 14,
+                                           ),
+                                         ),
+                                       ))
+                                       .toList(),
+                                   valueListenable: calculateController.selectedPoint,
+                                   onChanged: (value) {
+                                     if (value != null) {
+                                       calculateController.selectedPoint.value = value;
+                                       selectMembershipSpendCtrl.text =  value.name(initApp.isArabicLang);
+                                       calculateController.calculateSpendingPoints(double.tryParse(pointsSpendCtrl.text) ?? 0);
+                                     }
+                                   },
+                                   buttonStyleData: const ButtonStyleData(
+                                     height: 40,
+                                     width: 140,
+                                   ),
+                                 ),
                               ),
                               SizedBox(
                                 height: 15,
@@ -354,13 +362,15 @@ class _CalculatePointsPageState extends State<CalculatePointsPage> {
                               ),
                             ],
                           ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                    ],
-                  )))
+                         ),
+                       ),
+                       SizedBox(
+                         height: 20,
+                       ),
+                   ],
+                 ),
+              )
+            ),
             ],
           ),
         )),

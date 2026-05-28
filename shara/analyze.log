@@ -1,0 +1,564 @@
+Resolving dependencies...
+Downloading packages...
+  cli_util 0.4.2 (0.5.1 available)
+  connectivity_plus 6.1.5 (7.1.1 available)
+  dbus 0.7.12 (0.7.13 available)
+  device_info_plus 9.1.2 (13.1.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  image 4.8.0 (4.9.0 available)
+  matcher 0.12.18 (0.12.20 available)
+  meta 1.17.0 (1.18.2 available)
+  package_info_plus 8.3.1 (10.1.0 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  test_api 0.7.9 (0.7.12 available)
+  vector_math 2.2.0 (2.3.0 available)
+  win32 5.15.0 (6.3.0 available)
+  win32_registry 1.1.5 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+15 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing shara...                                              
+
+  error • The named parameter 'metadata' is required, but there's no corresponding argument • lib/controllers/buy_points_controller.dart:77:36 • missing_required_argument
+warning • The value of the local variable 'params' isn't used • lib/controllers/buy_points_controller.dart:103:9 • unused_local_variable
+  error • Non-nullable instance field 'selectedPoint' must be initialized • lib/controllers/calculate_points.dart:11:14 • not_initialized_non_nullable_instance_field
+  error • Undefined class 'UserData' • lib/controllers/change_account_information.dart:36:26 • undefined_class
+  error • Undefined class 'UserData' • lib/controllers/change_account_information.dart:66:26 • undefined_class
+  error • Undefined class 'UserData' • lib/controllers/change_account_information.dart:88:24 • undefined_class
+  error • The argument type 'Null' can't be assigned to the parameter type 'String'.  • lib/controllers/change_account_information.dart:89:79 • argument_type_not_assignable
+  error • Non-nullable instance field 'scrollController' must be initialized • lib/controllers/discount_coupon_controller.dart:20:20 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'offerDetails' must be initialized • lib/controllers/offer_details_controller.dart:11:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'promoCode' must be initialized • lib/controllers/promo_codes_controller.dart:19:13 • not_initialized_non_nullable_instance_field
+  error • The property 'text' can't be unconditionally accessed because the receiver can be 'null' • lib/controllers/promo_codes_controller.dart:133:30 • unchecked_use_of_nullable_value
+  error • A value of type 'int?' can't be assigned to a variable of type 'int' • lib/controllers/reset_password_controller.dart:41:20 • invalid_assignment
+  error • Undefined name 'UserData' • lib/controllers/sign_up_controller.dart:145:40 • undefined_identifier
+  error • The parameter 'success' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/controllers/sign_up_controller.dart:263:21 • missing_default_value_for_parameter
+  error • The parameter 'validator' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/controllers/sign_up_controller.dart:263:35 • missing_default_value_for_parameter
+  error • The parameter 'message' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/controllers/sign_up_controller.dart:263:51 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'message' must be initialized • lib/controllers/sign_up_controller.dart:265:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'success' must be initialized • lib/controllers/sign_up_controller.dart:265:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'validator' must be initialized • lib/controllers/sign_up_controller.dart:265:3 • not_initialized_non_nullable_instance_field
+  error • A value of type 'ValidatorClass?' can't be assigned to a variable of type 'ValidatorClass' • lib/controllers/sign_up_controller.dart:267:17 • invalid_assignment
+  error • The parameter 'name' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/controllers/transfer_points_controller.dart:27:21 • missing_default_value_for_parameter
+  error • The getter 'allContacts' isn't defined for the type 'FastContacts' • lib/controllers/transfer_points_controller.dart:44:47 • undefined_getter
+  error • The method 'split' isn't defined for the type 'Phone' • lib/controllers/transfer_points_controller.dart:52:32 • undefined_method
+  error • Target of URI doesn't exist: 'user_model.dart' • lib/features/auth/data/datasources/auth_data_source.dart:1:8 • uri_does_not_exist
+  error • The name 'UserDataModel' isn't a type, so it can't be used as a type argument • lib/features/auth/data/datasources/auth_data_source.dart:5:10 • non_type_as_type_argument
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:5:24 • missing_default_value_for_parameter
+  error • The parameter 'nameAr' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:5:35 • missing_default_value_for_parameter
+  error • The parameter 'nameEn' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:5:50 • missing_default_value_for_parameter
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:27:9 • missing_default_value_for_parameter
+  error • The parameter 'isActive' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:28:9 • missing_default_value_for_parameter
+  error • The parameter 'phone' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:29:12 • missing_default_value_for_parameter
+  error • The parameter 'points' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:30:12 • missing_default_value_for_parameter
+  error • The parameter 'email' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:31:12 • missing_default_value_for_parameter
+  error • The parameter 'firstName' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:32:12 • missing_default_value_for_parameter
+  error • The parameter 'lastName' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:33:12 • missing_default_value_for_parameter
+  error • The parameter 'avatar' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:34:12 • missing_default_value_for_parameter
+  error • The parameter 'gender' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:35:9 • missing_default_value_for_parameter
+  error • The parameter 'createdAt' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:36:12 • missing_default_value_for_parameter
+  error • The parameter 'membershipTypeId' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:37:9 • missing_default_value_for_parameter
+  error • The parameter 'membership' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:38:22 • missing_default_value_for_parameter
+  error • The parameter 'password' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:39:12 • missing_default_value_for_parameter
+  error • The argument type 'MembershipModel?' can't be assigned to the parameter type 'MembershipEntity'.  • lib/features/auth/data/models/user_model.dart:69:19 • argument_type_not_assignable
+  error • The parameter 'accessToken' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:94:22 • missing_default_value_for_parameter
+  error • The parameter 'tokenType' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:94:42 • missing_default_value_for_parameter
+  error • The parameter 'expiresIn' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:94:57 • missing_default_value_for_parameter
+  error • The parameter 'success' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:117:23 • missing_default_value_for_parameter
+  error • The parameter 'token' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:117:44 • missing_default_value_for_parameter
+  error • The parameter 'user' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/models/user_model.dart:117:62 • missing_default_value_for_parameter
+  error • The argument type 'TokenModel?' can't be assigned to the parameter type 'TokenEntity'.  • lib/features/auth/data/models/user_model.dart:123:14 • argument_type_not_assignable
+  error • The argument type 'UserModel?' can't be assigned to the parameter type 'UserEntity'.  • lib/features/auth/data/models/user_model.dart:124:13 • argument_type_not_assignable
+warning • The value of the local variable 'parsed' isn't used • lib/features/auth/data/models/user_model.dart:143:11 • unused_local_variable
+  error • The argument type 'Null' can't be assigned to the parameter type 'Map<String, dynamic>'.  • lib/features/auth/data/models/user_model.dart:152:27 • argument_type_not_assignable
+  error • The parameter 'dataSource' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/data/repositories/auth_repository_impl.dart:10:28 • missing_default_value_for_parameter
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:6:26 • missing_default_value_for_parameter
+  error • The parameter 'nameAr' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:6:35 • missing_default_value_for_parameter
+  error • The parameter 'nameEn' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:6:48 • missing_default_value_for_parameter
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:25:10 • missing_default_value_for_parameter
+  error • The parameter 'isActive' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:26:10 • missing_default_value_for_parameter
+  error • The parameter 'phone' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:27:10 • missing_default_value_for_parameter
+  error • The parameter 'points' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:28:10 • missing_default_value_for_parameter
+  error • The parameter 'email' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:29:10 • missing_default_value_for_parameter
+  error • The parameter 'firstName' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:30:10 • missing_default_value_for_parameter
+  error • The parameter 'lastName' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:31:10 • missing_default_value_for_parameter
+  error • The parameter 'avatar' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:32:10 • missing_default_value_for_parameter
+  error • The parameter 'gender' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:33:10 • missing_default_value_for_parameter
+  error • The parameter 'createdAt' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:34:10 • missing_default_value_for_parameter
+  error • The parameter 'membershipTypeId' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:35:10 • missing_default_value_for_parameter
+  error • The parameter 'membership' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:36:10 • missing_default_value_for_parameter
+  error • The parameter 'password' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:37:10 • missing_default_value_for_parameter
+  error • The parameter 'accessToken' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:47:10 • missing_default_value_for_parameter
+  error • The parameter 'tokenType' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:48:10 • missing_default_value_for_parameter
+  error • The parameter 'expiresIn' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:49:10 • missing_default_value_for_parameter
+  error • The parameter 'success' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:59:10 • missing_default_value_for_parameter
+  error • The parameter 'token' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:60:10 • missing_default_value_for_parameter
+  error • The parameter 'user' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/entities/user.dart:61:10 • missing_default_value_for_parameter
+  error • The parameter 'phoneOrEmail' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/usecases/login_usecase.dart:11:21 • missing_default_value_for_parameter
+  error • The parameter 'confirmCode' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/usecases/login_usecase.dart:11:40 • missing_default_value_for_parameter
+  error • The parameter 'phoneOrEmail' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/features/auth/domain/usecases/login_usecase.dart:28:31 • missing_default_value_for_parameter
+  error • The argument type 'Null' can't be assigned to the parameter type 'String'.  • lib/features/auth/presentation/controllers/login_controller.dart:42:19 • argument_type_not_assignable
+  error • The name 'UserDataModel' isn't a type, so it can't be used in an 'as' expression • lib/features/auth/presentation/controllers/login_controller.dart:62:62 • cast_to_non_type
+warning • Unused import: 'package:flutter/material.dart' • lib/helpers/apis_urls/api.dart:3:8 • unused_import
+  error • The parameter 'header' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/apis_urls/api.dart:9:27 • missing_default_value_for_parameter
+  error • The parameter 'body' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/apis_urls/api.dart:10:28 • missing_default_value_for_parameter
+  error • The parameter 'header' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/apis_urls/api.dart:29:27 • missing_default_value_for_parameter
+  error • The parameter 'header' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/apis_urls/api.dart:51:27 • missing_default_value_for_parameter
+  error • A value of type 'String?' can't be assigned to a variable of type 'String' • lib/helpers/utils/storage/handle_json.dart:24:32 • invalid_assignment
+  error • A value of type 'Null' can't be returned from the method 'readJson' because it has a return type of 'Future<Map<String, dynamic>>' • lib/helpers/utils/storage/handle_json.dart:32:14 • return_of_invalid_type
+warning • Dead code • lib/helpers/utils/storage/handle_json.dart:35:7 • dead_code
+  error • A value of type 'Null' can't be returned from the method 'readJson' because it has a return type of 'Future<Map<String, dynamic>>' • lib/helpers/utils/storage/handle_json.dart:35:14 • return_of_invalid_type
+warning • The value of the local variable 'success' isn't used • lib/helpers/utils/storage/handle_json.dart:42:11 • unused_local_variable
+  error • The parameter 'currentEmail' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/utils/validation/validate_fields.dart:6:48 • missing_default_value_for_parameter
+  error • A value of type 'Null' can't be returned from the function 'validateEmailField' because it has a return type of 'String' • lib/helpers/utils/validation/validate_fields.dart:16:10 • return_of_invalid_type
+  error • The parameter 'currentPassword' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/utils/validation/validate_fields.dart:19:49 • missing_default_value_for_parameter
+  error • A value of type 'Null' can't be returned from the function 'validatePassword' because it has a return type of 'String' • lib/helpers/utils/validation/validate_fields.dart:27:10 • return_of_invalid_type
+  error • The parameter 'password' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/utils/validation/validate_fields.dart:30:42 • missing_default_value_for_parameter
+  error • The parameter 'confirmedPassword' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/utils/validation/validate_fields.dart:30:59 • missing_default_value_for_parameter
+  error • A value of type 'Null' can't be returned from the function 'validateConfirmedPassword' because it has a return type of 'String' • lib/helpers/utils/validation/validate_fields.dart:37:13 • return_of_invalid_type
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/utils/widgets/loading_data_widget.dart:9:26 • missing_default_value_for_parameter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/helpers/utils/widgets/loading_data_widget.dart:19:33 • deprecated_member_use
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/utils/widgets/loading_indicator.dart:6:32 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/helpers/utils/widgets/sending_loading_widget.dart:9:33 • missing_default_value_for_parameter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/helpers/utils/widgets/sending_loading_widget.dart:19:32 • deprecated_member_use
+  error • This expression has a type of 'void' so its value can't be used • lib/main.dart:24:9 • use_of_void_result
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: MyApp.initApp • lib/main.dart:58:7 • must_be_immutable
+  error • Non-nullable instance field 'image' must be initialized • lib/models/app_contact.dart:6:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameAr' must be initialized • lib/models/clac_points.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameEn' must be initialized • lib/models/clac_points.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'earnRatio' must be initialized • lib/models/clac_points.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/clac_points.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'lossRatio' must be initialized • lib/models/clac_points.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'currentPage' must be initialized • lib/models/discount_coupon.dart:6:7 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'firstPageUrl' must be initialized • lib/models/discount_coupon.dart:8:10 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'from' must be initialized • lib/models/discount_coupon.dart:9:7 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'lastPage' must be initialized • lib/models/discount_coupon.dart:10:7 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'lastPageUrl' must be initialized • lib/models/discount_coupon.dart:11:10 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'path' must be initialized • lib/models/discount_coupon.dart:13:10 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'perPage' must be initialized • lib/models/discount_coupon.dart:14:7 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'to' must be initialized • lib/models/discount_coupon.dart:16:7 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'total' must be initialized • lib/models/discount_coupon.dart:17:7 • not_initialized_non_nullable_instance_field
+warning • The value of the field '_nameAr' isn't used • lib/models/discount_coupon.dart:45:10 • unused_field
+  error • Non-nullable instance field '_image' must be initialized • lib/models/discount_coupon.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameAr' must be initialized • lib/models/discount_coupon.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameEn' must be initialized • lib/models/discount_coupon.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'createdAt' must be initialized • lib/models/discount_coupon.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/discount_coupon.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'updatedAt' must be initialized • lib/models/discount_coupon.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_introAr' must be initialized • lib/models/home_service.dart:18:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_introEn' must be initialized • lib/models/home_service.dart:18:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_imageAr' must be initialized • lib/models/home_service.dart:62:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_imageEn' must be initialized • lib/models/home_service.dart:62:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/home_service.dart:62:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_introAr' must be initialized • lib/models/membership_ervice.dart:9:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_introEn' must be initialized • lib/models/membership_ervice.dart:9:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'memberships' must be initialized • lib/models/membership_ervice.dart:9:3 • not_initialized_non_nullable_instance_field
+  error • A value of type 'Memberships?' can't be assigned to a variable of type 'Memberships' • lib/models/membership_ervice.dart:12:19 • invalid_assignment
+  error • The parameter 'currentPage' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:47:13 • missing_default_value_for_parameter
+  error • The parameter 'data' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:48:14 • missing_default_value_for_parameter
+  error • The parameter 'firstPageUrl' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:49:14 • missing_default_value_for_parameter
+  error • The parameter 'from' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:50:14 • missing_default_value_for_parameter
+  error • The parameter 'lastPage' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:51:14 • missing_default_value_for_parameter
+  error • The parameter 'lastPageUrl' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:52:14 • missing_default_value_for_parameter
+  error • The parameter 'nextPageUrl' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:53:14 • missing_default_value_for_parameter
+  error • The parameter 'path' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:54:14 • missing_default_value_for_parameter
+  error • The parameter 'perPage' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:55:14 • missing_default_value_for_parameter
+  error • The parameter 'prevPageUrl' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:56:14 • missing_default_value_for_parameter
+  error • The parameter 'to' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:57:14 • missing_default_value_for_parameter
+  error • The parameter 'total' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/membership_ervice.dart:58:14 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'currentPage' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'data' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'firstPageUrl' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'from' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'lastPage' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'lastPageUrl' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'nextPageUrl' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'path' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'perPage' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'prevPageUrl' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'to' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'total' must be initialized • lib/models/membership_ervice.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_detailsAr' must be initialized • lib/models/membership_ervice.dart:92:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_detailsEn' must be initialized • lib/models/membership_ervice.dart:92:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_imageAr' must be initialized • lib/models/membership_ervice.dart:92:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_imageEn' must be initialized • lib/models/membership_ervice.dart:92:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameAr' must be initialized • lib/models/membership_ervice.dart:92:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameEn' must be initialized • lib/models/membership_ervice.dart:92:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'features' must be initialized • lib/models/membership_ervice.dart:92:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/membership_ervice.dart:92:3 • not_initialized_non_nullable_instance_field
+warning • The left operand can't be null, so the right operand is never executed • lib/models/membership_ervice.dart:101:31 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/models/membership_ervice.dart:101:49 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/models/membership_ervice.dart:109:36 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/models/membership_ervice.dart:109:57 • dead_null_aware_expression
+  error • Non-nullable instance field '_detailsAr' must be initialized • lib/models/membership_ervice.dart:111:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_detailsEn' must be initialized • lib/models/membership_ervice.dart:111:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_imageAr' must be initialized • lib/models/membership_ervice.dart:111:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_imageEn' must be initialized • lib/models/membership_ervice.dart:111:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameAr' must be initialized • lib/models/membership_ervice.dart:111:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameEn' must be initialized • lib/models/membership_ervice.dart:111:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'features' must be initialized • lib/models/membership_ervice.dart:111:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/membership_ervice.dart:111:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameAr' must be initialized • lib/models/membership_ervice.dart:142:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameEn' must be initialized • lib/models/membership_ervice.dart:142:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'icon' must be initialized • lib/models/membership_ervice.dart:142:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/membership_ervice.dart:142:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'membershipTypesId' must be initialized • lib/models/membership_ervice.dart:142:3 • not_initialized_non_nullable_instance_field
+  error • The parameter 'giftCards' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:6:25 • missing_default_value_for_parameter
+  error • The parameter 'success' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:6:41 • missing_default_value_for_parameter
+  error • The parameter 'message' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:6:55 • missing_default_value_for_parameter
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:38:13 • missing_default_value_for_parameter
+  error • The parameter 'resalId' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:39:14 • missing_default_value_for_parameter
+  error • The parameter 'status' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:40:14 • missing_default_value_for_parameter
+  error • The parameter 'customerId' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:41:14 • missing_default_value_for_parameter
+  error • The parameter 'variantId' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:42:14 • missing_default_value_for_parameter
+  error • The parameter 'referenceId' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:43:14 • missing_default_value_for_parameter
+  error • The parameter 'code' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:44:14 • missing_default_value_for_parameter
+  error • The parameter 'expireOn' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:45:14 • missing_default_value_for_parameter
+  error • The parameter 'howToUse' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:46:14 • missing_default_value_for_parameter
+  error • The parameter 'photo' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:47:14 • missing_default_value_for_parameter
+  error • The parameter 'price' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:48:14 • missing_default_value_for_parameter
+  error • The parameter 'totalPrice' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:49:14 • missing_default_value_for_parameter
+  error • The parameter 'createdAt' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:50:14 • missing_default_value_for_parameter
+  error • The parameter 'updatedAt' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/my_coupons_manager.dart:51:14 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'code' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'createdAt' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'customerId' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'expireOn' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'howToUse' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'photo' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'price' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'referenceId' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'resalId' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'status' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'totalPrice' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'updatedAt' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'variantId' must be initialized • lib/models/my_coupons_manager.dart:53:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_imageEn' must be initialized • lib/models/offer.dart:21:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_titleAr' must be initialized • lib/models/offer.dart:21:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_titleEn' must be initialized • lib/models/offer.dart:21:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/offer.dart:21:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'offersCategoriesId' must be initialized • lib/models/offer.dart:21:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'partner' must be initialized • lib/models/offer.dart:21:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'usersCompaniesId' must be initialized • lib/models/offer.dart:21:3 • not_initialized_non_nullable_instance_field
+  error • A value of type 'OfferPartner?' can't be assigned to a variable of type 'OfferPartner' • lib/models/offer.dart:30:5 • invalid_assignment
+  error • Non-nullable instance field '_nameAr' must be initialized • lib/models/offer.dart:46:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameEn' must be initialized • lib/models/offer.dart:46:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/offer.dart:46:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_imageEn' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'category' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'descAr' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'descEn' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'offersCategoriesId' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'partner' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'titleAr' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'titleEn' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'usersCompaniesId' must be initialized • lib/models/offer_details.dart:43:3 • not_initialized_non_nullable_instance_field
+  error • A value of type 'Partner?' can't be assigned to a variable of type 'Partner' • lib/models/offer_details.dart:54:5 • invalid_assignment
+  error • A value of type 'OfferCategory?' can't be assigned to a variable of type 'OfferCategory' • lib/models/offer_details.dart:55:16 • invalid_assignment
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/offer_details.dart:68:23 • missing_default_value_for_parameter
+  error • The parameter 'nameAr' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/offer_details.dart:68:32 • missing_default_value_for_parameter
+  error • The parameter 'nameEn' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/offer_details.dart:68:45 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'id' must be initialized • lib/models/offer_details.dart:70:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'nameAr' must be initialized • lib/models/offer_details.dart:70:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'nameEn' must be initialized • lib/models/offer_details.dart:70:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameAr' must be initialized • lib/models/offers_service.dart:31:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameEn' must be initialized • lib/models/offers_service.dart:31:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/offers_service.dart:31:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'nextLinke' must be initialized • lib/models/offers_service.dart:31:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_logo' must be initialized • lib/models/partner.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameAr' must be initialized • lib/models/partner.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_nameEn' must be initialized • lib/models/partner.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/partner.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'storeUrl' must be initialized • lib/models/partner.dart:12:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'success' must be initialized • lib/models/promo_code.dart:4:8 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'message' must be initialized • lib/models/promo_code.dart:5:10 • not_initialized_non_nullable_instance_field
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:33:13 • missing_default_value_for_parameter
+  error • The parameter 'title' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:34:14 • missing_default_value_for_parameter
+  error • The parameter 'photo' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:35:14 • missing_default_value_for_parameter
+  error • The parameter 'description' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:36:14 • missing_default_value_for_parameter
+  error • The parameter 'display' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:38:14 • missing_default_value_for_parameter
+  error • The parameter 'variants' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:39:14 • missing_default_value_for_parameter
+  error • The parameter 'types' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:40:14 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'description' must be initialized • lib/models/promo_code.dart:42:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'display' must be initialized • lib/models/promo_code.dart:42:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/promo_code.dart:42:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'photo' must be initialized • lib/models/promo_code.dart:42:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'title' must be initialized • lib/models/promo_code.dart:42:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'types' must be initialized • lib/models/promo_code.dart:42:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'variants' must be initialized • lib/models/promo_code.dart:42:3 • not_initialized_non_nullable_instance_field
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:83:13 • missing_default_value_for_parameter
+  error • The parameter 'display' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:89:14 • missing_default_value_for_parameter
+  error • The parameter 'country' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:90:14 • missing_default_value_for_parameter
+  error • The parameter 'stock' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:91:14 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'country' must be initialized • lib/models/promo_code.dart:93:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'display' must be initialized • lib/models/promo_code.dart:93:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/promo_code.dart:93:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'stock' must be initialized • lib/models/promo_code.dart:93:3 • not_initialized_non_nullable_instance_field
+  error • A value of type 'Country?' can't be assigned to a variable of type 'Country' • lib/models/promo_code.dart:102:5 • invalid_assignment
+  error • A value of type 'Stock?' can't be assigned to a variable of type 'Stock' • lib/models/promo_code.dart:103:13 • invalid_assignment
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:117:17 • missing_default_value_for_parameter
+  error • The parameter 'name' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:117:26 • missing_default_value_for_parameter
+  error • The parameter 'fullName' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:117:37 • missing_default_value_for_parameter
+  error • The parameter 'code' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:117:52 • missing_default_value_for_parameter
+  error • The parameter 'flag' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:117:63 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'code' must be initialized • lib/models/promo_code.dart:119:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'flag' must be initialized • lib/models/promo_code.dart:119:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'fullName' must be initialized • lib/models/promo_code.dart:119:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/promo_code.dart:119:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'name' must be initialized • lib/models/promo_code.dart:119:3 • not_initialized_non_nullable_instance_field
+  error • The parameter 'status' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:133:15 • missing_default_value_for_parameter
+  error • The parameter 'quantity' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:133:28 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'quantity' must be initialized • lib/models/promo_code.dart:135:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'status' must be initialized • lib/models/promo_code.dart:135:3 • not_initialized_non_nullable_instance_field
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:149:15 • missing_default_value_for_parameter
+  error • The parameter 'name' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:149:24 • missing_default_value_for_parameter
+  error • The parameter 'code' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:149:35 • missing_default_value_for_parameter
+  error • The parameter 'description' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code.dart:149:46 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'code' must be initialized • lib/models/promo_code.dart:151:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'description' must be initialized • lib/models/promo_code.dart:151:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/promo_code.dart:151:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'name' must be initialized • lib/models/promo_code.dart:151:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'success' must be initialized • lib/models/promo_code_type.dart:2:8 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'message' must be initialized • lib/models/promo_code_type.dart:3:10 • not_initialized_non_nullable_instance_field
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code_type.dart:27:23 • missing_default_value_for_parameter
+  error • The parameter 'name' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code_type.dart:27:32 • missing_default_value_for_parameter
+  error • The parameter 'code' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code_type.dart:27:43 • missing_default_value_for_parameter
+  error • The parameter 'description' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/promo_code_type.dart:27:54 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'code' must be initialized • lib/models/promo_code_type.dart:29:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'description' must be initialized • lib/models/promo_code_type.dart:29:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/promo_code_type.dart:29:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'name' must be initialized • lib/models/promo_code_type.dart:29:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'success' must be initialized • lib/models/transaction_service.dart:5:8 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'message' must be initialized • lib/models/transaction_service.dart:6:10 • not_initialized_non_nullable_instance_field
+warning • The operand can't be 'null', so the condition is always 'false' • lib/models/transaction_service.dart:17:66 • unnecessary_null_comparison
+  error • Non-nullable instance field '_status' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_type' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'companyId' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'createdAt' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'currency' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'customerId' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'merchantOrderId' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'partner' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'pointsInfo' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'redirectLink' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'updatedAt' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'uuid' must be initialized • lib/models/transaction_service.dart:60:3 • not_initialized_non_nullable_instance_field
+  error • A value of type 'TransPartner?' can't be assigned to a variable of type 'TransPartner' • lib/models/transaction_service.dart:75:5 • invalid_assignment
+  error • A value of type 'PointsInfo?' can't be assigned to a variable of type 'PointsInfo' • lib/models/transaction_service.dart:76:18 • invalid_assignment
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/transaction_service.dart:89:22 • missing_default_value_for_parameter
+  error • The parameter 'name' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/transaction_service.dart:89:31 • missing_default_value_for_parameter
+  error • The parameter 'isActive' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/transaction_service.dart:89:42 • missing_default_value_for_parameter
+  error • The parameter 'logo' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/transaction_service.dart:89:57 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'id' must be initialized • lib/models/transaction_service.dart:91:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'isActive' must be initialized • lib/models/transaction_service.dart:91:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'logo' must be initialized • lib/models/transaction_service.dart:91:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'name' must be initialized • lib/models/transaction_service.dart:91:3 • not_initialized_non_nullable_instance_field
+  error • The parameter 'id' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/transaction_service.dart:110:13 • missing_default_value_for_parameter
+  error • The parameter 'transactionId' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/transaction_service.dart:111:14 • missing_default_value_for_parameter
+  error • The parameter 'createdAt' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/transaction_service.dart:115:14 • missing_default_value_for_parameter
+  error • The parameter 'updatedAt' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/models/transaction_service.dart:116:14 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'createdAt' must be initialized • lib/models/transaction_service.dart:118:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'id' must be initialized • lib/models/transaction_service.dart:118:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'transactionId' must be initialized • lib/models/transaction_service.dart:118:3 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field 'updatedAt' must be initialized • lib/models/transaction_service.dart:118:3 • not_initialized_non_nullable_instance_field
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/my_libs/image/load_image.dart:19:32 • missing_default_value_for_parameter
+  error • The parameter 'height' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/my_libs/image/load_image.dart:19:66 • missing_default_value_for_parameter
+  error • The parameter 'width' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/my_libs/image/load_image.dart:19:78 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'imageFromBytes' must be initialized • lib/my_libs/image/load_image.dart:29:13 • not_initialized_non_nullable_instance_field
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/account_information.dart:11:24 • missing_default_value_for_parameter
+  error • The method 'mempName' isn't defined for the type 'MembershipEntity' • lib/views/screens/account/account_information.dart:60:93 • undefined_method
+  error • The parameter 'onChange' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/account_settings.dart:146:33 • missing_default_value_for_parameter
+  error • The argument type 'Function' can't be assigned to the parameter type 'GestureTapCallback?'.  • lib/views/screens/account/account_settings.dart:179:27 • argument_type_not_assignable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/forget_password.dart:18:29 • missing_default_value_for_parameter
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: InvoicesProcesses.controller • lib/views/screens/account/invoices_processes.dart:10:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/invoices_processes.dart:12:26 • missing_default_value_for_parameter
+  error • Target of URI doesn't exist: '../../../../controllers/login_controller.dart' • lib/views/screens/account/login/code_verification_login.dart:8:8 • uri_does_not_exist
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/login/code_verification_login.dart:17:40 • missing_default_value_for_parameter
+  error • Undefined class 'LoginController' • lib/views/screens/account/login/code_verification_login.dart:31:9 • undefined_class
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/login/login.dart:15:18 • missing_default_value_for_parameter
+  error • 2 positional arguments expected by 'LoginController.new', but 0 found • lib/views/screens/account/login/login.dart:25:51 • not_enough_positional_arguments
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: MyCouponsPage.controller • lib/views/screens/account/my_coupons.dart:13:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/my_coupons.dart:15:22 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/reset_password.dart:18:26 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/signin_pages/code_verification.dart:13:35 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/signin_pages/confirm_password.dart:15:34 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/signin_pages/password_page.dart:20:38 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/signin_pages/phone_page.dart:19:24 • missing_default_value_for_parameter
+  error • The property 'languageCode' can't be unconditionally accessed because the receiver can be 'null' • lib/views/screens/account/signin_pages/phone_page.dart:114:50 • unchecked_use_of_nullable_value
+  error • The property 'languageCode' can't be unconditionally accessed because the receiver can be 'null' • lib/views/screens/account/signin_pages/phone_page.dart:129:50 • unchecked_use_of_nullable_value
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/signin_pages/sign_up.dart:17:20 • missing_default_value_for_parameter
+warning • Dead code • lib/views/screens/account/signin_pages/sign_up.dart:132:29 • dead_code
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/account/widgets/my_coupon_widget.dart:13:23 • missing_default_value_for_parameter
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: AllOffersScreen.initAppController • lib/views/screens/all_offers/all_offers_screen.dart:10:8 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/all_offers/all_offers_screen.dart:22:24 • missing_default_value_for_parameter
+  error • The parameter 'onBack' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/all_offers/all_offers_screen.dart:22:33 • missing_default_value_for_parameter
+  error • The argument type 'Function' can't be assigned to the parameter type 'GestureTapCallback?'.  • lib/views/screens/all_offers/all_offers_screen.dart:48:26 • argument_type_not_assignable
+  error • The argument type 'Null' can't be assigned to the parameter type 'dynamic Function()'.  • lib/views/screens/all_offers/all_offers_screen.dart:95:180 • argument_type_not_assignable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/all_offers/offers.dart:10:25 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/all_offers/single_offer.dart:13:25 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/main_home_screen.dart:17:23 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'size' must be initialized • lib/views/screens/home/main_home_screen.dart:26:8 • not_initialized_non_nullable_instance_field
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/views/screens/home/main_home_screen.dart:35:12 • deprecated_member_use
+  error • The named parameter 'itemHeight' isn't defined • lib/views/screens/home/pages/calculate_points.dart:259:36 • undefined_named_parameter
+  error • The named parameter 'itemHeight' isn't defined • lib/views/screens/home/pages/calculate_points.dart:338:36 • undefined_named_parameter
+  error • The named parameter 'items' isn't defined • lib/views/screens/home/pages/calculate_points.dart:340:36 • undefined_named_parameter
+  error • The named parameter 'valueListenable' isn't defined • lib/views/screens/home/pages/calculate_points.dart:352:36 • undefined_named_parameter
+  error • The named parameter 'onChanged' isn't defined • lib/views/screens/home/pages/calculate_points.dart:353:36 • undefined_named_parameter
+  error • The named parameter 'buttonStyleData' isn't defined • lib/views/screens/home/pages/calculate_points.dart:358:36 • undefined_named_parameter
+  error • The named parameter 'menuItemStyleData' isn't defined • lib/views/screens/home/pages/calculate_points.dart:362:36 • undefined_named_parameter
+  error • The named parameter 'height' isn't defined • lib/views/screens/home/pages/calculate_points.dart:363:38 • undefined_named_parameter
+  error • Expected to find ']' • lib/views/screens/home/pages/calculate_points.dart:366:31 • expected_token
+  error • Too many positional arguments: 0 expected, but 4 found • lib/views/screens/home/pages/calculate_points.dart:367:31 • extra_positional_arguments_could_be_named
+  error • Expected to find ')' • lib/views/screens/home/pages/calculate_points.dart:389:29 • expected_token
+  error • Expected an identifier • lib/views/screens/home/pages/calculate_points.dart:398:18 • missing_identifier
+  error • Expected to find ')' • lib/views/screens/home/pages/calculate_points.dart:398:18 • expected_token
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/discount_coupons/screen.dart:14:24 • missing_default_value_for_parameter
+  error • The parameter 'onBack' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/discount_coupons/screen.dart:14:33 • missing_default_value_for_parameter
+  error • The argument type 'Function' can't be assigned to the parameter type 'GestureTapCallback?'.  • lib/views/screens/home/pages/discount_coupons/screen.dart:36:26 • argument_type_not_assignable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/discount_coupons/screen.dart:104:33 • missing_default_value_for_parameter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/discount_coupons/screen.dart:146:50 • deprecated_member_use
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/finance/choose_beneficiary.dart:9:31 • missing_default_value_for_parameter
+warning • This cast always throws an exception because the expression always evaluates to 'null' • lib/views/screens/home/pages/finance/contacts.dart:96:60 • cast_from_null_always_fails
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: FinancePage.appController • lib/views/screens/home/pages/finance/finance_page.dart:12:7 • must_be_immutable
+  error • The argument type 'Function' can't be assigned to the parameter type 'GestureTapCallback?'.  • lib/views/screens/home/pages/finance/finance_page.dart:35:22 • argument_type_not_assignable
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/finance/finance_page.dart:60:44 • deprecated_member_use
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: TransferToContactPage.readOnly, TransferToContactPage._phone • lib/views/screens/home/pages/finance/transfer_to_contact.dart:10:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/finance/transfer_to_contact.dart:18:30 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/finance/widgets/ContactListItemWidget.dart:10:49 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/finance/widgets/bottom_sheet.dart:14:27 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/finance/widgets/finance_page_item.dart:10:36 • missing_default_value_for_parameter
+warning • The value of the local variable 'height' isn't used • lib/views/screens/home/pages/home_page/home_page.dart:49:9 • unused_local_variable
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/home_page/home_page.dart:64:46 • deprecated_member_use
+  error • The argument type 'Null' can't be assigned to the parameter type 'dynamic Function()'.  • lib/views/screens/home/pages/home_page/home_page.dart:96:89 • argument_type_not_assignable
+  error • The method 'mempName' isn't defined for the type 'MembershipEntity' • lib/views/screens/home/pages/home_page/home_widgets/acoount_widget.dart:70:76 • undefined_method
+  error • The getter 'typeColor' isn't defined for the type 'MembershipEntity' • lib/views/screens/home/pages/home_page/home_widgets/acoount_widget.dart:74:87 • undefined_getter
+  error • The getter 'typeBGImage' isn't defined for the type 'MembershipEntity' • lib/views/screens/home/pages/home_page/home_widgets/acoount_widget.dart:111:80 • undefined_getter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart:23:32 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart:40:64 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart:44:64 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart:70:64 • deprecated_member_use
+  error • The parameter 'imageIcon' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart:109:31 • missing_default_value_for_parameter
+  error • The parameter 'title' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart:109:46 • missing_default_value_for_parameter
+  error • The argument type 'Function?' can't be assigned to the parameter type 'GestureTapCallback?'.  • lib/views/screens/home/pages/home_page/home_widgets/finance_widget.dart:114:14 • argument_type_not_assignable
+warning • The value of the local variable 'height' isn't used • lib/views/screens/home/pages/home_page/home_widgets/home_appbar.dart:79:10 • unused_local_variable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/home_page/home_widgets/slider_banner_widget.dart:10:28 • missing_default_value_for_parameter
+  error • Non-nullable instance field '_timer' must be initialized • lib/views/screens/home/pages/home_page/home_widgets/slider_banner_widget.dart:22:9 • not_initialized_non_nullable_instance_field
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/last_ops/item_widget.dart:10:46 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/last_ops/last_operations.dart:11:29 • missing_default_value_for_parameter
+  error • The argument type 'Null' can't be assigned to the parameter type 'ScrollController'.  • lib/views/screens/home/pages/last_ops/last_operations.dart:47:29 • argument_type_not_assignable
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: MembershipPage.controller, MembershipPage.initApp • lib/views/screens/home/pages/memberships.dart:10:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/memberships.dart:13:23 • missing_default_value_for_parameter
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: MembershipDetailsScreen.initApp • lib/views/screens/home/pages/memberships/membership_details.dart:8:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/memberships/membership_details.dart:10:32 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/notifications_page.dart:9:26 • missing_default_value_for_parameter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/notifications_page.dart:99:52 • deprecated_member_use
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/profile.dart:24:20 • missing_default_value_for_parameter
+  error • The parameter 'onBack' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/profile.dart:24:29 • missing_default_value_for_parameter
+  error • The argument type 'VerifyIdPage?' can't be assigned to the parameter type 'Widget'.  • lib/views/screens/home/pages/profile.dart:124:47 • argument_type_not_assignable
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: ItemWidget.controller • lib/views/screens/home/pages/promo_codes/item_widget.dart:9:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/promo_codes/item_widget.dart:15:20 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/promo_codes/offers_points.dart:14:29 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'scrollController' must be initialized • lib/views/screens/home/pages/promo_codes/offers_points.dart:22:20 • not_initialized_non_nullable_instance_field
+  error • The argument type 'Function' can't be assigned to the parameter type 'GestureTapCallback?'.  • lib/views/screens/home/pages/promo_codes/offers_points.dart:72:22 • argument_type_not_assignable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/promo_codes/offers_points.dart:152:39 • missing_default_value_for_parameter
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: PromoCodeVariantsScreen.controller • lib/views/screens/home/pages/promo_codes/promo_code_varients_screen.dart:9:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/promo_codes/promo_code_varients_screen.dart:12:33 • missing_default_value_for_parameter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/screens/home/pages/promo_codes/promo_code_varients_screen.dart:66:31 • deprecated_member_use
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: VariantItemWidget.controller • lib/views/screens/home/pages/promo_codes/variant_item_widget.dart:11:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/promo_codes/variant_item_widget.dart:14:26 • missing_default_value_for_parameter
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: ChangeLanguagePage.initApp • lib/views/screens/home/pages/settings/change_lang.dart:6:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/home/pages/settings/change_lang.dart:8:28 • missing_default_value_for_parameter
+  error • The property 'languageCode' can't be unconditionally accessed because the receiver can be 'null' • lib/views/screens/home/pages/settings/change_lang.dart:62:34 • unchecked_use_of_nullable_value
+  error • The property 'languageCode' can't be unconditionally accessed because the receiver can be 'null' • lib/views/screens/home/pages/settings/change_lang.dart:95:34 • unchecked_use_of_nullable_value
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: PartnersPage.partnersController, PartnersPage.initApp • lib/views/screens/partners/all_partners.dart:13:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/partners/all_partners.dart:16:21 • missing_default_value_for_parameter
+  error • The argument type 'Function' can't be assigned to the parameter type 'GestureTapCallback?'.  • lib/views/screens/partners/all_partners.dart:39:24 • argument_type_not_assignable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/splash/intro_page.dart:10:24 • missing_default_value_for_parameter
+  error • The parameter 'image' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/splash/intro_page.dart:276:19 • missing_default_value_for_parameter
+  error • The parameter 'title' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/splash/intro_page.dart:276:31 • missing_default_value_for_parameter
+  error • The parameter 'description' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/splash/intro_page.dart:276:43 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/splash/splash.dart:18:19 • missing_default_value_for_parameter
+  error • Non-nullable instance field 'timer' must be initialized • lib/views/screens/splash/splash.dart:29:9 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_controller' must be initialized • lib/views/screens/splash/splash.dart:33:25 • not_initialized_non_nullable_instance_field
+warning • Dead code • lib/views/screens/splash/splash.dart:92:5 • dead_code
+warning • The left operand can't be null, so the right operand is never executed • lib/views/screens/splash/splash.dart:129:84 • dead_null_aware_expression
+warning • The left operand can't be null, so the right operand is never executed • lib/views/screens/splash/splash.dart:130:77 • dead_null_aware_expression
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/screens/verfy_id/verify_id_page.dart:11:22 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_listview_widget.dart:11:25 • missing_default_value_for_parameter
+  error • The argument type 'dynamic Function(BuildContext, int)' can't be assigned to the parameter type 'NullableIndexedWidgetBuilder'.  • lib/views/widgets/custom_listview_widget.dart:18:20 • argument_type_not_assignable
+  error • The argument type 'dynamic Function(BuildContext, int)' can't be assigned to the parameter type 'IndexedWidgetBuilder'.  • lib/views/widgets/custom_listview_widget.dart:18:51 • argument_type_not_assignable
+  error • The argument type 'dynamic Function()' can't be assigned to the parameter type 'RefreshCallback'.  • lib/views/widgets/custom_listview_widget.dart:19:19 • argument_type_not_assignable
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: CustomTextFormField.inputFormatters, CustomTextFormField.focusNode • lib/views/widgets/custom_text_form_field.dart:5:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:29 • missing_default_value_for_parameter
+  error • The parameter 'hintText' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:56 • missing_default_value_for_parameter
+  error • The parameter 'labelText' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:70 • missing_default_value_for_parameter
+  error • The parameter 'icon' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:85 • missing_default_value_for_parameter
+  error • The parameter 'errorMessage' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:145 • missing_default_value_for_parameter
+  error • The parameter 'controller' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:163 • missing_default_value_for_parameter
+  error • The parameter 'onFieldSubmitted' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:218 • missing_default_value_for_parameter
+  error • The parameter 'onChange' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:240 • missing_default_value_for_parameter
+  error • The parameter 'focusNode' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:360 • missing_default_value_for_parameter
+  error • The parameter 'inputFormatters' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_text_form_field.dart:25:375 • missing_default_value_for_parameter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/widgets/custom_text_form_field.dart:89:36 • deprecated_member_use
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/custom_textfield_underline.dart:5:38 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/decorated_app_bar.dart:7:25 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/drop_down_widget.dart:13:12 • missing_default_value_for_parameter
+  error • The parameter 'hintText' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/drop_down_widget.dart:15:12 • missing_default_value_for_parameter
+  error • The parameter 'labelText' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/drop_down_widget.dart:16:12 • missing_default_value_for_parameter
+  error • The parameter 'controller' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/drop_down_widget.dart:17:12 • missing_default_value_for_parameter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/widgets/drop_down_widget.dart:81:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/widgets/drop_down_widget.dart:96:33 • deprecated_member_use
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/favorit_icon_widget.dart:7:33 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/flat_botton.dart:8:25 • missing_default_value_for_parameter
+  error • The parameter 'child' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/flat_botton.dart:8:34 • missing_default_value_for_parameter
+  error • The parameter 'color' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/flat_botton.dart:8:45 • missing_default_value_for_parameter
+  error • The parameter 'onPressed' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/flat_botton.dart:8:56 • missing_default_value_for_parameter
+  error • The argument type 'Function' can't be assigned to the parameter type 'GestureTapCallback?'.  • lib/views/widgets/flat_botton.dart:13:14 • argument_type_not_assignable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/four_digits_widget.dart:14:25 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/home_loading_widget.dart:8:26 • missing_default_value_for_parameter
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/views/widgets/home_loading_widget.dart:22:36 • deprecated_member_use
+warning • The declaration '_imageFromServer' isn't referenced • lib/views/widgets/image_from_server.dart:6:8 • unused_element
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/leading_back_arrow.dart:7:31 • missing_default_value_for_parameter
+  error • The parameter 'onBack' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/leading_back_arrow.dart:7:55 • missing_default_value_for_parameter
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: ListOffersItemsWidget.offers • lib/views/widgets/list_offers_items.dart:10:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/login_header.dart:12:26 • missing_default_value_for_parameter
+  error • The parameter 'pageName' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/login_header.dart:12:112 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/main_button.dart:8:26 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/network_image.dart:9:24 • missing_default_value_for_parameter
+  error • The parameter 'width' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/network_image.dart:18:57 • missing_default_value_for_parameter
+  error • The parameter 'height' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/network_image.dart:18:70 • missing_default_value_for_parameter
+  error • The parameter 'fit' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/network_image.dart:74:44 • missing_default_value_for_parameter
+  error • The parameter 'width' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/network_image.dart:74:55 • missing_default_value_for_parameter
+  error • The parameter 'height' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/network_image.dart:74:68 • missing_default_value_for_parameter
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: OfferItemWidget.initAppController • lib/views/widgets/offer_item_widget.dart:8:7 • must_be_immutable
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: OffersTitleShowAllWidget.appController • lib/views/widgets/offers_title_show_all.dart:8:7 • must_be_immutable
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/offers_title_show_all.dart:14:34 • missing_default_value_for_parameter
+  error • The parameter 'onShowAllPressed' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/offers_title_show_all.dart:14:44 • missing_default_value_for_parameter
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/open_container_widget.dart:10:29 • missing_default_value_for_parameter
+warning • Dead code • lib/views/widgets/open_container_widget.dart:21:5 • dead_code
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/rotating_widget.dart:9:13 • missing_default_value_for_parameter
+  error • The parameter 'color' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/rotating_widget.dart:10:14 • missing_default_value_for_parameter
+  error • The parameter 'itemBuilder' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/rotating_widget.dart:12:14 • missing_default_value_for_parameter
+  error • The parameter 'controller' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/rotating_widget.dart:14:14 • missing_default_value_for_parameter
+warning • Unnecessary type check; the result is always 'true' • lib/views/widgets/rotating_widget.dart:15:22 • unnecessary_type_check
+warning • The operand can't be 'null', so the condition is always 'false' • lib/views/widgets/rotating_widget.dart:15:55 • unnecessary_null_comparison
+warning • The operand can't be 'null', so the condition is always 'false' • lib/views/widgets/rotating_widget.dart:15:72 • unnecessary_null_comparison
+  error • Non-nullable instance field '_controller' must be initialized • lib/views/widgets/rotating_widget.dart:31:24 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_animation1' must be initialized • lib/views/widgets/rotating_widget.dart:32:22 • not_initialized_non_nullable_instance_field
+  error • Non-nullable instance field '_animation2' must be initialized • lib/views/widgets/rotating_widget.dart:33:22 • not_initialized_non_nullable_instance_field
+warning • The left operand can't be null, so the right operand is never executed • lib/views/widgets/rotating_widget.dart:39:41 • dead_null_aware_expression
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/svg_widget.dart:9:44 • missing_default_value_for_parameter
+  error • The parameter 'color' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/svg_widget.dart:9:53 • missing_default_value_for_parameter
+   info • 'color' is deprecated and shouldn't be used. Use colorFilter instead • lib/views/widgets/svg_widget.dart:16:11 • deprecated_member_use
+  error • The parameter 'key' can't have a value of 'null' because of its type, but the implicit default value is 'null' • lib/views/widgets/web_page.dart:18:31 • missing_default_value_for_parameter
+  error • Undefined name 'WebView' • lib/views/widgets/web_page.dart:42:9 • undefined_identifier
+  error • The name 'AndroidWebView' isn't a class • lib/views/widgets/web_page.dart:42:34 • creation_with_non_type
+  error • The method 'WebView' isn't defined for the type '_WebPageState' • lib/views/widgets/web_page.dart:84:15 • undefined_method
+  error • Undefined name 'JavascriptMode' • lib/views/widgets/web_page.dart:85:33 • undefined_identifier
+  error • The method 'JavascriptChannel' isn't defined for the type '_WebPageState' • lib/views/widgets/web_page.dart:87:17 • undefined_method
+  error • The method 'cancel' can't be unconditionally invoked because the receiver can be 'null' • lib/views/widgets/web_page.dart:127:11 • unchecked_use_of_nullable_value
+

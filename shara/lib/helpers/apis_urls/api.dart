@@ -1,15 +1,13 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:shara/helpers/utils/printutils.dart';
 
 class AppApiHandler {
   static void getData(
-      {@required String url,
-      Map<String, String> header,
-      Map<String, dynamic> body,
-      @required callback}) async {
+      {required String url,
+      Map<String, String>? header,
+      Map<String, dynamic>? body,
+      required Function callback}) async {
 
 
     var uri = Uri.parse(url);
@@ -20,15 +18,15 @@ class AppApiHandler {
       final json = jsonDecode(response.body);
       callback(json);
     } else {
-      callback      (null);
+      callback(null);
     }
   }
 
   static void sendData(
-      {@required String url,
-      @required dynamic body,
-      Map<String, String> header,
-      @required callback(json, stsCode)}) async {
+      {required String url,
+      required dynamic body,
+      Map<String, String>? header,
+      required Function callback}) async {
     var uri = Uri.parse(url);
 
     final response = await http.post(uri, body: body, headers: header);
@@ -47,10 +45,10 @@ class AppApiHandler {
   }
 
   static void sendDataWithConType(
-      {@required String url,
-      @required dynamic body,
-      Map<String, String> header,
-      @required callback}) async {
+      {required String url,
+      required dynamic body,
+      Map<String, String>? header,
+      required Function callback}) async {
     var uri = Uri.parse(url);
    
     final response = await http

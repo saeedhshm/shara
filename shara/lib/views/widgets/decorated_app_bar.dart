@@ -4,7 +4,7 @@ import 'package:shara/helpers/app_colors.dart';
 class DecoratedAppBar extends StatelessWidget implements PreferredSizeWidget{
 
    final Widget child;
-   DecoratedAppBar({Key key,@required this.child}) : super(key: key);
+   DecoratedAppBar({Key? key,required this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

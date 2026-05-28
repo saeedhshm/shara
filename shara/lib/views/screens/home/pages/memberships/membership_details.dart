@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 
 class MembershipDetailsScreen extends StatelessWidget {
 
-  MembershipDetailsScreen({Key key}) : super(key: key){
+  MembershipDetailsScreen({Key? key}) : super(key: key){
     controller.getMembershipDetails();
   }
 
@@ -61,7 +61,7 @@ class MembershipDetailsScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500
                   ),),
 
-                  for(int i = 0; i< controller.membershipDetails.value.features.length; i++)
+                  for(int i = 0; i< controller.membershipDetails.value.features!.length; i++)
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -75,7 +75,7 @@ class MembershipDetailsScreen extends StatelessWidget {
                             fontWeight: FontWeight.w700
                         ),) ,
                         SizedBox(height: 10,),
-                        Text(controller.membershipDetails.value.features[i].name(initApp.isArabicLang),style: TextStyle(
+                        Text(controller.membershipDetails.value.features![i].name(initApp.isArabicLang),style: TextStyle(
                             color: AppColors.fontLightGreyColor,
                             fontSize: 15,
                             height: 1.5,

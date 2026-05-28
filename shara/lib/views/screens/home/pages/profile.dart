@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shara/controllers/init_app_controller.dart';
-import 'package:shara/controllers/login_controller.dart';
+import 'package:shara/features/auth/presentation/controllers/login_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/navigation.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 import 'package:shara/views/screens/account/account_information.dart';
 import 'package:shara/views/screens/account/account_settings.dart';
@@ -22,7 +21,7 @@ import '../../account/my_coupons.dart';
 
 class ProfilePage extends StatelessWidget {
 
-  ProfilePage({Key key,this.onBack}) : super(key: key);
+  ProfilePage({Key? key,required this.onBack}) : super(key: key);
 
   final Function onBack;
   final InitAppController initAppController = Get.find();
@@ -122,7 +121,7 @@ class ProfilePage extends StatelessWidget {
                                       ),) : SizedBox()
                                     ],
                                   ),
-                                  openWidget: verifyIDController.isVerifiedId.value ? null : VerifyIdPage(),
+                                  openWidget: verifyIDController.isVerifiedId.value ? Container() : VerifyIdPage(),
                                 )
 
                             ),

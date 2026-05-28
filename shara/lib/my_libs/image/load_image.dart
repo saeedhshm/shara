@@ -7,7 +7,6 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../helpers/utils/printutils.dart';
 import '../../helpers/utils/widgets/loading_indicator.dart';
 
 class LoadingImage extends StatefulWidget {
@@ -17,7 +16,7 @@ class LoadingImage extends StatefulWidget {
   final double width;
   final double height;
 
-   LoadingImage(this.name,{Key key, this.fit = BoxFit.cover,this.height,this.width}) : super(key: key);
+   LoadingImage(this.name,{Key? key, this.fit = BoxFit.cover,required this.height,required this.width}) : super(key: key);
 
   @override
   State<LoadingImage> createState() => _LoadingImageState();
@@ -27,7 +26,7 @@ class _LoadingImageState extends State<LoadingImage> {
 
 
   var loading = false;
-  Uint8List imageFromBytes;
+  Uint8List? imageFromBytes;
   @override
   void initState() {
     // TODO: implement initState
@@ -37,9 +36,9 @@ class _LoadingImageState extends State<LoadingImage> {
   @override
   Widget build(BuildContext context) {
 
-    return loading
+    return loading || imageFromBytes == null
         ?  LoadingIndicatorWidget() :
-    imageFromBytes != null ? Image.memory(imageFromBytes,
+    Image.memory(imageFromBytes!,
       errorBuilder: (context,widget,done){
         return  Padding(
           padding: const EdgeInsets.all(8.0),
@@ -48,10 +47,7 @@ class _LoadingImageState extends State<LoadingImage> {
       },
       width: double.infinity,
       fit:  widget.fit,
-      height: double.infinity,) : Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Icon(Icons.apple),
-    );
+      height: double.infinity,);
   }
 
   loadImage()async {
@@ -67,7 +63,7 @@ class _LoadingImageState extends State<LoadingImage> {
 
 class LoadingImageFromNetwork{
  static Future<Uint8List> loadImage(String imageUrl)async{
-   Uint8List imageFromBytes;
+   Uint8List? imageFromBytes;
    final prefs = await SharedPreferences.getInstance();
    // prefs.remove(imageUrl);
 

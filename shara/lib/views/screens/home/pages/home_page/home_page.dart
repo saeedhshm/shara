@@ -21,10 +21,10 @@ import 'home_widgets/slider_banner_widget.dart';
 
 
 class HomePage extends StatefulWidget {
-
-  final Function onShowOffers;
-
-  HomePage({Key key,this.onShowOffers}) : super(key: key);
+ 
+   final Function onShowOffers;
+ 
+   HomePage({Key? key, required this.onShowOffers}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
+                          color: Colors.grey.withValues(alpha: 0.5),
                           spreadRadius: 0,
                           blurRadius: 1,
                           offset: Offset(0, 0), // changes position of shadow
@@ -83,17 +83,17 @@ class _HomePageState extends State<HomePage> {
                           height: 16,
                         ),
                         FinanceWidget(),
-                        SizedBox(
-                          height: 20,
-                        ),
+                        // SizedBox(
+                        //   height: 20,
+                        // ),
 
-                        kReleaseMode ? SliderBannerWidget() : SizedBox(),
-                        SizedBox(
-                          height: 20,
-                        ),
+                        // kReleaseMode ? SliderBannerWidget() : SizedBox(),
+                        // SizedBox(
+                        //   height: 20,
+                        // ),
 
-                        AppIntroWidget(),
-                        OffersTitleShowAllWidget(title: 'coupons'.tr, onShowAllPressed: null,),
+                        // AppIntroWidget(),
+                        OffersTitleShowAllWidget(title: 'coupons'.tr, onShowAllPressed: (){},),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child:  Row(

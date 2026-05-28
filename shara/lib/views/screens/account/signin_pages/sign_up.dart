@@ -4,11 +4,9 @@ import 'package:shara/controllers/sign_up_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:shara/helpers/navigation.dart';
 import 'package:shara/helpers/utils/printutils.dart';
-import 'package:shara/helpers/utils/widgets/sending_loading_widget.dart';
 import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 import 'package:shara/views/screens/account/signin_pages/password_page.dart';
 import 'package:shara/views/screens/account/signin_pages/phone_page.dart';
-import 'package:shara/views/screens/home/main_home_screen.dart';
 import 'package:shara/views/widgets/custom_text_form_field.dart';
 import 'package:shara/views/widgets/login_header.dart';
 import 'package:shara/views/widgets/main_button.dart';
@@ -16,7 +14,7 @@ import 'package:shara/views/widgets/main_button.dart';
 
 class SignUpPage extends StatefulWidget {
 
-   SignUpPage({Key key}) : super(key: key);
+   SignUpPage({Key? key}) : super(key: key);
 
   @override
   State<SignUpPage> createState() => _SignUpPageState();

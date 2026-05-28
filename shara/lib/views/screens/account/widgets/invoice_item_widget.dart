@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:get/get.dart';
-import 'dart:math';
 
 import 'package:shara/models/transaction_service.dart';
 
@@ -83,7 +82,7 @@ class _InvoiceItemWidgetState extends State<InvoiceItemWidget> {
                                   Expanded(child: Text('mark_name'.tr,style: TextStyle(
                                       color: AppColors.mainLightGreyColor
                                   ),)),
-                                  Expanded(child: Text('${widget.transaction.partner.name}'.tr,style: TextStyle(
+                                  Expanded(child: Text('${widget.transaction.partner!.name}'.tr,style: TextStyle(
                                       color: AppColors.mainLightGreyColor
                                   ),)),
                                 ],

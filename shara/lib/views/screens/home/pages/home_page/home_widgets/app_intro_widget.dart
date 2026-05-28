@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 class AppIntroWidget extends StatelessWidget {
 
-   AppIntroWidget({Key key}) : super(key: key);
+    AppIntroWidget({Key? key}) : super(key: key);
    final InitAppController initAppController = Get.find();
    final homeController  = Get.find<HomeController>();
 

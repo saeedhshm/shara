@@ -5,7 +5,7 @@ import 'package:shara/helpers/app_colors.dart';
 
 class ChangeLanguagePage extends StatelessWidget {
 
-   ChangeLanguagePage({Key key}) : super(key: key);
+   ChangeLanguagePage({Key? key}) : super(key: key);
    InitAppController initApp = Get.find();
 
   @override
@@ -59,7 +59,7 @@ class ChangeLanguagePage extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
-                      Get.locale.languageCode == 'ar' ? Image.asset(
+                      Get.locale!.languageCode == 'ar' ? Image.asset(
                         'assets/images/icons/lang/check.png',
                         width: 35,
                       ) : SizedBox(),
@@ -92,7 +92,7 @@ class ChangeLanguagePage extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                       Spacer(),
-                      Get.locale.languageCode != 'ar' ? Image.asset(
+                      Get.locale!.languageCode != 'ar' ? Image.asset(
                         'assets/images/icons/lang/check.png',
                         width: 35,
                       ) : SizedBox(),

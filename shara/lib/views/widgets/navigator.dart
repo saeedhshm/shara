@@ -5,7 +5,7 @@ class NavigateTo extends StatelessWidget {
   final dynamic secondPage;
   final Widget child;
 
-  const NavigateTo({@required this.secondPage,@required this.child});
+  const NavigateTo({required this.secondPage,required this.child});
 
   @override
   Widget build(BuildContext context) {

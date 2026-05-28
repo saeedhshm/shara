@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:shara/helpers/app_colors.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 
 class DropDownWidget extends StatefulWidget {
-  final String hintText;
-  final String labelText;
+  final String? hintText;
+  final String? labelText;
 
   final TextEditingController controller;
 
   final int maxLines;
 
   DropDownWidget(
-      {Key key,
+      {Key? key,
       this.maxLines = 1,
       this.hintText,
       this.labelText,
-      this.controller})
+      required this.controller})
       : super(key: key);
 
   @override
@@ -55,15 +54,13 @@ class _DropDownWidgetState extends State<DropDownWidget> {
                 hintStyle: TextStyle(
                     color: AppColors.mainLightGreyColor,
                     backgroundColor: Colors.white),
-                label: widget.labelText == null
-                    ? null
-                    : Text(
-                        widget.labelText,
+                label: widget.labelText != null ? Text(
+                        widget.labelText!,
                         style: TextStyle(
                             color: AppColors.mainLightGreyColor,
                             backgroundColor: Colors.white,
                             fontSize: 20),
-                      ),
+                      ) : null,
                 suffixIcon: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Icon(
@@ -81,7 +78,7 @@ class _DropDownWidgetState extends State<DropDownWidget> {
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
+                color: Colors.grey.withValues(alpha: 0.5),
                 spreadRadius: 0,
                 blurRadius: 1,
                 offset: Offset(0, 0), // changes position of shadow
@@ -96,7 +93,7 @@ class _DropDownWidgetState extends State<DropDownWidget> {
           left: 0,
           child: Container(
             width: double.infinity,
-            color: Colors.white.withOpacity(0.000001)
+            color: Colors.white.withValues(alpha: 0.000001)
           ),
         )
       ],

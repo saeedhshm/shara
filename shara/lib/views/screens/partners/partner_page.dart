@@ -14,7 +14,7 @@
 //
 //   final Partner partner;
 //
-//   const PartnerPage(this.partner,{Key key}) : super(key: key);
+//   const PartnerPage(this.partner,{Key? key}) : super(key: key);
 //
 //   @override
 //   State<PartnerPage> createState() => _PartnerPageState();
@@ -95,7 +95,7 @@
 //             loading ? Container(
 //                 width: double.infinity,
 //                 height: double.infinity,
-//                 color: Colors.black.withOpacity(0.1),
+//                 color: Colors.black.withValues(alpha: 0.1),
 //                 child: Center(child: LoadingIndicatorWidget())) : SizedBox()
 //           ],
 //         ),

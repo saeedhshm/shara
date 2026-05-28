@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shara/helpers/app_colors.dart';
-import 'package:shara/views/screens/all_offers/all_offers_screen.dart';
 import 'package:shara/views/screens/home/pages/discount_coupons/screen.dart';
 import 'package:shara/views/screens/home/pages/finance/finance_page.dart';
 import 'package:shara/views/screens/home/pages/home_page/home_page.dart';
 import 'package:get/get.dart';
-import 'package:shara/views/screens/home/pages/memberships.dart';
 import 'package:shara/views/screens/home/pages/profile.dart';
 import 'package:shara/views/screens/home/pages/promo_codes/offers_points.dart';
-import 'package:shara/views/screens/partners/all_partners.dart';
 
 import '../../../controllers/home_controller.dart';
 import '../../../controllers/promo_codes_controller.dart';
@@ -17,7 +14,7 @@ class MainHomeScreen extends StatefulWidget {
 
 
 
-  MainHomeScreen({Key key}) : super(key: key);
+  MainHomeScreen({Key? key}) : super(key: key);
 
 
   @override
@@ -26,7 +23,7 @@ class MainHomeScreen extends StatefulWidget {
 
 class _MainHomeScreenState extends State<MainHomeScreen> {
   int _selectedIndex = 0;
-  Size size;
+  Size? size;
   ScrollController _scrollController = new ScrollController();
 
   PromoCodeController controller =  Get.put(PromoCodeController());
@@ -35,7 +32,23 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   @override
   Widget build(BuildContext context) {
      size = MediaQuery.of(context).size;
-    return WillPopScope(child: Scaffold(
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (bool didPop, dynamic result) async {
+        if (didPop) return;
+        if(_selectedIndex == 0) {
+          Navigator.of(context).pop();
+          return;
+        }
+        _selectedIndex = 0;
+        setState(() {});
+        _scrollController.animateTo(
+          size!.width * _selectedIndex,
+          curve: Curves.easeOut,
+          duration: const Duration(milliseconds: 300),
+        );
+      },
+      child: Scaffold(
       body: Container(
         color: AppColors.mainLightColor,
         child: Column(
@@ -56,19 +69,19 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                   physics: const NeverScrollableScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   children: [
-                    SizedBox(width: size.width, child: HomePage(onShowOffers: (){
+                    SizedBox(width: size!.width, child: HomePage(onShowOffers: (){
                       _gotoSelectedTap(1);
                     },)),
-                    SizedBox(width: size.width, child: FinancePage(onBack: (){
+                    SizedBox(width: size!.width, child: FinancePage(onBack: (){
                       _gotoSelectedTap(0);
                     },)),
-                    SizedBox(width: size.width, child: DiscountCoupons(onBack: (){
+                    SizedBox(width: size!.width, child: DiscountCoupons(onBack: (){
                       _gotoSelectedTap(0);
                     },),),
-                    SizedBox(width: size.width,child: OffersOfPointsScreen(onBack: (){
+                    SizedBox(width: size!.width,child: OffersOfPointsScreen(onBack: (){
                       _gotoSelectedTap(0);
                     },), ),
-                    SizedBox(width: size.width,child: ProfilePage(onBack: (){
+                    SizedBox(width: size!.width,child: ProfilePage(onBack: (){
                       _gotoSelectedTap(0);
                     },), )
                   ],
@@ -125,20 +138,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
         elevation: 50,
         onTap: _gotoSelectedTap,
       ),
-    ), onWillPop: ()async{
-               if(_selectedIndex == 0)
-                 return true;
-               _selectedIndex = 0;
-               setState(() {
-
-               });
-               _scrollController.animateTo(
-                 size.width * _selectedIndex,
-                 curve: Curves.easeOut,
-                 duration: const Duration(milliseconds: 300),
-               );
-      return false;
-    });
+    ), );
   }
 
   _gotoSelectedTap(int index) {
@@ -147,7 +147,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
     });
 
     _scrollController.animateTo(
-      size.width * index,
+      size!.width * index,
       curve: Curves.easeOut,
       duration: const Duration(milliseconds: 300),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shara/my_libs/image/load_image.dart';
 
 import '../../../../../helpers/app_colors.dart';
 import '../../../../../models/operations_manager.dart';
@@ -8,7 +7,7 @@ import '../../../../widgets/network_image.dart';
 class LastOperationItem extends StatelessWidget {
 
   final OperationItem operationItem;
-   LastOperationItem(this.operationItem,{Key key,}) : super(key: key);
+   LastOperationItem(this.operationItem,{Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

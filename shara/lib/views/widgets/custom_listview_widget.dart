@@ -4,11 +4,11 @@ class MyCustomListView extends StatelessWidget {
 
   final int itemCount;
   final ScrollController scrollController;
-  final Function (BuildContext,int) itemBuilder;
-  final Function (BuildContext,int) separatorBuilder;
-  final Function () onRefresh;
+  final Widget? Function(BuildContext,int) itemBuilder;
+  final Widget Function(BuildContext,int) separatorBuilder;
+  final Future<void> Function() onRefresh;
 
-  MyCustomListView({Key key,@required this.itemCount, @required this.scrollController,@required this.itemBuilder,@required this.separatorBuilder,@required this.onRefresh}) : super(key: key);
+  MyCustomListView({Key? key,required this.itemCount, required this.scrollController,required this.itemBuilder,required this.separatorBuilder,required this.onRefresh}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

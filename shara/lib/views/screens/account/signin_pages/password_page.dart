@@ -17,7 +17,7 @@ class PasswordPage extends StatefulWidget {
 
   final bool isFromLogin;
   final bool fromRegister;
-  PasswordPage(this.isFromLogin,{Key key,this.fromRegister = false}) : super(key: key);
+  PasswordPage(this.isFromLogin,{Key? key,this.fromRegister = false}) : super(key: key);
 
   @override
   State<PasswordPage> createState() => _PasswordPageState();
@@ -117,12 +117,12 @@ class _PasswordPageState extends State<PasswordPage> {
                       }
 
                       //////////////////////////////////////////
-                      if(initAppController.userData.value.user.password == null || initAppController.userData.value.user.password == '') {
-                        initAppController.userData.value.user.password = password;
+                      if(initAppController.userData.value.user!.password == '') {
+                        initAppController.userData.value.user!.password = password;
                         initAppController.userData.value.saveDataToStorage();
-                        println(initAppController.userData.value.user.password);
+                        println(initAppController.userData.value.user!.password);
                         Get.to(()=>MainHomeScreen());
-                      }else if(initAppController.userData.value.user.password == password){
+                      }else if(initAppController.userData.value.user!.password == password){
                         Get.to(()=>MainHomeScreen());
                       }else {
                         // textEditing1.text = '';

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/app_colors.dart';
-import 'package:shara/helpers/utils/printutils.dart';
-import 'package:shara/views/widgets/main_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../controllers/init_app_controller.dart';
 import '../account/login/login.dart';
 
 class IntroPage extends StatefulWidget {
-  const IntroPage({Key key}) : super(key: key);
+  const IntroPage({Key? key}) : super(key: key);
 
   @override
   State<IntroPage> createState() => _IntroPageState();
@@ -275,5 +273,5 @@ class IntroItem {
   String title;
   String description;
 
-  IntroItem({this.image, this.title, this.description});
+  IntroItem({required this.image, required this.title, required this.description});
 }

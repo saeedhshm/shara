@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/views/screens/account/signin_pages/code_verification.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../controllers/sign_up_controller.dart';
@@ -18,7 +16,7 @@ class PhoneNumberPage extends StatelessWidget {
   final SignUpController signUpController =  Get.put(SignUpController());
   final _phoneController = TextEditingController();
 
-  PhoneNumberPage({Key key}) : super(key: key);
+  PhoneNumberPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +111,7 @@ class PhoneNumberPage extends StatelessWidget {
                                  onTap: (){
 
                                    var url = 'https://sharaksa.com/terms-condition';
-                                   if(Get.locale.languageCode == 'en'){
+                                   if(Get.locale!.languageCode == 'en'){
                                      url = 'https://sharaksa.com/en/terms-condition';
                                    }
                                    launchUrlString(url);
@@ -128,7 +126,7 @@ class PhoneNumberPage extends StatelessWidget {
                                InkWell(
                                  onTap: (){
                                    var url = 'https://sharaksa.com/privacy-policy';
-                                   if(Get.locale.languageCode == 'en'){
+                                   if(Get.locale!.languageCode == 'en'){
                                      url = 'https://sharaksa.com/en/privacy-policy';
                                    }
                                    launchUrlString(url);

@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shara/controllers/promo_codes_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/views/screens/home/pages/promo_codes/promo_code_varients_screen.dart';
 
-import '../../../../../models/promo_code.dart';
-import '../../../../../my_libs/image/load_image.dart';
-import '../../../../widgets/image_from_server.dart';
 import '../../../../widgets/network_image.dart';
 
 class ItemWidget extends StatelessWidget {
@@ -16,7 +12,7 @@ class ItemWidget extends StatelessWidget {
 
   PromoCodeController controller = Get.find();
 
-  ItemWidget( {Key key, @required this.index}) : super(key: key);
+  ItemWidget( {Key? key, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +52,7 @@ class ItemWidget extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 8.0),
                     child: Text(
-                      controller.promoCodeService.value.promoCodes[index].title,
+                      controller.promoCodeService.value.promoCodes[index].title ?? '',
                       textAlign: TextAlign.center,
                       maxLines: 1,
                         overflow: TextOverflow.ellipsis,

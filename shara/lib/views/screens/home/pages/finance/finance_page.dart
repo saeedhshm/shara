@@ -2,20 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
-import 'package:shara/views/screens/home/pages/finance/local_tranfer.dart';
-import 'package:shara/views/screens/home/pages/finance/transfer_to_contact.dart';
 import 'package:shara/views/screens/home/pages/finance/widgets/bottom_sheet.dart';
 import 'package:shara/views/screens/home/pages/finance/widgets/finance_page_item.dart';
 
 import '../../../../../controllers/buy_points_controller.dart';
 import '../../../../widgets/flat_botton.dart';
-import 'choose_beneficiary.dart';
 import 'contacts.dart';
 
 class FinancePage extends StatelessWidget {
 
-  final Function onBack;
-   FinancePage({Key key,this.onBack}) : super(key: key);
+  final void Function()? onBack;
+    FinancePage({Key? key, required this.onBack}) : super(key: key);
 
    InitAppController appController = Get.find();
 
@@ -60,7 +57,7 @@ class FinancePage extends StatelessWidget {
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.grey.withValues(alpha: 0.5),
                         spreadRadius: 0,
                         blurRadius: 1,
                         offset: Offset(0, 0), // changes position of shadow
@@ -87,7 +84,7 @@ class FinancePage extends StatelessWidget {
                                   // fontWeight: FontWeight.bold
                               )),
                               SizedBox(height: 16,),
-                              Text('${appController.userData.value.user.points} ${'Point'.tr}',style: TextStyle(
+                              Text('${appController.userData.value.user?.points ?? 0} ${'Point'.tr}',style: TextStyle(
                                 color: AppColors.mainGoldenDarkColor,
                                 fontSize: 23,
                                 fontWeight: FontWeight.bold
@@ -96,7 +93,7 @@ class FinancePage extends StatelessWidget {
                           ),
                         ),
                         decoration: BoxDecoration(
-                          color: Colors.white, //AppColors.peageColor.withOpacity(0.3),
+                          color: Colors.white, //AppColors.peageColor.withValues(alpha: 0.3),
                           border: Border.all(color: AppColors.goldColor,width: 1),
                           borderRadius: BorderRadius.circular(25)
                         ),

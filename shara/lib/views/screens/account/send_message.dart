@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/helpers/utils/widgets/sending_loading_widget.dart';
 import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 import 'package:shara/views/widgets/custom_text_form_field.dart';
@@ -33,8 +32,8 @@ class _SendMessagePageState extends State<SendMessagePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    nameCtrl.text = '${initAppController.userData.value.user.firstName} ${initAppController.userData.value.user.lastName}';
-    phoneCtrl.text = '${initAppController.userData.value.user.phone}';
+    nameCtrl.text = '${initAppController.userData.value.user!.firstName} ${initAppController.userData.value.user!.lastName}';
+    phoneCtrl.text = '${initAppController.userData.value.user!.phone}';
   }
 
    @override
@@ -53,15 +52,9 @@ class _SendMessagePageState extends State<SendMessagePage> {
                   fontSize: 18),
               maxLines: 3,
             ),
-            leading: Container(
-              child: InkWell(
-                onTap: () {
-                  Get.back();
-                },
-                child: LeadingBackArrow(
-                  size: 30,
-                ),
-              ),
+            leading: LeadingBackArrow(
+              size: 30,
+              onBack: Get.back,
             )),
         backgroundColor: Colors.white,
         body: SizedBox(

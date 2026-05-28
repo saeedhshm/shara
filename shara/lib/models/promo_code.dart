@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 
 class PromoCodesService {
-  bool success;
-  String message;
+  bool? success;
+  String? message;
   List<PromoCode> promoCodes = <PromoCode>[].obs;
 
 
@@ -20,24 +20,24 @@ class PromoCodesService {
 }
 
 class PromoCode {
-  int id;
-  String title;
-  String photo;
-  String description;
+  int? id;
+  String? title;
+  String? photo;
+  String? description;
   dynamic beginPrice;
-  bool display;
-  List<Variant> variants;
-  List<Types> types;
+  bool? display;
+  List<Variant>? variants;
+  List<Types>? types;
 
   PromoCode(
-      {this.id,
-        this.title,
-        this.photo,
-        this.description,
+      {required this.id,
+        required this.title,
+        required this.photo,
+        required this.description,
         this.beginPrice,
-        this.display,
-        this.variants,
-        this.types});
+        required this.display,
+        required this.variants,
+        required this.types});
 
   PromoCode.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -49,13 +49,13 @@ class PromoCode {
     if (json['variants'] != null) {
       variants = <Variant>[];
       json['variants'].forEach((v) {
-        variants.add(new Variant.fromJson(v));
+        variants!.add(new Variant.fromJson(v));
       });
     }
     if (json['types'] != null) {
       types = <Types>[];
       json['types'].forEach((v) {
-        types.add(new Types.fromJson(v));
+        types!.add(new Types.fromJson(v));
       });
     }
   }
@@ -63,32 +63,32 @@ class PromoCode {
   @override
   String toString() {
     // TODO: implement toString
-    return description;
+    return description ?? '';
   }
 
 }
 
 class Variant {
-  int id;
+  int? id;
   dynamic value;
   dynamic price;
   dynamic vat;
   dynamic serviceFees;
   dynamic partnerFees;
-  bool display;
-  Country country;
-  Stock stock;
+  bool? display;
+  Country? country;
+  Stock? stock;
 
   Variant(
-      {this.id,
+      {required this.id,
         this.value,
         this.price,
         this.vat,
         this.serviceFees,
         this.partnerFees,
-        this.display,
-        this.country,
-        this.stock});
+        required this.display,
+        required this.country,
+        required this.stock});
 
   Variant.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -108,13 +108,13 @@ class Variant {
 }
 
 class Country {
-  int id;
-  String name;
-  String fullName;
-  String code;
-  String flag;
+  int? id;
+  String? name;
+  String? fullName;
+  String? code;
+  String? flag;
 
-  Country({this.id, this.name, this.fullName, this.code, this.flag});
+  Country({required this.id, required this.name, required this.fullName, required this.code, required this.flag});
 
   Country.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -127,10 +127,10 @@ class Country {
 }
 
 class Stock {
-  String status;
-  int quantity;
+  String? status;
+  int? quantity;
 
-  Stock({this.status, this.quantity});
+  Stock({required this.status, required this.quantity});
 
   Stock.fromJson(Map<String, dynamic> json) {
     status = json['status'];
@@ -141,12 +141,12 @@ class Stock {
 }
 
 class Types {
-  int id;
-  String name;
-  String code;
-  String description;
+  int? id;
+  String? name;
+  String? code;
+  String? description;
 
-  Types({this.id, this.name, this.code, this.description});
+  Types({required this.id, required this.name, required this.code, required this.description});
 
   Types.fromJson(Map<String, dynamic> json) {
     id = json['id'];

@@ -10,7 +10,7 @@ import 'package:shara/views/screens/home/pages/memberships/membership_details.da
 class MembershipPage extends StatelessWidget {
 
   MembershipController controller = Get.put(MembershipController());
-  MembershipPage({Key key}) : super(key: key);
+  MembershipPage({Key? key}) : super(key: key);
   InitAppController initApp = Get.find();
   @override
   Widget build(BuildContext context) {
@@ -19,6 +19,10 @@ class MembershipPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.mainLightColor,
         elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Get.back(),
+        ),
         title: Text(
           'shara_membership'.tr,
           style: TextStyle(
@@ -27,7 +31,6 @@ class MembershipPage extends StatelessWidget {
               fontSize: 18),
           maxLines: 3,
         ),
-        leadingWidth: 0,
       ),
       body: Obx(()=>LoadingDataWidget(
         isLoading: controller.loading.value,
@@ -69,7 +72,7 @@ class MembershipPage extends StatelessWidget {
                                       width: double.infinity,
                                       // color:Colors.blue,
                                       child: Text(
-                                        controller.memebershipService.value.memberships.data[index].name(initApp.isArabicLang),
+                                        controller.memebershipService.value.memberships!.data![index].name(initApp.isArabicLang),
                                         style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.w700),
@@ -87,7 +90,7 @@ class MembershipPage extends StatelessWidget {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 15.0),
                                     child: Image.network(
-                                        controller.memebershipService.value.memberships.data[index].image(initApp.isArabicLang)),
+                                        controller.memebershipService.value.memberships!.data![index].image(initApp.isArabicLang)),
                                   ),
                                 ),
                               )),
@@ -99,7 +102,7 @@ class MembershipPage extends StatelessWidget {
                                   children: [
                                     InkWell(
                                       onTap:(){
-                                        Get.put(MembershipDetailsController()).membershipDetails.value =  controller.memebershipService.value.memberships.data[index];
+                                        Get.put(MembershipDetailsController()).membershipDetails.value =  controller.memebershipService.value.memberships!.data![index];
                                         Get.to(MembershipDetailsScreen());
                                       },
                                       child: Padding(

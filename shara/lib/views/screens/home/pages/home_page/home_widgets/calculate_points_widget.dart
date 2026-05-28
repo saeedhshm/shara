@@ -7,7 +7,7 @@ import '../../calculate_points.dart';
 
 class CalculatePointsWidget extends StatelessWidget {
 
-   CalculatePointsWidget({Key key}) : super(key: key);
+    CalculatePointsWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

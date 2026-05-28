@@ -12,8 +12,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class PartnersPage extends StatelessWidget {
 
-  final Function onBack;
-  PartnersPage({Key key,@required this.onBack}) : super(key: key);
+  final void Function()? onBack;
+  PartnersPage({Key? key,required this.onBack}) : super(key: key);
 
   PartnersController partnersController = Get.put(PartnersController());
   InitAppController initApp = Get.find();
@@ -64,7 +64,7 @@ class PartnersPage extends StatelessWidget {
                 onTap: () async {
 
 
-                  final Uri _url = Uri.parse(partner.storeUrl);
+                  final Uri _url = Uri.parse(partner.storeUrl ?? '');
                   if (!await launchUrl(_url)) throw 'Could not launch $_url';
                   // Get.to(() => PartnerPage(partner));
                 },

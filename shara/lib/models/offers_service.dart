@@ -18,10 +18,10 @@ class OffersService {
 }
 
 class Section {
-  int id;
-  String _nameAr;
-  String _nameEn;
-  String nextLinke;
+  int? id;
+  String? _nameAr;
+  String? _nameEn;
+  String? nextLinke;
   List<Offer> offers = <Offer>[];
 
   String name(bool isArabic){

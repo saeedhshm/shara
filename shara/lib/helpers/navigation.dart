@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class Go{
 
-  static to(BuildContext context,dynamic page){
-           Navigator.push(context, MaterialPageRoute(
+  static to(BuildContext? context,dynamic page){
+           Navigator.push(context!, MaterialPageRoute(
                builder: (context) => page
            )) ;
   }
-  static toAndOff(BuildContext context,dynamic page){
+  static toAndOff(BuildContext? context,dynamic page){
     Navigator.pushAndRemoveUntil(
-        context,
+        context!,
         MaterialPageRoute(
             builder: (context) => page
         ),

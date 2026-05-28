@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 
-import '../helpers/apis_urls/api.dart';
+import '../helpers/apis_urls/api_handler.dart';
 import '../helpers/apis_urls/app_urls.dart';
 import '../models/app_contact.dart';
 import 'init_app_controller.dart';
@@ -24,12 +24,12 @@ class TransferPointsController extends GetxController{
     getContacts();
   }
 
-  searchFor({String name}){
+  searchFor({String? name}){
     if(name == null || name == ''){
       contacts.value = _contacts;
       return;
     }
-    contacts.value = _contacts.where((e) => e.name.toLowerCase().contains(name.toLowerCase())).toList();
+    contacts.value = _contacts.where((e) => e.name.toLowerCase().contains(name!.toLowerCase())).toList();
   }
   getContacts() async {
     loading.value = true;
@@ -41,7 +41,7 @@ class TransferPointsController extends GetxController{
     }
 
     if(status.isGranted){
-      List<Contact> data = await FastContacts.allContacts;
+      List<Contact> data = await FastContacts.getAllContacts();
 
       for(var contact in data){
         if(contact.phones.isNotEmpty){
@@ -49,7 +49,7 @@ class TransferPointsController extends GetxController{
           for(var phone in contact.phones){
             // var mob = phone.replaceAll('-', '').replaceAll(' ', '').replaceAll('+', '00');
             var mob = '';
-            for(var i in phone.split('')){
+            for(var i in phone.number.split('')){
               if(int.tryParse(i) != null){
                 mob += i;
               }
@@ -80,16 +80,16 @@ class TransferPointsController extends GetxController{
       var body = {
         "phones": '[${phones.join(',')}]'
       };
-      AppApiHandler.sendData(
+      ApiHandler.sendData(
           url: syncPhonesUrl,
           body: body,
           header: {
-            'Authorization' : 'bearer ${appController.userData.value.token.accessToken}' ,
+            'Authorization' : 'bearer ${appController.userData.value.token?.accessToken}' ,
             "x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
           callback: (json,stsCode) {
             loading.value = false;
             println('---- success phones ----- = $json');
-            if(json['success']){
+            if(json != null && json['success']){
 
             } else{
             }

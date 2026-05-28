@@ -8,7 +8,7 @@ class AccountInfoPage extends StatelessWidget {
 
   final InitAppController initAppController = Get.find();
 
-  AccountInfoPage({Key key}) : super(key: key);
+  AccountInfoPage({Key? key}) : super(key: key);
   // final accountInfoController = Get.put(AccountInfoController());
   @override
   Widget build(BuildContext context) {
@@ -25,15 +25,9 @@ class AccountInfoPage extends StatelessWidget {
                 fontSize: 18),
             maxLines: 3,
           ),
-          leading: Container(
-            child: InkWell(
-              onTap: () {
-                Get.back();
-              },
-              child: LeadingBackArrow(
-                size: 30,
-              ),
-            ),
+          leading: LeadingBackArrow(
+            size: 30,
+            onBack: Get.back,
           )),
       body: SizedBox(
         width: double.infinity,
@@ -54,13 +48,13 @@ class AccountInfoPage extends StatelessWidget {
 
                   // textAlign: TextAlign.justify,
                 ),
-                _rowItem('user_full_name'.tr, '${initAppController.userData.value.user.firstName} ${initAppController.userData.value.user.lastName}'),
-                _rowItem('phone'.tr, '0${int.tryParse(initAppController.userData.value.user.phone)}'),
+                _rowItem('user_full_name'.tr, '${initAppController.userData.value.user!.firstName} ${initAppController.userData.value.user!.lastName}'),
+                _rowItem('phone'.tr, '0${int.tryParse(initAppController.userData.value.user!.phone ?? '')}'),
 
-                _rowItem('member_type'.tr, initAppController.userData.value.user.membership.mempName(initAppController.isArabicLang)),
-                _rowItem('member_id'.tr,   '${initAppController.userData.value.user.membership.id}'),
-                _rowItem('subscribe_date'.tr, initAppController.userData.value.user.createdAt),
-                _rowItem('points_count'.tr, '${initAppController.userData.value.user.points}'),
+                _rowItem('member_type'.tr, initAppController.userData.value.user!.membership!.mempName(initAppController.isArabicLang)),
+                _rowItem('member_id'.tr,   '${initAppController.userData.value.user!.membership!.id}'),
+                _rowItem('subscribe_date'.tr, initAppController.userData.value.user!.createdAt ?? ''),
+                _rowItem('points_count'.tr, '${initAppController.userData.value.user!.points}'),
               ],
             ),
           ),
@@ -70,12 +64,12 @@ class AccountInfoPage extends StatelessWidget {
   }
 
 
-  Widget _rowItem(String title,String data){
+  Widget _rowItem(String? title,String data){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height: 16,),
-        Text(title,style: TextStyle(
+        Text(title ?? '',style: TextStyle(
             color: AppColors.fontLightGreyColor ,
             fontWeight: FontWeight.bold
         ),),

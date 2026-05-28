@@ -29,11 +29,11 @@ class ListOffersItemsWidget extends StatelessWidget {
           return OpenContainer(closedBuilder: (cont,_){
             return OfferItemWidget(offers[index]);
           }, openBuilder: (c,_){
-            Get.put(OfferDetailsController(offers[index].id));
+            Get.put(OfferDetailsController(offers[index].id ?? 0));
             return SingleOfferPage();
           },closedElevation: 0,);
         },
-        separatorBuilder: (BuildContext context, int index) {
+        separatorBuilder: (BuildContext? context, int index) {
           return SizedBox(
             width: 16,
           );

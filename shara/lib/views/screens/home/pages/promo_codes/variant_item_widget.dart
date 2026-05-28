@@ -2,19 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/utils/printutils.dart';
-import 'package:shara/helpers/utils/widgets/loading_indicator.dart';
 
 import '../../../../../controllers/promo_codes_controller.dart';
-import '../../../../../models/promo_code.dart';
 import '../../../../widgets/flat_botton.dart';
-import '../../../../widgets/image_from_server.dart';
 import '../../../../widgets/network_image.dart';
 import '../../../account/my_coupons.dart';
 
 class VariantItemWidget extends StatelessWidget {
   PromoCodeController controller = Get.find();
   final int index;
-  VariantItemWidget({Key key, @required this.index}) : super(key: key);
+  VariantItemWidget({Key? key, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +58,7 @@ class VariantItemWidget extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 0.0),
                                   child: Text(
-                                    "${controller.promoCode.variants[index].value}",
+                                    "${controller.promoCode!.variants![index].value}",
                                     maxLines: 1,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(fontSize: 15),
@@ -77,7 +74,7 @@ class VariantItemWidget extends StatelessWidget {
                                       fontSize: 14),
                                 ),
                                 Text(
-                                  "${controller.promoCode.variants[index].price} ${'Point'.tr}",
+                                  "${controller.promoCode!.variants![index].price} ${'Point'.tr}",
                                   style: TextStyle(
                                       color: AppColors.mainGoldenDarkColor,
                                       fontSize: 14),
@@ -100,7 +97,7 @@ class VariantItemWidget extends StatelessWidget {
                                 padding: const EdgeInsets.all(0.0),
                                 child: SizedBox(
                                   // width: (width / 2.5),
-                                  child: loadImage(controller.promoCode.photo,
+                                  child: loadImage(controller.promoCode!.photo,
                                     fit: BoxFit.cover,
 
                                   ),
@@ -117,9 +114,9 @@ class VariantItemWidget extends StatelessWidget {
 
 
 
-                if(controller.promoCode.variants[index].stock.quantity > 0){
+                if(controller.promoCode!.variants![index].stock!.quantity! > 0){
 
-                  controller.buyPromoCodePay(controller.promoCode.variants[index].id,(message){
+                  controller.buyPromoCodePay(controller.promoCode!.variants![index].id,(message){
                     Get.defaultDialog(
                       title: "".tr,
                       middleText: "buying_success".tr,
@@ -154,14 +151,14 @@ class VariantItemWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(10.0),
                   child: Center(
                       child: Text(
-                        controller.promoCode.variants[index].stock.quantity > 0 ? "buy".tr : "not_available".tr,
+                        controller.promoCode!.variants![index].stock!.quantity! > 0 ? "buy".tr : "not_available".tr,
                         style:
                         TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                       )),
                 ),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
-                    color:controller.promoCode.variants[index].stock.quantity > 0 ? AppColors.mainGoldenDarkColor : Colors.grey),
+                    color:controller.promoCode!.variants![index].stock!.quantity! > 0 ? AppColors.mainGoldenDarkColor : Colors.grey),
               ),
             )
           ],

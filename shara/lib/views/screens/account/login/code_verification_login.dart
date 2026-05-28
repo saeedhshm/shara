@@ -5,7 +5,7 @@ import 'package:shara/views/screens/account/signin_pages/sign_up.dart';
 import 'package:shara/views/screens/home/pages/home_page/home_page.dart';
 import 'package:shara/views/widgets/main_button.dart';
 
-import '../../../../controllers/login_controller.dart';
+import '../../../../features/auth/presentation/controllers/login_controller.dart';
 import '../../../../controllers/sign_up_controller.dart';
 import '../../../../helpers/app_colors.dart';
 import '../../../../helpers/utils/widgets/sending_loading_widget.dart';
@@ -14,7 +14,7 @@ import '../../home/main_home_screen.dart';
 import '../signin_pages/password_page.dart';
 
 class CodeVerificationLoginPage extends StatefulWidget {
-  const CodeVerificationLoginPage({Key key}) : super(key: key);
+  const CodeVerificationLoginPage({Key? key}) : super(key: key);
 
   @override
   State<CodeVerificationLoginPage> createState() => _CodeVerificationPageState();

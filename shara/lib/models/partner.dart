@@ -1,11 +1,11 @@
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 
 class Partner {
-  int id;
-  String _nameAr;
-  String _nameEn;
-  String _logo;
-  String storeUrl;
+  int? id;
+  String? _nameAr;
+  String? _nameEn;
+  String? _logo;
+  String? storeUrl;
 
   // Partner({this.id, this.nameAr, this.nameEn, this.logo, this.storeUrl});
 
@@ -18,7 +18,7 @@ class Partner {
   }
 
   String partnerName(bool arabic){
-    return arabic ? _nameAr : _nameEn;
+    return (arabic ? _nameAr : _nameEn) ?? '';
   }
 
   String get logo{

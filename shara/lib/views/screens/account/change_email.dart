@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:shara/controllers/change_account_information.dart';
 import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/helpers/utils/widgets/sending_loading_widget.dart';
 import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 import 'package:shara/views/widgets/custom_text_form_field.dart';
@@ -104,7 +103,7 @@ class ChangeEmail extends StatelessWidget{
                               FocusScope.of(context).unfocus();
                               changeInfo.email = _emailCtrl.text;
                               changeInfo.password = _passwordCtrl.text;
-                              changeInfo.currentPassword = initAppController.userData.value.user.password;
+                              changeInfo.currentPassword = initAppController.userData.value.user!.password ?? '';
                               changeInfo.changeEmailAction(initAppController.userData.value,(done,message){
 
                                 if(done){

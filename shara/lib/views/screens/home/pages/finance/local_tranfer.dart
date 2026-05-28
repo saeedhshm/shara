@@ -9,7 +9,7 @@ class LocalTransferPage extends StatelessWidget {
 
   final transferToCtrl = TextEditingController();
 
-   LocalTransferPage({Key key}) : super(key: key);
+    LocalTransferPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

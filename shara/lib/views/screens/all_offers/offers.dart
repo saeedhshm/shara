@@ -7,7 +7,7 @@ import 'package:shara/views/screens/all_offers/single_offer.dart';
 class OffersPage extends StatelessWidget {
   final String title;
 
-  const OffersPage({Key key, @required this.title}) : super(key: key);
+  const OffersPage({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

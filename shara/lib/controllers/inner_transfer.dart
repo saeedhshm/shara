@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 
-import '../helpers/apis_urls/api.dart';
+import '../helpers/apis_urls/api_handler.dart';
 import '../helpers/apis_urls/app_urls.dart';
 import '../helpers/utils/printutils.dart';
 import 'init_app_controller.dart';
@@ -15,10 +15,10 @@ class InnerTransferController extends GetxController{
   var errorMsgContactName = ''.obs;
   var errorMsgAmmount = ''.obs;
 
-  sendInnerTransfer(String phone,String ammount){
+  sendInnerTransfer(String? phone,String ammount){
 
     println('------ $phone');
-    if(phone.isEmpty){
+    if(phone?.isEmpty ?? true){
       errorMsgContactName.value = 'enter_contact_phone'.tr;
     }else{
       errorMsgContactName.value = '';
@@ -29,7 +29,7 @@ class InnerTransferController extends GetxController{
       errorMsgAmmount.value = '';
     }
 
-    if(phone.isNotEmpty && ammount.isNotEmpty){
+    if((phone?.isNotEmpty ?? false) && ammount.isNotEmpty){
 
       loading.value = true;
       var body = {
@@ -37,17 +37,17 @@ class InnerTransferController extends GetxController{
         'amount':ammount
       } ;
 
-      AppApiHandler.sendData(
+      ApiHandler.sendData(
           url: innerTransferUrl,
           body: body,
           header: {
-            'Authorization' : 'bearer ${appController.userData.value.token.accessToken}' ,
+            'Authorization' : 'bearer ${appController.userData.value.token?.accessToken}' ,
             "x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
           callback: (json,stsCode) {
             println('---->>>> $json');
             loading.value = false;
 
-            if(json['success']){
+            if(json != null && json['success']){
               Get.back();
               println('---- success = $json');
               appController.getUserProfileInfo();
@@ -55,7 +55,7 @@ class InnerTransferController extends GetxController{
 
             } else{
               println('---- failed = $json');
-              SnackBars.showErrorSnackBar('failed'.tr, json['message']);
+              SnackBars.showErrorSnackBar('failed'.tr, json?['message'] ?? '');
             }
           });
     }

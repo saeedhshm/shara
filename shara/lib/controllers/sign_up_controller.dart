@@ -1,11 +1,11 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:get/get.dart';
 import 'package:shara/controllers/init_app_controller.dart';
-import 'package:shara/helpers/apis_urls/api.dart';
+import 'package:shara/helpers/apis_urls/api_handler.dart';
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/helpers/utils/validation/validator.dart';
-import 'package:shara/models/user_data.dart';
+import 'package:shara/features/auth/data/models/user_model.dart';
 
 class SignUpController extends GetxController {
 
@@ -55,7 +55,7 @@ class SignUpController extends GetxController {
       loading.value = true;
       println('------------ send code');
       println(body);
-      AppApiHandler.sendData(
+      ApiHandler.sendData(
           url: sendConfirmCodeUrl,
           body: body,
           header: {"x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
@@ -74,8 +74,8 @@ class SignUpController extends GetxController {
 
               InvalidUser invalidUser = InvalidUser.fromJson(json);
               // println(invalidUser.message);
-              // println(invalidUser.validator.errors);
-              onLogin(false,invalidUser.validator.errors) ;
+              // println(invalidUser.validator?.errors);
+              onLogin(false,invalidUser.validator?.errors) ;
 
             }
           });
@@ -91,7 +91,7 @@ class SignUpController extends GetxController {
     println('------------ send code');
     println(body);
     println(confirmationCode);
-    AppApiHandler.sendData(
+    ApiHandler.sendData(
         url: validateConfirmCodeUrl,
         body: body,
         header: {"x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
@@ -131,7 +131,7 @@ class SignUpController extends GetxController {
       } ;
 
       println(body);
-      AppApiHandler.sendData(
+      ApiHandler.sendData(
           url: registerUrl,
           body: body,
           header: {"x-localization":'lang_code'.tr,'Content-Type':'application/x-www-form-urlencoded'},
@@ -142,16 +142,16 @@ class SignUpController extends GetxController {
             println('--------->>>>>>>>>>>>>> register');
             if(stsCode == 200){
               InitAppController initApp = Get.find();
-              initApp.userData.value = UserData.fromJson(json);
-              initApp.userData.value .user.password = password;
-              initApp.userData.value .saveDataToStorage();
+              initApp.userData.value = UserDataModel.fromJson(json);
+              initApp.userData.value?.user?.password = password;
+              initApp.userData.value?.saveDataToStorage();
               onLogin(null,null);
             } else{
               println('--------->>>>>> error message');
               InvalidUser invalidUser = InvalidUser.fromJson(json);
-              onLogin(invalidUser.message,invalidUser.validator.errors) ;
+              onLogin(invalidUser.message,invalidUser.validator?.errors) ;
               println(invalidUser.message);
-              println(invalidUser.validator.errors);
+              println(invalidUser.validator?.errors);
               println('--------->>>>>> error message');
             }
           });
@@ -256,9 +256,9 @@ class SignUpController extends GetxController {
 
 
 class InvalidUser {
-  bool success;
-  ValidatorClass validator;
-  String message;
+  bool? success;
+  ValidatorClass? validator;
+  String? message;
 
   InvalidUser({this.success, this.validator, this.message});
 

@@ -6,7 +6,6 @@ import 'package:shara/helpers/app_colors.dart';
 import 'package:shara/helpers/navigation.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/helpers/utils/widgets/snack_bars.dart';
-import 'package:shara/views/screens/account/change_email.dart';
 import 'package:shara/views/widgets/leading_back_arrow.dart';
 import 'package:shara/views/widgets/main_button.dart';
 
@@ -41,15 +40,15 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
   @override
   Widget build(BuildContext context) {
 
-      firstNameCtrl.text = initAppController.userData.value.user.firstName;
-      secondNameCtrl.text = initAppController.userData.value.user.lastName;
-      phoneCtrl.text = '0${initAppController.userData.value.user.phone}';
+      firstNameCtrl.text = initAppController.userData.value.user!.firstName ?? '';
+      secondNameCtrl.text = initAppController.userData.value.user!.lastName ?? '';
+      phoneCtrl.text = '0${initAppController.userData.value.user!.phone}';
       // birthDateCtrl.text = '14/06/2020';
       genderCtrl.text =
-      '${initAppController.userData.value.user.points} ${'Point'.tr}';
+      '${initAppController.userData.value.user!.points} ${'Point'.tr}';
       // emailCtrl.text = initAppController.userData.value.user.email;
       secretNumberCtrl.text = '123456';
-      passwordCtrl.text = initAppController.userData.value.user.password;
+      passwordCtrl.text = initAppController.userData.value.user!.password ?? '';
       return Scaffold(
         appBar: AppBar(
             backgroundColor: AppColors.mainLightColor,
@@ -62,15 +61,9 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
                   fontSize: 18),
               maxLines: 3,
             ),
-            leading: Container(
-              child: InkWell(
-                onTap: () {
-                  Get.back();
-                },
-                child: LeadingBackArrow(
-                  size: 30,
-                ),
-              ),
+            leading: LeadingBackArrow(
+              size: 30,
+              onBack: Get.back,
             )),
         backgroundColor: Colors.white,
         body: SizedBox(
@@ -115,10 +108,10 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
                   ),
                   MainButtonWidget(btnTitle: 'save_changes'.tr, onPressed: () {
                     if(firstNameCtrl.text.isEmpty){
-                      firstNameCtrl.text = initAppController.userData.value.user.firstName;
+                      firstNameCtrl.text = initAppController.userData.value.user!.firstName ?? '';
                     }
                     if(secondNameCtrl.text.isEmpty){
-                      secondNameCtrl.text = initAppController.userData.value.user.lastName;
+                      secondNameCtrl.text = initAppController.userData.value.user!.lastName ?? '';
                     }
 
                     changeInfo.firstName = firstNameCtrl.text;
@@ -144,7 +137,7 @@ class _AccountSettingsPageState extends State<AccountSettingsPage> {
   }
 
   Widget _rowItem(String title, TextEditingController controller,
-      {suffix = false, Function onChange,readOnly = false,obscureText = false}) {
+      {suffix = false, void Function()? onChange,readOnly = false,obscureText = false}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

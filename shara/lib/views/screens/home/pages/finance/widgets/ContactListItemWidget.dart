@@ -1,4 +1,3 @@
-import 'package:fast_contacts/fast_contacts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,7 +7,7 @@ import '../../../../../../models/app_contact.dart';
 class ContactListItemWidget extends StatelessWidget {
   
   final AppContact contact;
-  const ContactListItemWidget(this.contact,{Key key}) : super(key: key);
+  const ContactListItemWidget(this.contact,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

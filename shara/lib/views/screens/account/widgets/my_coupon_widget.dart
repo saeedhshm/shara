@@ -10,7 +10,7 @@ class MyCouponWidget extends StatelessWidget {
 
   final MyGiftCard card;
 
-  MyCouponWidget({Key key,@required this.card}) : super(key: key);
+  MyCouponWidget({Key? key,required this.card}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

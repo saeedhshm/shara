@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shara/controllers/login_controller.dart';
 import 'package:shara/controllers/reset_password_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:shara/helpers/navigation.dart';
@@ -16,7 +15,7 @@ class ForgetPasswordWidget extends StatelessWidget {
   final _emailController = TextEditingController();
   final loginController = Get.put(ResetPasswordController());
 
-  ForgetPasswordWidget({Key key}) : super(key: key);
+  ForgetPasswordWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

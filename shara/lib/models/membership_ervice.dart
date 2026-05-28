@@ -1,10 +1,10 @@
-import 'package:shara/helpers/apis_urls/api.dart';
+import 'package:shara/helpers/apis_urls/api_handler.dart';
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 
 class MemebershipService {
-  Memberships memberships;
-  String _introAr;
-  String _introEn;
+  Memberships? memberships;
+  String? _introAr;
+  String? _introEn;
 
   MemebershipService();
 
@@ -17,11 +17,11 @@ class MemebershipService {
   }
 
   String memberShipIntro(bool isArabic){
-    return isArabic ? _introAr : _introEn;
+    return isArabic ? (_introAr ?? '') : (_introEn ?? '');
   }
 
   getMemberships(onDone){
-    AppApiHandler.getData(url: membershipUrl, callback: (json){
+    ApiHandler.getData(url: membershipUrl, callback: (json){
        this.fromJson(json);
        onDone();
     });
@@ -30,18 +30,18 @@ class MemebershipService {
 }
 
 class Memberships {
-  int currentPage;
-  List<Membership> data;
-  String firstPageUrl;
-  int from;
-  int lastPage;
-  String lastPageUrl;
-  String nextPageUrl;
-  String path;
-  int perPage;
-  String prevPageUrl;
-  int to;
-  int total;
+  int? currentPage;
+  List<Membership>? data;
+  String? firstPageUrl;
+  int? from;
+  int? lastPage;
+  String? lastPageUrl;
+  String? nextPageUrl;
+  String? path;
+  int? perPage;
+  String? prevPageUrl;
+  int? to;
+  int? total;
 
   Memberships(
       {this.currentPage,
@@ -62,7 +62,7 @@ class Memberships {
     if (json['data'] != null) {
       data = <Membership>[];
       json['data'].forEach((v) {
-        data.add(new Membership.fromJson(v));
+        data!.add(new Membership.fromJson(v));
       });
     }
     firstPageUrl = json['first_page_url'];
@@ -80,14 +80,14 @@ class Memberships {
 }
 
 class Membership {
-  int id;
-  String _nameAr;
-  String _nameEn;
-  String _imageAr;
-  String _imageEn;
-  List<Features> features;
-  String _detailsAr;
-  String _detailsEn;
+  int? id;
+  String? _nameAr;
+  String? _nameEn;
+  String? _imageAr;
+  String? _imageEn;
+  List<Features>? features;
+  String? _detailsAr;
+  String? _detailsEn;
 
   Membership();
 
@@ -120,7 +120,7 @@ String details(bool arabic){
     if (json['features'] != null) {
       features = <Features>[];
       json['features'].forEach((v) {
-        features.add(new Features.fromJson(v));
+        features!.add(new Features.fromJson(v));
       });
     }
   }
@@ -129,14 +129,14 @@ String details(bool arabic){
 
 
 class Features {
-  int id;
-  int membershipTypesId;
-  String icon;
-  String _nameAr;
-  String _nameEn;
+  int? id;
+  int? membershipTypesId;
+  String? icon;
+  String? _nameAr;
+  String? _nameEn;
 
   String name(bool arabic){
-    return arabic ? _nameAr : _nameEn;
+    return arabic ? (_nameAr ?? '') : (_nameEn ?? '');
   }
 
   Features.fromJson(Map<String, dynamic> json) {

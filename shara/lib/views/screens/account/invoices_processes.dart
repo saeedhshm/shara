@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shara/controllers/init_app_controller.dart';
 import 'package:shara/controllers/transactions_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:shara/helpers/utils/widgets/loading_indicator.dart';
 import 'package:shara/views/screens/account/widgets/invoice_item_widget.dart';
 import 'package:shara/views/widgets/decorated_app_bar.dart';
-import 'package:shara/views/widgets/drop_down_widget.dart';
 import 'package:shara/views/widgets/leading_back_arrow.dart';
 import 'package:get/get.dart';
 
 class InvoicesProcesses extends StatelessWidget {
 
-  InvoicesProcesses({Key key}) : super(key: key) {
+  InvoicesProcesses({Key? key}) : super(key: key) {
     // dateFilteringCtrl.text = 'اخر ٦ اشهر';
     // brandFilteringCtrl.text = 'brand_name_filter'.tr;
   }
@@ -32,6 +30,7 @@ class InvoicesProcesses extends StatelessWidget {
           children: [
             LeadingBackArrow(
               size: 30,
+              onBack: Get.back,
             ),
             SizedBox(
               width: 8,
@@ -85,7 +84,7 @@ class InvoicesProcesses extends StatelessWidget {
             ),
             Expanded(child: ListView.builder(
               itemCount: controller.transactionsService.transactions.length,
-              itemBuilder: (BuildContext context, int index) {
+              itemBuilder: (BuildContext? context, int index) {
                 return InvoiceItemWidget(controller.transactionsService.transactions[index]);
               },
             ))

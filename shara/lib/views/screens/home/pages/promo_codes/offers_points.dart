@@ -9,9 +9,9 @@ import '../../../../../models/promo_code_type.dart';
 import 'item_widget.dart';
 
 class OffersOfPointsScreen extends StatefulWidget {
-  final Function onBack;
+  final void Function()? onBack;
 
-  OffersOfPointsScreen({Key key, @required this.onBack}) : super(key: key);
+  OffersOfPointsScreen({Key? key, required this.onBack}) : super(key: key);
 
   @override
   State<OffersOfPointsScreen> createState() => _OffersOfPointsScreenState();
@@ -19,7 +19,7 @@ class OffersOfPointsScreen extends StatefulWidget {
 
 class _OffersOfPointsScreenState extends State<OffersOfPointsScreen> {
 
-  ScrollController scrollController;
+  ScrollController? scrollController;
   PromoCodeController controller =  Get.find();
 
   @override
@@ -33,14 +33,14 @@ class _OffersOfPointsScreenState extends State<OffersOfPointsScreen> {
   @override
   void dispose() {
     // TODO: implement dispose
-    scrollController.removeListener(_scrollListener);
-    scrollController.dispose();
+    scrollController!.removeListener(_scrollListener);
+    scrollController!.dispose();
     super.dispose();
   }
 
   void _scrollListener() {
     // print(scrollController.position.extentAfter);
-    if (scrollController.position.extentAfter == 0.0) {
+    if (scrollController!.position.extentAfter == 0.0) {
       controller.loadMore();
     }
   }
@@ -104,7 +104,7 @@ class _OffersOfPointsScreenState extends State<OffersOfPointsScreen> {
                               type.selected = false;
                             }
                           }
-                          controller.getSelectedTypePromoCodes(id);
+                          controller.getSelectedTypePromoCodes(id ?? 0);
                         },
                         child: TypeItemWidget(controller.promocodeTypeService.value.productsTypes[i]),
                       ),
@@ -149,7 +149,7 @@ class _OffersOfPointsScreenState extends State<OffersOfPointsScreen> {
 
 class TypeItemWidget extends StatelessWidget {
   final ProductsTypes type;
-  const TypeItemWidget(this.type,{Key key}) : super(key: key);
+  const TypeItemWidget(this.type,{Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -166,7 +166,7 @@ class TypeItemWidget extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 16),
             child: Text(
-               type.name.tr,
+               type.name!.tr,
               style: TextStyle(
                 color: type.selected ? Colors.white : Colors.black
               ),

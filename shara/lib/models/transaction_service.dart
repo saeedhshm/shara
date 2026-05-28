@@ -2,8 +2,8 @@ import 'package:shara/helpers/utils/printutils.dart';
 
 class TransactionsService {
   List<Transaction> transactions = <Transaction>[];
-  bool success;
-  String message;
+  bool? success;
+  String? message;
 
   // TransactionsService({this.transactions, this.success, this.message});
 
@@ -26,21 +26,21 @@ class TransactionsService {
 }
 
 class Transaction {
-  int id;
-  String uuid;
-  int customerId;
-  int companyId;
-  int _type;
-  String merchantOrderId;
-  int _status;
+  int? id;
+  String? uuid;
+  int? customerId;
+  int? companyId;
+  int? _type;
+  String? merchantOrderId;
+  int? _status;
   dynamic amount;
   dynamic points;
-  String currency;
-  String redirectLink;
-  String createdAt;
-  String updatedAt;
-  TransPartner partner;
-  PointsInfo pointsInfo;
+  String? currency;
+  String? redirectLink;
+  String? createdAt;
+  String? updatedAt;
+  TransPartner? partner;
+  PointsInfo? pointsInfo;
 
   String get type{
        return _type == 1 ? 'earning_points' : 'spending_points';
@@ -52,7 +52,7 @@ class Transaction {
   }
 
   String get transactionDate{
-    var date = updatedAt.split('T')[0].replaceAll('-', '/');
+    var date = updatedAt!.split('T')[0].replaceAll('-', '/');
 
     return date;
   }
@@ -81,12 +81,12 @@ class Transaction {
 }
 
 class TransPartner {
-  int id;
-  String name;
-  int isActive;
-  String logo;
+  int? id;
+  String? name;
+  int? isActive;
+  String? logo;
 
-  TransPartner({this.id, this.name, this.isActive, this.logo});
+  TransPartner({required this.id, required this.name, required this.isActive, required this.logo});
 
   TransPartner.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -98,22 +98,22 @@ class TransPartner {
 }
 
 class PointsInfo {
-  int id;
-  int transactionId;
+  int? id;
+  int? transactionId;
   dynamic points;
   dynamic pointsBefore;
   dynamic pointsAfter;
-  String createdAt;
-  String updatedAt;
+  String? createdAt;
+  String? updatedAt;
 
   PointsInfo(
-      {this.id,
-        this.transactionId,
+      {required this.id,
+        required this.transactionId,
         this.points,
         this.pointsBefore,
         this.pointsAfter,
-        this.createdAt,
-        this.updatedAt});
+        required this.createdAt,
+        required this.updatedAt});
 
   PointsInfo.fromJson(Map<String, dynamic> json) {
     id = json['id'];

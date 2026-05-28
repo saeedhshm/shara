@@ -8,11 +8,10 @@ import 'package:shara/views/widgets/web_page.dart';
 
 import '../../../../../../controllers/buy_points_controller.dart';
 import '../../../../../../helpers/app_colors.dart';
-import 'package:overlay_support/overlay_support.dart';
 
 class BottomSheetWidget extends StatelessWidget {
 
-   BottomSheetWidget({Key key}) : super(key: key);
+   BottomSheetWidget({Key? key}) : super(key: key);
 
   final BuyPointsController controller = Get.find();
   final pointCtrl = TextEditingController();

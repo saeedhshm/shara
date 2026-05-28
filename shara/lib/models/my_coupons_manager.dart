@@ -1,7 +1,7 @@
 class MyCoupnsManager {
-  List<MyGiftCard> giftCards;
-  bool success;
-  String message;
+  List<MyGiftCard>? giftCards;
+  bool? success;
+  String? message;
 
   MyCoupnsManager({this.giftCards, this.success, this.message});
 
@@ -9,7 +9,7 @@ class MyCoupnsManager {
     if (json['gift_cards'] != null) {
       giftCards = <MyGiftCard>[];
       json['gift_cards'].forEach((v) {
-        giftCards.add(new MyGiftCard.fromJson(v));
+        giftCards!.add(new MyGiftCard.fromJson(v));
       });
     }
     success = json['success'];
@@ -19,20 +19,20 @@ class MyCoupnsManager {
 }
 
 class MyGiftCard {
-  int id;
-  int resalId;
-  int status;
-  int customerId;
-  int variantId;
-  String referenceId;
-  String code;
-  String expireOn;
-  String howToUse;
-  String photo;
-  String price;
-  String totalPrice;
-  String createdAt;
-  String updatedAt;
+  int? id;
+  int? resalId;
+  int? status;
+  int? customerId;
+  int? variantId;
+  String? referenceId;
+  String? code;
+  String? expireOn;
+  String? howToUse;
+  String? photo;
+  String? price;
+  String? totalPrice;
+  String? createdAt;
+  String? updatedAt;
 
   MyGiftCard(
       {this.id,

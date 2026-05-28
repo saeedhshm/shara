@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:shara/helpers/apis_urls/api.dart';
+import 'package:shara/helpers/apis_urls/api_handler.dart';
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 import 'package:shara/models/home_service.dart';
 
@@ -17,7 +17,7 @@ class HomeController extends GetxController{
 
 
   loadingHomeData(){
-    AppApiHandler.getData(url: homePageUrl, callback: (json){
+    ApiHandler.getData(url: homePageUrl, callback: (json){
 
          homeData.value.fromJson(json);
          loading.value = false;

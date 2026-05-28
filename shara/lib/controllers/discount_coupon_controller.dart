@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/models/discount_coupon.dart';
 
-import '../helpers/apis_urls/api.dart';
+import '../helpers/apis_urls/api_handler.dart';
 import '../helpers/apis_urls/app_urls.dart';
 
 class DiscountCouponsController extends GetxController{
@@ -17,13 +17,13 @@ class DiscountCouponsController extends GetxController{
   var currentPage = 1;
   var nextPage = 1;
 
-  ScrollController scrollController;
+  ScrollController? scrollController;
 
   getAllCoupons(){
     loading.value = true;
     currentPage = 1;
     nextPage = 1;
-    AppApiHandler.getData(url: '$allDiscountCouponsUrl?page=$currentPage', callback: (json){
+    ApiHandler.getData(url: '$allDiscountCouponsUrl?page=$currentPage', callback: (json){
       println('=-=-=-=-=---=- offers =-==-==-=-=-');
       println(json);
       println('=-=-=-=-=---=- offers =-==-==-=-=-');
@@ -49,9 +49,9 @@ class DiscountCouponsController extends GetxController{
   }
 
   void _scrollListener() {
-    // print(scrollController.position.extentAfter);
+    // print(scrollController?.position.extentAfter);
     if(!subLoading.value) {
-      if (scrollController.position.extentAfter == 0.0) {
+      if (scrollController?.position.extentAfter == 0.0) {
         this.loadMore();
       }
     }
@@ -65,7 +65,7 @@ class DiscountCouponsController extends GetxController{
       if(currentPage != nextPage){
         subLoading.value = true;
         currentPage = nextPage;
-        AppApiHandler.getData(url: '$allDiscountCouponsUrl?page=$currentPage', callback: (json){
+        ApiHandler.getData(url: '$allDiscountCouponsUrl?page=$currentPage', callback: (json){
 
           couponsManager.value .fromJson(json);
           nextPage++;

@@ -1,7 +1,5 @@
-import 'package:fast_contacts/fast_contacts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:shara/controllers/transfer_points_controller.dart';
 import 'package:shara/helpers/utils/widgets/loading_indicator.dart';
 import 'package:shara/views/screens/home/pages/finance/transfer_to_contact.dart';
@@ -11,7 +9,7 @@ import '../../../../../helpers/app_colors.dart';
 import '../../../../../models/app_contact.dart';
 
 class ContactsPage extends StatelessWidget {
-  ContactsPage({Key key}) : super(key: key);
+  ContactsPage({Key? key}) : super(key: key);
 
   final TransferPointsController controller =
       Get.put(TransferPointsController());
@@ -93,10 +91,10 @@ class ContactsPage extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                InkWell(
-                  onTap: (){
-                    Get.to(TransferToContactPage(contact: null));
-                  },
+                 InkWell(
+                   onTap: (){
+                     Get.to(TransferToContactPage(contact: null as AppContact));
+                   },
                   child: Container(
                     decoration: BoxDecoration(
                         color: AppColors.mainGoldenDarkColor,

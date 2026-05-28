@@ -2,6 +2,6 @@
 class AppContact {
   String name;
   String phone;
-  String image;
+  String? image;
   AppContact(this.name,this.phone);
 }

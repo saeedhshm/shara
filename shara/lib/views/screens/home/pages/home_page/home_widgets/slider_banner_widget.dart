@@ -3,14 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/controllers/home_controller.dart';
 import 'package:shara/controllers/init_app_controller.dart';
-import 'package:shara/helpers/app_colors.dart';
-import 'package:shara/views/widgets/image_from_server.dart';
 import 'package:shara/views/widgets/network_image.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SliderBannerWidget extends StatefulWidget {
 
-   SliderBannerWidget({Key key}) : super(key: key);
+   SliderBannerWidget({Key? key}) : super(key: key);
 
   @override
   State<SliderBannerWidget> createState() => _SliderBannerWidgetState();
@@ -22,7 +19,7 @@ class _SliderBannerWidgetState extends State<SliderBannerWidget> {
   HomeController homeController  = Get.find();
   InitAppController initAppController = Get.find();
 
-  Timer _timer;
+  Timer? _timer;
   int index = 0;
   double sliderWidth = 0.0;
   @override
@@ -56,7 +53,7 @@ class _SliderBannerWidgetState extends State<SliderBannerWidget> {
 
   @override
   void dispose() {
-    _timer.cancel();
+    _timer!.cancel();
     super.dispose();
   }
   @override
@@ -83,7 +80,7 @@ class _SliderBannerWidgetState extends State<SliderBannerWidget> {
                           borderRadius: BorderRadius.circular(0),
                           child: loadImage(homeController.homeData.value.sliders[index].image(initAppController.isArabicLang),fit: BoxFit.fill)),
                     );
-                  }, separatorBuilder: (BuildContext context, int index) {
+                  }, separatorBuilder: (BuildContext? context, int index) {
                   return SizedBox(width: 8,);
                 },
                 ),

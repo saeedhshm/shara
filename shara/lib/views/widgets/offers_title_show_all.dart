@@ -11,7 +11,7 @@ class OffersTitleShowAllWidget extends StatelessWidget {
   final String title;
   final double padding;
 
-   OffersTitleShowAllWidget({Key key, this.onShowAllPressed,@required this.title,this.padding = 20}) : super(key: key);
+   OffersTitleShowAllWidget({Key? key, required this.onShowAllPressed,required this.title,this.padding = 20}) : super(key: key);
    InitAppController appController = Get.find();
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class OffersTitleShowAllWidget extends StatelessWidget {
               ),
             ),
             Spacer(),
-           onShowAllPressed != null ? InkWell(
+           InkWell(
               onTap: onShowAllPressed,
               child: Row(
                 children: [
@@ -58,7 +58,7 @@ class OffersTitleShowAllWidget extends StatelessWidget {
                   ),
                 ],
               ),
-            ) : SizedBox(),
+            ),
 
           ],
         ),

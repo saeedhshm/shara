@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/controllers/promo_codes_controller.dart';
-import 'package:shara/models/promo_code.dart';
 import 'package:shara/views/screens/home/pages/promo_codes/variant_item_widget.dart';
 
 import '../../../../../helpers/app_colors.dart';
@@ -10,7 +9,7 @@ import '../../../../../helpers/utils/widgets/loading_indicator.dart';
 class PromoCodeVariantsScreen extends StatelessWidget {
 
   PromoCodeController controller = Get.find();
-   PromoCodeVariantsScreen({Key key}) : super(key: key);
+   PromoCodeVariantsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class PromoCodeVariantsScreen extends StatelessWidget {
               backgroundColor: AppColors.mainLightColor,
               elevation: 0,
               title: Text(
-                controller.promoCode.title,
+                controller.promoCode!.title ?? '',
                 style: TextStyle(
                     color: AppColors.mainDarkGreyColor,
                     fontWeight: FontWeight.bold,
@@ -51,7 +50,7 @@ class PromoCodeVariantsScreen extends StatelessWidget {
                       crossAxisSpacing: 16,
                       mainAxisSpacing: 16,
                       childAspectRatio: 0.65),
-                  itemCount: controller.promoCode.variants.length,
+                  itemCount: controller.promoCode!.variants!.length,
                   itemBuilder: (contx, indx) {
                     return VariantItemWidget(index:indx);
                   },
@@ -64,7 +63,7 @@ class PromoCodeVariantsScreen extends StatelessWidget {
         controller.buyingCode.value? Container(
           width: double.infinity,
           height: double.infinity,
-          color: Colors.black.withOpacity(0.3),
+          color: Colors.black.withValues(alpha: 0.3),
           child: Center(
             child: LoadingIndicatorWidget(),
           ),

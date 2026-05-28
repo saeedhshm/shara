@@ -3,16 +3,15 @@ import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'package:shara/helpers/utils/widgets/loading_indicator.dart';
 import 'package:shara/controllers/discount_coupon_controller.dart';
-import 'package:shara/views/widgets/custom_listview_widget.dart';
 
 import '../../../../../helpers/app_colors.dart';
 import '../../../../../models/discount_coupon.dart';
 import '../../../../widgets/network_image.dart';
 
 class DiscountCoupons extends StatelessWidget {
-  final Function onBack;
+  final void Function()? onBack;
 
-  DiscountCoupons({Key key,this.onBack}) : super(key: key);
+  DiscountCoupons({Key? key,required this.onBack}) : super(key: key);
 
   final controller = Get.put(DiscountCouponsController());
 
@@ -84,7 +83,7 @@ class DiscountCoupons extends StatelessWidget {
         // Container(
         //   width: double.infinity,
         //   height: double.infinity,
-        //   color: Colors.black54.withOpacity(0.3),
+        //   color: Colors.black54.withValues(alpha: 0.3),
         //   child: Center(
         //     child: Container(
         //       decoration: BoxDecoration(
@@ -102,7 +101,7 @@ class DiscountCopounItemWidget extends StatelessWidget {
 
   final Coupon coupon;
   final controller = Get.put(DiscountCouponsController());
-  DiscountCopounItemWidget({Key key,@required this.coupon}) : super(key: key);
+  DiscountCopounItemWidget({Key? key,required this.coupon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -144,7 +143,7 @@ class DiscountCopounItemWidget extends StatelessWidget {
                         ),
                         Container(
                           decoration: BoxDecoration(
-                              color: Colors.grey.withOpacity(0.1)
+                              color: Colors.grey.withValues(alpha: 0.1)
                           ),
                           child: Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 32),

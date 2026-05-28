@@ -6,7 +6,7 @@ import 'package:shara/views/widgets/network_image.dart';
 import '../../../../helpers/app_colors.dart';
 
 class NotificationsPage extends StatefulWidget {
-  NotificationsPage({Key key}) : super(key: key);
+  NotificationsPage({Key? key}) : super(key: key);
 
   @override
   State<NotificationsPage> createState() => _NotificationsPageState();
@@ -96,7 +96,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                             borderRadius: BorderRadius.circular(8),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.grey.withOpacity(0.3),
+                                color: Colors.grey.withValues(alpha: 0.3),
                                 spreadRadius: 1,
                                 blurRadius: 8,
                                 offset:
@@ -107,7 +107,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                         );
                       },
                       itemCount: controller.notifications.length,
-                      separatorBuilder: (BuildContext context, int index) {
+                      separatorBuilder: (BuildContext? context, int index) {
                         return SizedBox(
                           height: 4,
                         );

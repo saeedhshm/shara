@@ -1,10 +1,7 @@
-import 'package:fast_contacts/fast_contacts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shara/controllers/inner_transfer.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 
-import '../../../../../controllers/init_app_controller.dart';
 import '../../../../../helpers/app_colors.dart';
 import '../../../../../models/app_contact.dart';
 import '../../../../widgets/custom_text_form_field.dart';
@@ -18,12 +15,10 @@ class TransferToContactPage extends StatelessWidget {
 
   final InnerTransferController controller = Get.put(InnerTransferController());
 
-  TransferToContactPage({Key key, @required this.contact}) : super(key: key) {
-    if(contact != null){
-      _phone = contact.phone;
-      transferToCtrl.text ='${contact.name} ($_phone)';
-    }
-    readOnly = transferToCtrl.text.isNotEmpty;
+  TransferToContactPage({Key? key, required this.contact}) : super(key: key) {
+    _phone = contact.phone;
+    transferToCtrl.text ='${contact.name} ($_phone)';
+      readOnly = transferToCtrl.text.isNotEmpty;
   }
 
   final transferToCtrl = TextEditingController();
@@ -101,7 +96,7 @@ class TransferToContactPage extends StatelessWidget {
                             height: 8,
                           ),
                           Text(
-                            '${controller.appController.userData.value.user.points}',
+                            '${controller.appController.userData.value.user?.points ?? 0}',
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,

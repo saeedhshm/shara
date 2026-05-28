@@ -5,7 +5,7 @@ class MainButtonWidget extends StatelessWidget {
 
   final String btnTitle;
   final Function ()onPressed;
-   MainButtonWidget({Key key,@required this.btnTitle,@required this.onPressed}) : super(key: key);
+   MainButtonWidget({Key? key,required this.btnTitle,required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

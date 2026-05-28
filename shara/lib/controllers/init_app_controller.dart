@@ -1,13 +1,13 @@
 import 'package:get/get.dart';
-import 'package:shara/helpers/apis_urls/api.dart';
+import 'package:shara/helpers/apis_urls/api_handler.dart';
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 import 'package:shara/helpers/utils/printutils.dart';
-import 'package:shara/models/user_data.dart';
+import 'package:shara/features/auth/data/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class InitAppController extends GetxController{
-  var userData = UserData().obs;
+  var userData = UserDataModel().obs;
   // var loading = false.obs;
 
   var savedLangCode = '';
@@ -24,7 +24,7 @@ class InitAppController extends GetxController{
   }
 
   bool get isArabicLang{
-    return (Get.locale.languageCode == 'ar');
+    return (Get.locale?.languageCode == 'ar');
   }
 
   updateAppLanguage(String langCode) async {
@@ -38,17 +38,17 @@ class InitAppController extends GetxController{
     savedLangCode = prefs.getString('lang') ?? 'ar' ;
   }
 
-  void sendMessageAction(String message,onChangeDone){
+  void sendMessageAction(String? message,onChangeDone){
 
     var params = {
       'message' : message,
     }  ;
 
     var headers = {
-      'Authorization' : 'bearer ${userData.value.token.accessToken}' ,
+      'Authorization' : 'bearer ${userData.value.token?.accessToken}' ,
       "x-localization": 'lang_code'.tr,
     } ;
-    AppApiHandler.sendData(url: sendMessageUrl, callback: (json,stsCode){
+    ApiHandler.sendData(url: sendMessageUrl, callback: (json,stsCode){
       println();
       println(json);
       println();
@@ -58,13 +58,17 @@ class InitAppController extends GetxController{
 
   void getUserProfileInfo(){
     var headers = {
-      'Authorization' : 'bearer ${userData.value.token.accessToken}' ,
+      'Authorization' : 'bearer ${userData.value.token?.accessToken}' ,
       "x-localization": 'lang_code'.tr,
     } ;
 
-    AppApiHandler.getData(url: profileDataUrl, header: headers ,callback: (json){
-      User user = User.fromJson(json);
-      userData.value.user = user;
+    ApiHandler.getData(url: profileDataUrl, header: headers ,callback: (json){
+      UserModel user = UserModel.fromJson(json);
+      userData.value = UserDataModel(
+        success: userData.value.success,
+        token: userData.value.token,
+        user: user,
+      );
       userData.value.saveDataToStorage();
       update();
     });

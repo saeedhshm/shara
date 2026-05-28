@@ -4,7 +4,7 @@ class FavoriteIconWidget extends StatefulWidget {
 
   final double size;
 
-  const FavoriteIconWidget({Key key,this.size = 35,}) : super(key: key);
+  const FavoriteIconWidget({Key? key,this.size = 35,}) : super(key: key);
 
   @override
   _FavoriteIconWidgetState createState() => _FavoriteIconWidgetState();

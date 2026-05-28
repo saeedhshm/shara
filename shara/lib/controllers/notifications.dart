@@ -1,7 +1,5 @@
-import 'dart:async';
 
 import 'package:get/get.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shara/models/notification.dart';
 
 class NotificationsController extends GetxController{

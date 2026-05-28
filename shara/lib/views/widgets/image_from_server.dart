@@ -1,10 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:shara/helpers/app_colors.dart';
 
 import 'loading.dart';
 
-Widget _imageFromServer({@required String imageUrl,fit = BoxFit.contain}){
+Widget _imageFromServer({required String imageUrl,fit = BoxFit.contain}){
 
 
   return CachedNetworkImage(

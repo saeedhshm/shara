@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pay/flutter_pay.dart';
 import 'package:get/get.dart';
 import 'package:shara/helpers/apis_urls/app_urls.dart';
 import 'package:urwaypayment/urwaypayment.dart';
-import 'dart:io' show Platform;
-import '../helpers/apis_urls/api.dart';
+import '../helpers/apis_urls/api_handler.dart';
 import '../helpers/utils/printutils.dart';
 import 'init_app_controller.dart';
 
@@ -12,24 +10,23 @@ class BuyPointsController extends GetxController{
 
   InitAppController appController = Get.find();
   var errorMessage = ''.obs;
-  var canUseApplePay = false;
   var startApplePay = false.obs;
 
 
-  generatePaymentUrl(String points,onDone){
+  generatePaymentUrl(String? points,onDone){
     var params = {
       'points' : points,
     }  ;
 
     var headers = {
-      'Authorization' : 'bearer ${appController.userData.value.token.accessToken}' ,
+      'Authorization' : 'bearer ${appController.userData.value.token?.accessToken}' ,
       "x-localization": 'lang_code'.tr,
     } ;
-    AppApiHandler.sendData(url: urlPaymentGeneratorUrl, callback: (json,stsCode){
+    ApiHandler.sendData(url: urlPaymentGeneratorUrl, callback: (json,stsCode){
       println();
       println(json);
       println();
-      if(json['success']){
+      if(json != null && json['success']){
        var paymentUrl = 'https://sharaksa.com/api/customer/payment/checkout-mobile-redirect?link=${json['url']}';
         onDone(paymentUrl);
       }
@@ -37,43 +34,24 @@ class BuyPointsController extends GetxController{
     }, body: params,header: headers);
   }
 
-  void checkForApplePay() async{
-    FlutterPay flutterPay = FlutterPay();
-    println('-0-0-0-0-0->>> check_apple_pay');
-    canUseApplePay = await flutterPay.canMakePaymentsWithActiveCard(allowedPaymentNetworks: [
-      PaymentNetwork.visa,
-      PaymentNetwork.masterCard,
-      PaymentNetwork.mada,
-    ]);
-    println('-0-0-0-0-0->>> $canUseApplePay');
-  }
-
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
-
-    if (Platform.isIOS) {
-      println('-0-0-0-0-0->>> -0-0-0-0-0->>> onInit() ');
-      checkForApplePay();
-    }else{
-      println('-0-0-0-0-0->>> not Platform.isIOS');
-    }
   }
 
-  void payUsingApplePay(BuildContext context,String points,onDone) async {
+  void payUsingApplePay(BuildContext? context,String? points,onDone) async {
     await _performtrxn(context, '');
-    onDone('replaceFarsiNumber(points)');
+    onDone(replaceFarsiNumber(points));
 
   }
 
-  Future<void> _performtrxn(BuildContext context, String amount) async {
+  Future<void> _performtrxn(BuildContext? context, String amount) async {
 
       startApplePay.value = true;
-      checkForApplePay();
     // var priceBeforeShipping = double.tryParse(_checkOut.totalAmountAll) - double.tryParse(_checkOut.shipmentAmount) ;
       println('hkjhkjh kjhkjh');
 
+    if (context == null) return;
     var RespResult = await Payment.makeapplepaypaymentService(
         context: context,
         country: 'SA',
@@ -91,6 +69,7 @@ class BuyPointsController extends GetxController{
         tokenizationType: '',
         merchantIdentifier: "merchant.com.traffic.saeed.shara",
         companyName:'Zinco Int.', shippingCharge:'0.00',
+        metadata: '', // Add empty metadata string to satisfy required parameter
     );
       println('hkjhkjh kjhkjh DateTime >>> ${DateTime.now().millisecondsSinceEpoch}');
       println('hkjhkjh kjhkjh RespResult >>> $RespResult');
@@ -100,12 +79,12 @@ class BuyPointsController extends GetxController{
     //
     // final jsonData = json.decode(RespResult);
 
-    var params = {
-
-      "order_id":'{sra.orderId}'  ,
-      "amount" :'{_checkOut.totalAmountAll}',
-      "unique_id": '{sra.uniqueId}'
-    };
+    // var params = {
+    //
+    //   "order_id":'{sra.orderId}'  ,
+    //   "amount" :'{_checkOut.totalAmountAll}',
+    //   "unique_id": '{sra.uniqueId}'
+    // };
 
 
     // if (json['result'] == 'UnSuccessful') {
@@ -186,14 +165,15 @@ class BuyPointsController extends GetxController{
 
   }
 
-  String replaceFarsiNumber(String input) {
+  String replaceFarsiNumber(String? input) {
+    if (input == null) return '';
     const english = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
     const farsi = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
-
+    String result = input;
     for (int i = 0; i < english.length; i++) {
-      input = input.replaceAll(farsi[i], english[i]);
+      result = result.replaceAll(farsi[i], english[i]);
     }
 
-    return input;
+    return result;
   }
 }

@@ -4,26 +4,35 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:shara/controllers/init_app_controller.dart';
-import 'package:shara/controllers/login_controller.dart';
 import 'package:shara/helpers/utils/printutils.dart';
-import 'package:shara/views/screens/home/pages/discount_coupons/screen.dart';
 import 'package:shara/views/screens/splash/splash.dart';
 import 'helpers/translattion/local_strings.dart';
 import 'package:flutter/services.dart';
+
+import 'package:shara/core/di/injection_container.dart' as di;
+import 'package:shara/features/auth/presentation/controllers/login_controller.dart' as new_login;
 
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+  
+  // Initialize Clean Architecture dependencies
+  await di.initDependencies();
+  
   InitAppController initApp = Get.put(InitAppController());
   await registerNotification();
   await initApp.getSavedLangCode();
-  Get.lazyPut(() => LoginController());
+  
+  // We use the new LoginController from the presentation layer, but it's injected in di,
+  // however, old screens might just use Get.lazyPut. 
+  Get.lazyPut(() => new_login.LoginController(Get.find(), Get.find()));
+
   runApp(MyApp());
 
 }
 
-void registerNotification() async {
+Future<void> registerNotification() async {
   // 1. Initialize the Firebase app
   // await Firebase.initializeApp();
   //  FirebaseMessaging _messaging;
@@ -48,7 +57,7 @@ void registerNotification() async {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  InitAppController initApp = Get.find();
+  final InitAppController initApp = Get.find();
   @override
   Widget build(BuildContext context) {
     println('----->>>>>> initApp.savedLangCode ${initApp.savedLangCode} ') ;

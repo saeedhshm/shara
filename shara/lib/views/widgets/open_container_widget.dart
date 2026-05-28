@@ -7,17 +7,15 @@ class OpenContainerWidget extends StatelessWidget {
   final Widget openWidget;
   final Widget closedWidget;
 
-   OpenContainerWidget({Key key,@required this.openWidget,@required this.closedWidget}) : super(key: key);
+   OpenContainerWidget({Key? key,required this.openWidget,required this.closedWidget}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
 
     return InkWell(
       onTap: (){
-        if(openWidget != null) {
-          Get.to(() => openWidget);
-        }
-      },
+        Get.to(() => openWidget);
+            },
       child: closedWidget,
     );
     return OpenContainer(

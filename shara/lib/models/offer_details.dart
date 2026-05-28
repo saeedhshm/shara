@@ -2,24 +2,24 @@ import 'package:shara/helpers/apis_urls/app_urls.dart';
 import 'package:shara/models/partner.dart';
 
 class OfferDetails {
-  int id;
-  int offersCategoriesId;
-  int usersCompaniesId;
-  String titleAr;
-  String titleEn;
-  String descAr;
-  String descEn;
+  int? id;
+  int? offersCategoriesId;
+  int? usersCompaniesId;
+  String? titleAr;
+  String? titleEn;
+  String? descAr;
+  String? descEn;
   dynamic _imageAr;
-  String _imageEn;
-  Partner partner;
-  OfferCategory category;
+  String? _imageEn;
+  Partner? partner;
+  OfferCategory? category;
 
   String title(bool isArabic){
-    return isArabic ? titleAr : titleEn;
+    return (isArabic ? titleAr : titleEn) ?? '';
   }
 
   String description(bool isArabic){
-    return isArabic ? descAr : descEn;
+    return (isArabic ? descAr : descEn) ?? '';
   }
 
   String image(bool isArabic){
@@ -61,11 +61,11 @@ class OfferDetails {
 
 
 class OfferCategory {
-  int id;
-  String nameAr;
-  String nameEn;
+  int? id;
+  String? nameAr;
+  String? nameEn;
 
-  OfferCategory({this.id, this.nameAr, this.nameEn});
+  OfferCategory({required this.id, required this.nameAr, required this.nameEn});
 
   OfferCategory.fromJson(Map<String, dynamic> json) {
     id = json['id'];

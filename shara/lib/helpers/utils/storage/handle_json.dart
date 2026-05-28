@@ -1,9 +1,6 @@
 
 
 import 'dart:convert';
-import 'dart:io';
-import 'package:path_provider/path_provider.dart';
-import 'package:shara/helpers/utils/printutils.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class JsonHandler{
@@ -12,39 +9,43 @@ class JsonHandler{
   JsonHandler(this.shared_key);
 
 
-  void writeJson(Map<String,dynamic> json) async {
+  Future<void> writeJson(Map<String,dynamic>? json) async {
 
     //3. Convert _json ->_jsonString
-    var _jsonString = jsonEncode(json);
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(shared_key, _jsonString);
-
-  }
-
-  Future<Map<String,dynamic>> readJson() async {
-
-    final prefs = await SharedPreferences.getInstance();
-    final String _jsonString = prefs.getString(shared_key);
-
-    if (_jsonString != null) {
-      try {
-        return jsonDecode(_jsonString);
-      } catch (e) {
-
-        print('Tried reading _file error: $e');
-
-        return null;
-      }
-
+    if (json != null) {
+      var _jsonString = jsonEncode(json);
+      await prefs.setString(shared_key, _jsonString);
+    } else {
+      await prefs.remove(shared_key);
     }
-    return null;
+
+  }
+
+  Future<Map<String,dynamic>?> readJson() async {
+
+    final prefs = await SharedPreferences.getInstance();
+    final String? _jsonString = prefs.getString(shared_key);
+
+    if (_jsonString == null) {
+      return null;
+    }
+
+    try {
+      return jsonDecode(_jsonString) as Map<String,dynamic>;
+    } catch (e) {
+
+      print('Tried reading _file error: $e');
+
+      return null;
+    }
   }
 
 
-  Future deleteFile() async {
+  Future<void> deleteFile() async {
     final prefs = await SharedPreferences.getInstance();
     // Remove data for the 'counter' key.
-    final success = await prefs.remove(shared_key);
+    await prefs.remove(shared_key);
   }
 
 }

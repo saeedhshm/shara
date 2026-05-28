@@ -11,7 +11,7 @@ class FourDigitWidget extends StatefulWidget {
   final List<TextEditingController> textControllers;
   final bool isPassword;
 
-   FourDigitWidget({Key key,@required this.textControllers,this.isPassword = false}) : super(key: key);
+   FourDigitWidget({Key? key,required this.textControllers,this.isPassword = false}) : super(key: key);
 
   @override
   State<FourDigitWidget> createState() => _FourDigitWidgetState();

@@ -12,7 +12,7 @@ import '../../home/main_home_screen.dart';
 
 class ConfirmPasswordPage extends StatefulWidget {
 
-  const ConfirmPasswordPage({Key key}) : super(key: key);
+  const ConfirmPasswordPage({Key? key}) : super(key: key);
 
   @override
   State<ConfirmPasswordPage> createState() => _ConfirmPasswordPageState();

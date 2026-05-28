@@ -5,12 +5,9 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:shara/controllers/home_controller.dart';
 import 'package:shara/controllers/init_app_controller.dart';
-import 'package:shara/controllers/login_controller.dart';
-import 'package:shara/helpers/navigation.dart';
+import 'package:shara/features/auth/presentation/controllers/login_controller.dart';
 import 'package:shara/helpers/utils/printutils.dart';
-import 'package:shara/views/screens/account/login/login.dart';
 import 'package:shara/views/screens/home/main_home_screen.dart';
-import 'package:shara/views/screens/home/pages/home_page/home_page.dart';
 import 'package:shara/views/screens/splash/intro_page.dart';
 import 'package:video_player/video_player.dart';
 
@@ -18,7 +15,7 @@ import '../account/signin_pages/password_page.dart';
 
 class MyHomePage extends StatefulWidget {
 
-  MyHomePage({Key key, }) : super(key: key);
+  MyHomePage({Key? key, }) : super(key: key);
 
 
   @override
@@ -29,11 +26,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
   int count = 0;
-  Timer timer;
+  Timer? timer;
   var tryingLogging = false;
   var loogedUser = false;
 
-  VideoPlayerController _controller;
+  VideoPlayerController? _controller;
 
   InitAppController initAppController = Get.find();
   LoginController loginController = Get.find();
@@ -55,48 +52,37 @@ class _MyHomePageState extends State<MyHomePage> {
         setState(() {});
       });
     // _controller.setLooping(true);
-    _controller.play();
+    _controller!.play();
 
-    _controller.addListener(() {
+    _controller!.addListener(() {
       println();
 
 
-      if(!_controller.value.isPlaying){
+      if(!_controller!.value.isPlaying){
         SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
         // println('------------>>>>>._controller.value.isPlaying ${initAppController.userData.value.user.password} ');
-        if(initAppController.userData.value.user != null){
-          if(kDebugMode){
-            Navigator.pushReplacement(
-              context,
-              PageRouteBuilder(
-                pageBuilder: (context, animation1, animation2) =>  MainHomeScreen(),
-                transitionDuration: Duration.zero,
-                reverseTransitionDuration: Duration.zero,
-              ),
-            );
-          }else{
-            Navigator.pushReplacement(
-              context,
-              PageRouteBuilder(
-                pageBuilder: (context, animation1, animation2) =>  PasswordPage(false),
-                transitionDuration: Duration.zero,
-                reverseTransitionDuration: Duration.zero,
-              ),
-            );
-          }
-
-
+        if(kDebugMode){
+          Navigator.pushReplacement(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation1, animation2) =>  MainHomeScreen(),
+              transitionDuration: Duration.zero,
+              reverseTransitionDuration: Duration.zero,
+            ),
+          );
         }else{
           Navigator.pushReplacement(
             context,
             PageRouteBuilder(
-              pageBuilder: (context, animation1, animation2) => IntroPage(),
+              pageBuilder: (context, animation1, animation2) =>  PasswordPage(false),
               transitionDuration: Duration.zero,
               reverseTransitionDuration: Duration.zero,
             ),
           );
         }
 
+
+      
       }
     });
 
@@ -110,8 +96,8 @@ class _MyHomePageState extends State<MyHomePage> {
       });
 
 
-      if(!_controller.value.isPlaying && tryingLogging){
-        timer.cancel();
+      if(!_controller!.value.isPlaying && tryingLogging){
+        timer?.cancel();
         if(loogedUser){
           Navigator.pushReplacement(
             context,
@@ -140,25 +126,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
     Future.delayed(Duration(milliseconds: 3000),(){
 
-     if(initAppController.userData.value.user != null){
+     loginController.password =  initAppController.userData.value.user?.password ?? '';
+     loginController.email = initAppController.userData.value.user?.email ?? '';
 
+     loginController.sendConfirmCodeToPhoneAction((mssg){
 
-       loginController.password =  initAppController.userData.value.user.password ?? '';
-       loginController.email = initAppController.userData.value.user.email ?? '';
-
-       loginController.sendConfirmCodeToPhoneAction((mssg){
-
-         if(mssg == null){
-           loogedUser = true;
-         } else{
-           loogedUser = false;
-         }
-         tryingLogging = true;
-       });
-     }else{
-       tryingLogging = true;
-     }
-   });
+       loogedUser = false;
+            tryingLogging = true;
+     });
+      });
 
 
 
@@ -175,10 +151,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
         child: Center(
-          child: _controller.value.isInitialized
+          child: _controller!.value.isInitialized
               ? AspectRatio(
-            aspectRatio: _controller.value.aspectRatio,
-            child: VideoPlayer(_controller),
+            aspectRatio: _controller!.value.aspectRatio,
+            child: VideoPlayer(_controller!),
           )
               : Container(),
         ),
@@ -202,9 +178,9 @@ class _MyHomePageState extends State<MyHomePage> {
   void dispose() {
     // TODO: implement dispose
 
-    timer.cancel();
+    timer?.cancel();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);  // to re-show bars
-    _controller.dispose();
+    _controller?.dispose();
     super.dispose();
   }
 

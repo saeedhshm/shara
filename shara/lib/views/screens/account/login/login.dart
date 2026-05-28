@@ -1,26 +1,18 @@
-import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:shara/controllers/login_controller.dart';
+import 'package:shara/features/auth/presentation/controllers/login_controller.dart';
 import 'package:shara/helpers/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:shara/helpers/navigation.dart';
 import 'package:shara/helpers/utils/widgets/sending_loading_widget.dart';
 import 'package:shara/helpers/utils/widgets/snack_bars.dart';
 import 'package:shara/views/screens/account/signin_pages/phone_page.dart';
-import 'package:shara/views/screens/account/signin_pages/sign_up.dart';
-import 'package:shara/views/screens/home/main_home_screen.dart';
-import 'package:shara/views/screens/splash/intro_page.dart';
 import 'package:shara/views/widgets/custom_text_form_field.dart';
 import 'package:shara/views/widgets/login_header.dart';
 import 'package:shara/views/widgets/main_button.dart';
 
-import '../../splash/splash.dart';
-import '../forget_password.dart';
-import 'code_verification_login.dart';
 
 class LoginPage extends StatefulWidget {
 
-  LoginPage({Key key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -30,7 +22,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
   final _emailController = TextEditingController();
 
   final _passwordController = TextEditingController();
-  final loginController = Get.put(LoginController());
+  final loginController = Get.put(LoginController(Get.find(), Get.find()));
 
   // Animation<Offset> logoOffset;
   // AnimationController logoController;
@@ -139,7 +131,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
                         child: Obx(() => Column(
                           children: [
                             SizedBox(
-                              height: loginController.initAppController.userData.value.user == null  ? 30 : 0,
+                              height: 0,
                             ),
                              CustomTextFormField(
                               controller: _emailController,
@@ -197,12 +189,8 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin{
                                 loginController.email = _emailController.text;
 
                                 loginController.sendConfirmCodeToPhoneAction((message){
-                                   if(message == null){
-                                     Go.to(context, CodeVerificationLoginPage());
-                                   } else{
-                                     SnackBars.showErrorSnackBar('Error'.tr, message);
-                                   }
-                                });
+                                   SnackBars.showErrorSnackBar('Error'.tr, message);
+                                                                 });
                               },
                             ),
                             SizedBox(

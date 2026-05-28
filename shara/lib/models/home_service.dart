@@ -5,14 +5,14 @@ import 'package:shara/models/partner.dart';
 import 'offer.dart';
 
 class HomeService {
-  String _introAr;
-  String _introEn;
+  String? _introAr;
+  String? _introEn;
   List<Offer> offers = <Offer>[];
   List<Partner> partners = <Partner>[];
   List<Sliders> sliders = <Sliders>[];
 
   String intro(bool isArabic){
-   return isArabic ? '$_introAr' : '$_introEn';
+   return isArabic ? (_introAr ?? '') : (_introEn ?? '');
   }
 
   HomeService();
@@ -46,10 +46,11 @@ class HomeService {
 
 
 
+
 class Sliders {
-  int id;
-  String _imageAr;
-  String _imageEn;
+  int? id;
+  String? _imageAr;
+  String? _imageEn;
 
   String image(bool isArabic){
     println("--------------------- slider images");

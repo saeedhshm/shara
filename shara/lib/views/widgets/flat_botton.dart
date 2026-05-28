@@ -4,8 +4,8 @@ class FlatButtonWidget extends StatelessWidget {
 
   final Widget child;
   final Color color;
-  final Function onPressed;
-  FlatButtonWidget({Key key,this.child,this.color,this.onPressed}) : super(key: key);
+  final void Function()? onPressed;
+  FlatButtonWidget({Key? key,required this.child,required this.color,required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -7,13 +7,12 @@ import '../../../helpers/app_colors.dart';
 import '../../../helpers/utils/widgets/loading_indicator.dart';
 import '../../widgets/decorated_app_bar.dart';
 import '../../widgets/leading_back_arrow.dart';
-import '../home/pages/promo_codes/variant_item_widget.dart';
 
 
 
 class MyCouponsPage extends StatelessWidget {
 
-  MyCouponsPage({Key key}) : super(key: key){
+  MyCouponsPage({Key? key}) : super(key: key){
     controller.retrieveMyCoupons();
   }
 
@@ -32,6 +31,7 @@ class MyCouponsPage extends StatelessWidget {
           children: [
             LeadingBackArrow(
               size: 30,
+              onBack: Get.back,
             ),
             SizedBox(
               width: 8,
@@ -63,15 +63,15 @@ class MyCouponsPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Expanded(child:controller.myCoupons.value.giftCards.length > 0 ? GridView.builder(
+            Expanded(child:controller.myCoupons.value.giftCards!.length > 0 ? GridView.builder(
               // controller: scrollController,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,),
-              itemCount: controller.myCoupons.value.giftCards.length,
+              itemCount: controller.myCoupons.value.giftCards!.length,
               itemBuilder: (contx, indx) {
-                return MyCouponWidget(card: controller.myCoupons.value.giftCards[indx],);
+                return MyCouponWidget(card: controller.myCoupons.value.giftCards![indx],);
               },
             ):Center(child: Text('no_coupons_yet'.tr,style: TextStyle(
               fontSize: 16,

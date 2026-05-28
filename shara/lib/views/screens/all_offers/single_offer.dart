@@ -10,7 +10,7 @@ import 'package:shara/views/widgets/network_image.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SingleOfferPage extends StatefulWidget {
-   SingleOfferPage({Key key}) : super(key: key);
+   SingleOfferPage({Key? key}) : super(key: key);
 
   @override
   State<SingleOfferPage> createState() => _SingleOfferPageState();
@@ -52,10 +52,10 @@ class _SingleOfferPageState extends State<SingleOfferPage> {
                       // }, child: Image.asset('assets/images/icons/offer/fav_in_details.png',width: 35,))
                     ],
                   ),
-                  leading: LeadingBackArrow(),
+                  leading: LeadingBackArrow(onBack: Get.back),
                   bottom: PreferredSize(preferredSize: Size.fromHeight(0), child: SizedBox(),),
                   flexibleSpace: FlexibleSpaceBar(
-                    background: loadImage('${controller.offerDetails.image(isArabic)}',
+                    background: loadImage('${controller.offerDetails!.image(isArabic)}',
                       fit: BoxFit.cover,),
                   ),
                 ) ,
@@ -65,18 +65,18 @@ class _SingleOfferPageState extends State<SingleOfferPage> {
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          Container(width:100,height: 70,child: loadImage(  controller.offerDetails.partner.logo,fit: BoxFit.contain)) ,
+                          Container(width:100,height: 70,child: loadImage(  controller.offerDetails!.partner!.logo,fit: BoxFit.contain)) ,
                           SizedBox(height: 10,),
                           // Text('متبقي 10 ايام',style: TextStyle(color: AppColors.mainLightGreyColor),),
                           // SizedBox(height: 10,),
                           //titel
-                          SizedBox(width:double.infinity,child: Text(controller.offerDetails.title(isArabic), style: TextStyle(color: AppColors.mainDarkGreyColor,fontSize: 20,fontWeight: FontWeight.bold),)) ,
+                          SizedBox(width:double.infinity,child: Text(controller.offerDetails!.title(isArabic), style: TextStyle(color: AppColors.mainDarkGreyColor,fontSize: 20,fontWeight: FontWeight.bold),)) ,
 
                           SizedBox(height: 10,),
                           //details
                           SizedBox(
                             width:double.infinity,
-                            child: Text(controller.offerDetails.description(isArabic),style: TextStyle(
+                            child: Text(controller.offerDetails!.description(isArabic),style: TextStyle(
                                 height: 1.75,
                                 fontSize: 18,
                                 color: AppColors.mainLightGreyColor
@@ -105,10 +105,10 @@ class _SingleOfferPageState extends State<SingleOfferPage> {
               onTap: () async {
 
                 println('----- offer url');
-                println(controller.offerDetails.partner.storeUrl) ;
+                println(controller.offerDetails!.partner!.storeUrl) ;
 
 
-                final Uri _url = Uri.parse(controller.offerDetails.partner.storeUrl);
+                final Uri _url = Uri.parse(controller.offerDetails!.partner!.storeUrl ?? '');
                 if (!await launchUrl(_url)) throw 'Could not launch $_url';
               },
               child: Container(
