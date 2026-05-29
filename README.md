@@ -10,15 +10,15 @@
 
 | Screenshot 1 | Screenshot 2 | Screenshot 3 |
 |------|-----------|----------|
-| ![Screenshot 1](shara/screenshots/Screenshot_1780005696.png) | ![Screenshot 2](shara/screenshots/Screenshot_1780009493.png) | ![Screenshot 3](shara/screenshots/Screenshot_1780009497.png) |
+| ![Screenshot 1](shara/screenshots/Screenshot_1780009493.png) | ![Screenshot 2](shara/screenshots/Screenshot_1780009497.png) | ![Screenshot 3](shara/screenshots/Screenshot_1780009502.png) |
 
 | Screenshot 4 | Screenshot 5 | Screenshot 6 |
 |-------------------|-------------|---------|
-| ![Screenshot 4](shara/screenshots/Screenshot_1780009502.png) | ![Screenshot 5](shara/screenshots/Screenshot_1780009507.png) | ![Screenshot 6](shara/screenshots/Screenshot_1780009513.png) |
+| ![Screenshot 4](shara/screenshots/Screenshot_1780009507.png) | ![Screenshot 5](shara/screenshots/Screenshot_1780009513.png) | ![Screenshot 6](shara/screenshots/Screenshot_1780009516.png) |
 
-| Screenshot 7 | Screenshot 8 | Screenshot 9 |
-|------------|---------|---------|
-| ![Screenshot 7](shara/screenshots/Screenshot_1780009516.png) | ![Screenshot 8](shara/screenshots/Screenshot_1780009521.png) | ![Screenshot 9](shara/screenshots/Screenshot_1780009525.png) |
+| Screenshot 7 | Screenshot 8 |
+|------------|---------|
+| ![Screenshot 7](shara/screenshots/Screenshot_1780009521.png) | ![Screenshot 8](shara/screenshots/Screenshot_1780009525.png) |
 
 ---
 
