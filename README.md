@@ -8,17 +8,17 @@
 
 ## Screenshots
 
-| Home | Buy Points | Contacts |
+| Screenshot 1 | Screenshot 2 | Screenshot 3 |
 |------|-----------|----------|
-| ![Home](screenshots/home.png) | ![Buy Points](screenshots/buy_points.png) | ![Contacts](screenshots/contacts.png) |
+| ![Screenshot 1](shara/screenshots/Screenshot_1780005696.png) | ![Screenshot 2](shara/screenshots/Screenshot_1780009493.png) | ![Screenshot 3](shara/screenshots/Screenshot_1780009497.png) |
 
-| Phone Verification | Transactions | Finance |
+| Screenshot 4 | Screenshot 5 | Screenshot 6 |
 |-------------------|-------------|---------|
-| ![Phone Verification](screenshots/phone_verification.png) | ![Transactions](screenshots/transactions.png) | ![Finance](screenshots/finance.png) |
+| ![Screenshot 4](shara/screenshots/Screenshot_1780009502.png) | ![Screenshot 5](shara/screenshots/Screenshot_1780009507.png) | ![Screenshot 6](shara/screenshots/Screenshot_1780009513.png) |
 
-| Promo Codes | Profile |
-|------------|---------|
-| ![Promo Codes](screenshots/promo_codes.png) | ![Profile](screenshots/profile.png) |
+| Screenshot 7 | Screenshot 8 | Screenshot 9 |
+|------------|---------|---------|
+| ![Screenshot 7](shara/screenshots/Screenshot_1780009516.png) | ![Screenshot 8](shara/screenshots/Screenshot_1780009521.png) | ![Screenshot 9](shara/screenshots/Screenshot_1780009525.png) |
 
 ---
 
